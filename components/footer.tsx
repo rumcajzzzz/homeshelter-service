@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -71,6 +72,20 @@ export function Footer() {
               </p>
               <p className="text-sm text-primary-foreground/60">Zaprojektowane z myślą o Twoim bezpieczeństwie</p>
             </div>
+            <Link href="https://rumcajzdev.netlify.app/" target="_blank">
+              <div className="text-center flex flex-col items-center justify-center gap-3 mt-16">
+                <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+                  <img
+                    src="/rumcajzdevlogowhite.png"
+                    alt="RumcajzDev Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-md text-muted-foreground tracking-wide">
+                    Developed by <span className="font-semibold">rumcajzdev</span>
+                  </span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
