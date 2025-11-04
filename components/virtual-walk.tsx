@@ -25,7 +25,7 @@ export function VirtualTour() {
   }
 
   return (
-    <section className="py-20 px-6 lg:px-12 bg-card">
+    <section className="py-20 px-6 lg:px-12 bg-card" id="spacer">
       <div className="container mx-auto max-w-6xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
           Przejdź się z nami po schronie
@@ -54,7 +54,7 @@ export function VirtualTour() {
         </div>
 
         {/* Wirtualny spacer */}
-        <div className="relative w-full overflow-hidden rounded-lg shadow-lg aspect-video transition-opacity duration-500">
+        <div className="relative w-full overflow-hidden rounded-lg shadow-lg transition-opacity duration-500 h-[70vh] sm:aspect-video">
           <iframe
             key={activeTour}
             src={tours[activeTour].src}

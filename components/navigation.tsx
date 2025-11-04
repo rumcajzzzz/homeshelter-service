@@ -34,7 +34,7 @@ export function Navigation() {
     { href: "/inwestor", label: "Dla inwestorów" },
     { href: "/projektant", label: "Dla projektantów" },
     { href: "/#galeria", label: "Galeria" },
-    { href: "/#kontakt", label: "Kontakt" },
+    { href: "/#spacer", label: "Spacer Wirtualny" },
   ]
   return (
     <nav
