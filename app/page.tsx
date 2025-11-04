@@ -5,6 +5,7 @@ import { Gallery } from "@/components/gallery"
 import { Contact } from "@/components/contact"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { VirtualTour }from "@/components/virtual-walk"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Offerings />
       <Gallery />
+      <VirtualTour />
       <Contact />
       <Footer />
     </main>

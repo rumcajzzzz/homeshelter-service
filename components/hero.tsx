@@ -20,7 +20,7 @@ export function Hero() {
           alt="Modern shelter interior"
           className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
+        <div className="absolute inset-0 bg-linear-to-b from-primary/80 via-primary/70 to-primary" />
       </div>
 
       {/* Content */}

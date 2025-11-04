@@ -101,7 +101,7 @@ export function About() {
                   "Kompleksowa obsługa od projektu do realizacji",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
@@ -115,7 +115,7 @@ export function About() {
             >
               <div className="relative h-full min-h-[400px] rounded overflow-hidden">
                 <img src="/professional-construction-team-modern-architecture.jpg" alt="Our team" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent" />
               </div>
             </div>
           </div>

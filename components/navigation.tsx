@@ -1,36 +1,47 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 
-
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
+    const isSubpage = pathname !== "/" && !pathname.startsWith("/#")
+    setIsScrolled(isSubpage)
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else if (!isSubpage) {
+        setIsScrolled(false)
+      }
     }
+
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [pathname])
 
   const navLinks = [
-    { href: "#o-nas", label: "O nas" },
-    { href: "#oferta", label: "Oferta" },
-    { href: "#galeria", label: "Galeria" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/#o-nas", label: "O nas" },
+    { href: "/#oferta", label: "Oferta" },
+    { href: "/inwestor", label: "Dla inwestorów" },
+    { href: "/projektant", label: "Dla projektantów" },
+    { href: "/#galeria", label: "Galeria" },
+    { href: "/#kontakt", label: "Kontakt" },
   ]
-
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border" : "bg-transparent",
+        isScrolled ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border " : "text-white bg-transparent",
+        (isMobileMenuOpen && !isScrolled) ? "bg-[#1a1a1a]" : ""
       )}
     >
       <div className="container mx-auto px-6 lg:px-12">
@@ -82,27 +93,30 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
-                <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                  Skontaktuj się
-                </a>
-              </Button>
-            </div>
+        <div
+          className={cn(
+            "md:hidden overflow-hidden transition-all duration-700 ease-in-out border-t border-border",
+            isMobileMenuOpen ? "max-h-screen opacity-100 py-6" : "max-h-0 opacity-0 py-0"
+          )}
+        >
+          <div className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium text-muted-foreground transition-colors py-2 ${isScrolled ? "hover:text-foreground" : "text-white hover:text-[#6a6a6a]"}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
+              <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
+                Skontaktuj się
+              </a>
+            </Button>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )
