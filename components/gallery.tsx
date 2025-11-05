@@ -25,33 +25,33 @@ export function Gallery() {
 
   const images = [
     {
-      src: "/modern-shelter-entrance-steel-door-concrete.jpg",
-      alt: "Wejście do schronu",
+      src: "/gallery/schron8.jpeg",
+      alt: "Łazienka w schronie premium",
       span: "md:col-span-2",
     },
     {
-      src: "/shelter-interior-living-space-modern-furniture.jpg",
-      alt: "Wnętrze schronu - strefa dzienna",
+      src: "/gallery/schron13.jpeg",
+      alt: "Wnętrze schronu kompaktowego",
       span: "md:col-span-1",
     },
     {
-      src: "/shelter-ventilation-system-technical-room.jpg",
+      src: "/gallery/filtrowentyl.png",
       alt: "System wentylacji",
       span: "md:col-span-1",
     },
     {
-      src: "/luxury-shelter-bedroom-comfortable-interior.jpg",
-      alt: "Sypialnia w schronie premium",
+      src: "/gallery/schron15.jpeg",
+      alt: "Schron kompaktowy - wejście",
       span: "md:col-span-2",
     },
     {
-      src: "/shelter-control-room-monitoring-systems.jpg",
-      alt: "Centrum kontroli",
+      src: "/gallery/schron5.jpeg",
+      alt: "Toaleta w schronie premium",
       span: "md:col-span-1",
     },
     {
-      src: "/shelter-storage-room-supplies-organized.jpg",
-      alt: "Magazyn zapasów",
+      src: "/gallery/schron10.jpeg",
+      alt: "Schron specjalistyczny - magazyn zapasów",
       span: "md:col-span-2",
     },
   ]
@@ -88,9 +88,9 @@ export function Gallery() {
                 <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 opacity-80 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/60 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <p className="text-primary-foreground font-medium text-lg">{image.alt}</p>
                 </div>

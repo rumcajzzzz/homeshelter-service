@@ -18,14 +18,14 @@ export function Footer() {
                 >
                   <Image
                     src="/shelter.png"
-                    alt="SafeHaven Logo"
+                    alt="Fiber System Logo"
                     width={40}
                     height={40}
                     className="object-contain"
                   />
                 </div>
               </a>
-                <span className="text-xl font-semibold tracking-tight">SafeHaven</span>
+                <span className="text-xl font-semibold tracking-tight">FIBER SYSTEM</span>
               </div>
               <p className="text-primary-foreground/70 leading-relaxed max-w-md">
                 Profesjonalne projektowanie i budowa schronów domowych. Bezpieczeństwo i komfort dla Twojej rodziny.
@@ -68,7 +68,7 @@ export function Footer() {
           <div className="pt-8 border-t border-primary-foreground/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-primary-foreground/60">
-                © {currentYear} SafeHaven. Wszelkie prawa zastrzeżone.
+                © {currentYear} FIBER SYSTEM. Wszelkie prawa zastrzeżone.
               </p>
               <p className="text-sm text-primary-foreground/60">Zaprojektowane z myślą o Twoim bezpieczeństwie</p>
             </div>

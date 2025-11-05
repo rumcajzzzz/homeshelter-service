@@ -185,7 +185,7 @@ export default function ProjektantPage() {
                   <input
                     type="email"
                     className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="jan@example.com"
+                    placeholder="jan.kowalski@gmail.com"
                   />
                 </div>
                 <div>

@@ -11,16 +11,16 @@ export function VirtualTour() {
 
   const tours: Record<TourKey, { name: string; src: string }> = {
     bunker1: {
-      name: "Schron A – Podmiejski",
-      src: "https://evryplace.com/embed/vythac#ab308b58-3fb5-4737-a57e-c717c1b92346",
+      name: "Schron L = 6m",
+      src: "https://evryplace.com/p/vythac",
     },
     bunker2: {
-      name: "Schron B – Techniczny",
-      src: "https://evryplace.com/embed/vythac#185c006e-6936-4bd1-8854-1eb5dafa3a3b",
+      name: "Schron L = 11,5m",
+      src: "https://evryplace.com/p/pcrrfv",
     },
     bunker3: {
-      name: "Schron C – Wejściowy",
-      src: "https://evryplace.com/embed/vythac#9ca841dc-5c61-4a27-990f-405820d7b919",
+      name: "Schron Modułowy",
+      src: "https://evryplace.com/p/incnhy",
     },
   }
 

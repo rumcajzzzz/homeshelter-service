@@ -38,7 +38,7 @@ export function Offerings() {
         roundedBL: "150px",
         rotate: "5deg",
       },
-      blobSrc: "/blobs/blob1.jpg",
+      blobSrc: "/blobs/rodzinny.png",
     },
     {
       icon: Building2,
@@ -52,7 +52,7 @@ export function Offerings() {
         roundedBL: "120px",
         rotate: "-5deg",
       },
-      blobSrc: "/blobs/blob4.png",
+      blobSrc: "/blobs/premium.jpeg",
     },
     {
       icon: Shield,
@@ -66,7 +66,7 @@ export function Offerings() {
         roundedBL: "100px",
         rotate: "8deg",
       },
-      blobSrc: "/blobs/blob2.jpg",
+      blobSrc: "/blobs/specjal.png",
     },
     {
       icon: Zap,
@@ -80,7 +80,7 @@ export function Offerings() {
         roundedBL: "140px",
         rotate: "-8deg",
       },
-      blobSrc: "/blobs/blob3.png",
+      blobSrc: "/blobs/modern.png",
     },
   ]
   

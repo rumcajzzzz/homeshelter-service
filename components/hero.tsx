@@ -16,7 +16,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/modern-underground-shelter-interior-concrete-minim.jpg"
+          src="/front.jpeg"
           alt="Modern shelter interior"
           className="w-full h-full object-cover opacity-30"
         />

@@ -27,7 +27,7 @@ export function About() {
   const stats = [
     {
       icon: Award,
-      value: "15+",
+      value: "20+",
       label: "Lat doświadczenia",
     },
     {
@@ -55,8 +55,9 @@ export function About() {
               Bezpieczeństwo to nasza misja
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-              Od ponad 15 lat specjalizujemy się w projektowaniu i budowie schronów domowych najwyższej jakości. Każdy
-              projekt traktujemy indywidualnie, dbając o najdrobniejsze szczegóły.
+            Nasza firma to zespół ludzi z 20-letnim doświadczeniem w produkcji systemów rurowych. 
+            Gwarantujemy wykonanie i dostawę komfortowych oraz bezpiecznych schronów wyposażonych w nowoczesne systemy wentylacji, 
+            oświetlenia i zabezpieczeń.
             </p>
           </div>
 
@@ -114,7 +115,8 @@ export function About() {
               }`}
             >
               <div className="relative h-full min-h-[400px] rounded overflow-hidden">
-                <img src="/professional-construction-team-modern-architecture.jpg" alt="Our team" className="w-full h-full object-cover" />
+                <img src="/budowa.jpg" alt="Our team" className="w-full h-full object-cover opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent" />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent" />
               </div>
             </div>

@@ -47,22 +47,20 @@ export function Navigation() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
          {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <div
-              className={`w-10 h-10 rounded flex items-center justify-center overflow-hidden transition-all duration-300 ${
-                isScrolled ? "invert" : ""
-              }`}
+              className="w-24 h-24 rounded flex items-center justify-center overflow-hidden transition-all duration-300"
             >
               <Image
-                src="/shelter.png"
-                alt="SafeHaven Logo"
-                width={40}
-                height={40}
-                className="object-contain"
+                src={isScrolled ? "/shelter-black.png" : "/shelter.png"}
+                alt="FIBER SYSTEM Logo"
+                width={96}
+                height={96}
+                className="object-cover"
               />
             </div>
-            <span className={`text-xl font-semibold tracking-tight text-background ${isScrolled ? "text-foreground" : ""}`}>
-              SafeHaven
+            <span className={`text-xl font-semibold tracking-tight text-background hidden sm:block ${isScrolled ? "text-foreground" : ""}`}>
+              FIBER SYSTEM
             </span>
           </a>
 

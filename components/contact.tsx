@@ -38,13 +38,13 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "kontakt@safehaven.pl",
-      href: "mailto:kontakt@safehaven.pl",
+      value: "office@fibersystem.eu",
+      href: "mailto:office@fibersystem.eu",
     },
     {
       icon: MapPin,
       label: "Adres",
-      value: "ul. Przykładowa 123, 00-001 Warszawa",
+      value: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
       href: "#",
     },
   ]
@@ -108,7 +108,7 @@ export function Contact() {
                     <label htmlFor="email" className="text-sm font-medium text-foreground">
                       Email
                     </label>
-                    <Input id="email" type="email" placeholder="jan@example.com" className="bg-background" />
+                    <Input id="email" type="email" placeholder="jan.kowalski@gmail.com" className="bg-background" />
                   </div>
                 </div>
 
