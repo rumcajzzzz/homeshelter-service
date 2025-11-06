@@ -5,6 +5,7 @@ import { Shield, FileText, Calculator, Headphones, CheckCircle2, ArrowRight, Arr
 import Link from "next/link"
 
 export default function InwestorPage() {
+
   const benefits = [
     {
       icon: Shield,
@@ -27,7 +28,6 @@ export default function InwestorPage() {
       description: "Dedykowany opiekun projektu dostępny na każdym etapie",
     },
   ]
-
   const packages = [
     {
       name: "Wersja Podstawowa",
@@ -68,16 +68,17 @@ export default function InwestorPage() {
     },
   ]
   const steps = [
-    { step: "01", title: "Konsultacja", desc: "Analiza potrzeb i lokalizacji" },
-    { step: "02", title: "Projekt", desc: "Opracowanie dokumentacji technicznej" },
-    { step: "03", title: "Realizacja", desc: "Budowa i instalacja systemów" },
-    { step: "04", title: "Odbiór", desc: "Testy i przekazanie obiektu" },
+    { step: "1", title: "Konsultacja", desc: "Analiza potrzeb i lokalizacji" },
+    { step: "2", title: "Projekt", desc: "Opracowanie dokumentacji technicznej" },
+    { step: "3", title: "Realizacja", desc: "Budowa i instalacja systemów" },
+    { step: "4", title: "Odbiór", desc: "Testy i przekazanie obiektu" },
   ]
   
   return (
     <main className="min-h-screen bg-background">
+      
       <Navigation />
-
+    
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-6xl">
@@ -86,12 +87,12 @@ export default function InwestorPage() {
               Dla Inwestorów
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Kompleksowa pomoc i oferta dla osób planujących budowę prywatnego schronu. Zapewniamy pełne wsparcie od
-              koncepcji po realizację.
+              Pomagamy inwestorom indywidualnym i instytucjonalnym w realizacji nowoczesnych schronów oraz bezpiecznych przestrzeni ochronnych. Od koncepcji i projektu po finalne wykonanie gwarantujemy kompleksowe wsparcie na każdym etapie.
             </p>
           </div>
         </div>
       </section>
+    
       {/* Benefits Section */}
       <section className="relative py-20 px-6 lg:px-12">
         <div
@@ -100,7 +101,7 @@ export default function InwestorPage() {
         >
           <div className="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
         </div>
-
+    
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-background mb-12 text-center">
             Dlaczego warto z nami współpracować
@@ -125,14 +126,17 @@ export default function InwestorPage() {
           </div>
         </div>
       </section>
-
+    
       {/* Packages Section */}
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nasza oferta</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Wybierz pakiet dopasowany do Twoich potrzeb. Każda oferta może być indywidualnie modyfikowana.
+              Projektujemy i realizujemy <strong>schrony żelbetowe</strong> oraz 
+              <strong> Doraźne Miejsca Schronienia (DMS)</strong> zgodne z aktualnymi wytycznymi 
+              <strong> MSWiA</strong> i przepisami <strong>Ustawy o Obronie Cywilnej</strong>.
+              Każdy projekt opracowujemy indywidualnie z pełną dokumentacją i nadzorem technicznym.
             </p>
           </div>
 
@@ -146,7 +150,7 @@ export default function InwestorPage() {
               >
                 {pkg.highlighted && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    Najpopularniejszy
+                    Najczęściej wybierany
                   </div>
                 )}
                 <div className="mb-6">
@@ -177,51 +181,56 @@ export default function InwestorPage() {
               </div>
             ))}
           </div>
+
+          <p className="text-sm text-muted-foreground text-center mt-12">
+            Wszystkie realizacje wykonujemy zgodnie z aktualnymi wytycznymi <strong>MSWiA</strong> oraz zasadami nowej <strong>Ustawy o Obronie Cywilnej</strong>.
+          </p>
         </div>
       </section>
-
-     {/* Process Section */}
-     <section className="py-20 px-6 lg:px-12 bg-card">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-          Proces realizacji
-        </h2>
-
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          {steps.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center relative">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-accent">{item.step}</span>
+    
+      {/* Process Section */}
+      <section className="py-20 px-6 lg:px-12 bg-card">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+            Proces realizacji
+          </h2>
+    
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {steps.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center relative">
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mb-4 step-circle"
+                  style={{ animationDelay: `${index * 4}s`, animationDuration: '16s' }}
+                >
+                  <span className="text-2xl font-bold">{item.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+    
+                {index < steps.length - 1 && (
+                  <>
+                    <div className="hidden md:block absolute right-[-60px] top-1/2 transform -translate-y-1/2">
+                      <ArrowRight className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="block md:hidden mt-4">
+                      <ArrowDown className="w-6 h-6 text-accent mx-auto" />
+                    </div>
+                  </>
+                )}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-              <p className="text-muted-foreground">{item.desc}</p>
-
-              {/* Strzałka */}
-              {index < steps.length - 1 && (
-                <>
-                  {/* Pozioma strzałka na desktop */}
-                  <div className="hidden md:block absolute right-[-60px] top-1/2 transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-accent" />
-                  </div>
-
-                  {/* Pionowa strzałka na mobile */}
-                  <div className="block md:hidden mt-4">
-                    <ArrowDown className="w-6 h-6 text-accent mx-auto" />
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+    
       {/* CTA Section */}
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Gotowy na rozmowę o Twoim projekcie?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Gotowy na rozmowę o swoim projekcie?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Skontaktuj się z nami, aby otrzymać bezpłatną wycenę i konsultację
+            Skontaktuj się z nami, aby otrzymać indywidualną wycenę i bezpłatną konsultację techniczną.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
@@ -235,6 +244,7 @@ export default function InwestorPage() {
       </section>
 
       <Footer />
+      
     </main>
   )
 }

@@ -17,7 +17,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/front.jpeg"
-          alt="Modern shelter interior"
+          alt="Prefabrykowany schron żelbetowy"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-linear-to-b from-primary/80 via-primary/70 to-primary" />
@@ -32,17 +32,21 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 mb-8">
             <Shield className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-primary-foreground">Bezpieczeństwo na najwyższym poziomie</span>
+            <span className="text-xs font-medium text-primary-foreground">
+              Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 tracking-tight text-balance leading-[1.1]">
-            Schrony domowe
+            Schrony i ukrycia
             <span className="block text-accent mt-2">nowej generacji</span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Projektujemy i budujemy najwyższej jakości schrony, które łączą bezpieczeństwo z komfortem. Twoja rodzina
-            zasługuje na spokój.
+            <span className="font-extrabold">Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.</span> <br />
+            <span className="text-primary-foreground/60">
+              Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych.
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

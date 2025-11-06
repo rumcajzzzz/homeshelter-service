@@ -5,26 +5,31 @@ import { FileText, Users, Wrench, BookOpen, Download, Mail, CheckCircle2 } from 
 import Link from "next/link"
 
 export default function ProjektantPage() {
+
   const supportAreas = [
     {
       icon: FileText,
       title: "Dokumentacja techniczna",
-      description: "Szczegółowe specyfikacje, rysunki wykonawcze i normy branżowe dla projektów schronów",
+      description:
+        "Kompletne opracowania rysunkowe, schematy instalacyjne i wytyczne branżowe zgodne z obowiązującymi normami MSWiA.",
     },
     {
       icon: Users,
       title: "Konsultacje eksperckie",
-      description: "Wsparcie naszych specjalistów w zakresie projektowania i doboru rozwiązań technicznych",
+      description:
+        "Bezpośredni kontakt z naszymi specjalistami w zakresie konstrukcji, wentylacji i zabezpieczeń obiektów ochronnych.",
     },
     {
       icon: Wrench,
       title: "Wsparcie techniczne",
-      description: "Pomoc w doborze materiałów, systemów i technologii dla Twoich projektów",
+      description:
+        "Pomoc przy doborze materiałów, komponentów systemowych i technologii dedykowanych projektom schronowym.",
     },
     {
       icon: BookOpen,
       title: "Baza wiedzy",
-      description: "Dostęp do biblioteki rozwiązań, case studies i najlepszych praktyk branżowych",
+      description:
+        "Zbiór aktualnych wytycznych projektowych, analiz technicznych oraz przykładów zrealizowanych obiektów.",
     },
   ]
 
@@ -50,12 +55,12 @@ export default function ProjektantPage() {
   ]
 
   const benefits = [
-    "Dostęp do sprawdzonych rozwiązań technicznych",
-    "Wsparcie w procesie certyfikacji projektów",
-    "Priorytetowa obsługa zapytań technicznych",
-    "Możliwość współpracy przy realizacji projektów",
-    "Udział w szkoleniach i warsztatach branżowych",
-    "Dostęp do sieci partnerów i dostawców",
+    "Dostęp do certyfikowanych rozwiązań konstrukcyjnych i instalacyjnych",
+    "Wsparcie w zakresie interpretacji norm i wytycznych MSWiA",
+    "Priorytetowe konsultacje przy projektach technicznych",
+    "Możliwość współpracy przy realizacji inwestycji",
+    "Udział w szkoleniach i webinarach branżowych",
+    "Dostęp do sieci partnerów technologicznych",
   ]
 
   return (
@@ -70,8 +75,9 @@ export default function ProjektantPage() {
               Dla Projektantów
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Kompleksowe wsparcie techniczne i merytoryczne dla architektów i projektantów planujących realizację
-              schronów domowych.
+              Oferujemy wsparcie techniczne i merytoryczne dla architektów oraz biur projektowych
+              realizujących inwestycje z zakresu budownictwa ochronnego. 
+              Udostępniamy wiedzę, narzędzia i dokumentację, które ułatwiają tworzenie nowoczesnych i bezpiecznych obiektów.
             </p>
           </div>
         </div>
@@ -114,9 +120,11 @@ export default function ProjektantPage() {
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Materiały do pobrania</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Materiały dla projektantów
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Profesjonalne zasoby i dokumentacja techniczna dla Twoich projektów
+              Pobierz aktualne katalogi, specyfikacje i wytyczne pomocne przy projektowaniu schronów i obiektów ochronnych.
             </p>
           </div>
 
@@ -151,11 +159,13 @@ export default function ProjektantPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Korzyści ze współpracy</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Dołącz do grona profesjonalistów, którzy korzystają z naszego wsparcia w realizacji projektów schronów
-                domowych.
-              </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Korzyści ze współpracy
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Współpraca z nami to dostęp do specjalistycznej wiedzy i zaplecza technicznego,
+              które wspierają projektantów w tworzeniu bezpiecznych, zgodnych z przepisami obiektów.
+            </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -217,9 +227,11 @@ export default function ProjektantPage() {
       {/* CTA Section */}
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Masz pytania techniczne?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Potrzebujesz wsparcia projektowego?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Nasz zespół ekspertów jest gotowy, aby pomóc Ci w realizacji projektu
+            Skontaktuj się z naszym działem technicznym — pomożemy dobrać odpowiednie rozwiązania do Twojego projektu.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
