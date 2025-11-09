@@ -31,8 +31,7 @@ export function VirtualTour() {
           Przejdź się z nami po schronie
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Odkryj nasze projekty schronów w pełnej przestrzeni 3D. Możesz obracać, przybliżać i zwiedzać każdy zakamarek —
-          wszystko w Twojej przeglądarce.
+          Odkryj nasze projekty schronów w 3D. Obracaj, przybliżaj i zwiedzaj każdy szczegół bezpośrednio w przeglądarce.
         </p>
 
         {/* Przełączniki schronów */}

@@ -82,10 +82,12 @@ export function About() {
               </p>
               <ul className="space-y-3">
                 {[
-                  <>Schrony <strong>żelbetowe monolityczne</strong> wylewane „na mokro” na budowie</>,
+                  <>Schrony <strong>żelbetowe monolityczne</strong></>,
+                  <>Konstrukcje żelbetowe <strong>wylewane „na mokro”</strong> na budowie</>,
                   <>Modułowe <strong>prefabrykowane konstrukcje żelbetowe</strong> z kontrolą jakości produkcji</>,
-                  <>Ukrycia z materiałów kompozytowych{" "}<strong>GRP</strong>, <strong>PEHD</strong>, rury i profile o przekrojach
-                  <strong> okrągłych</strong> lub <strong>prostokątnych</strong></>,
+                  <>Ukrycia z materiałów kompozytowych{" "}
+                    <strong>GRP</strong>, <strong>PEHD</strong>, rury i profile o przekrojach
+                    <strong> okrągłych</strong> lub <strong>prostokątnych</strong></>,
                   <>Systemy <strong>wentylacji</strong>, <strong>zasilania</strong> i <strong>komunikacji awaryjnej</strong> zgodne z aktualnymi normami</>,
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -94,6 +96,7 @@ export function About() {
                   </li>
                 ))}
               </ul>
+
             </div>
 
             <div
