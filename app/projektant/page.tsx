@@ -35,22 +35,16 @@ export default function ProjektantPage() {
 
   const resources = [
     {
-      title: "Katalog rozwiązań technicznych",
-      description: "Kompletny przegląd systemów wentylacji, filtracji i zabezpieczeń",
+      title: "Ustawa o Obronie Cywilnej",
+      description: "Aktualne przepisy i wymagania dotyczące budownictwa ochronnego",
       type: "PDF",
-      size: "12 MB",
+      size: "2 MB",
     },
     {
-      title: "Wytyczne projektowe",
-      description: "Standardy i normy dla projektowania schronów domowych",
+      title: "Rozporządzenie MSWiA dotyczące ukryć",
+      description: "Wytyczne dotyczące warunków, jakie muszą spełniać Doraźne Miejsca Schronienia (DMS)",
       type: "PDF",
-      size: "8 MB",
-    },
-    {
-      title: "Specyfikacje materiałowe",
-      description: "Katalog certyfikowanych materiałów i producentów",
-      type: "PDF",
-      size: "15 MB",
+      size: "1,5 MB",
     },
   ]
 
@@ -124,30 +118,40 @@ export default function ProjektantPage() {
               Materiały dla projektantów
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Pobierz aktualne katalogi, specyfikacje i wytyczne pomocne przy projektowaniu schronów i obiektów ochronnych.
+              Dysponujemy najnowszymi wytycznymi, które ułatwiają projektantom pracę i wspierają tworzenie bezpiecznych, nowoczesnych obiektów ochronnych. <br />
+              <span className="text-orange-500 text-sm">
+                Wszystkie dokumenty są aktualne i dostosowane do obowiązujących norm MSWiA
+              </span>
             </p>
+
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {resources.map((resource, index) => (
               <div
                 key={index}
-                className="p-6 bg-card rounded-lg border border-border hover:border-accent transition-colors"
+                className="p-6 bg-card rounded-lg border border-border hover:border-accent transition-colors flex flex-col items-center text-center"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-accent" />
-                  </div>
-                  <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">
-                    {resource.type} • {resource.size}
-                  </span>
+                {/* Ikona */}
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <Download className="w-6 h-6 text-accent" />
                 </div>
+
+                {/* Tytuł */}
                 <h3 className="text-lg font-semibold text-foreground mb-2">{resource.title}</h3>
+
+                {/* Opis */}
                 <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
-                <Button variant="outline" size="sm" className="w-full bg-transparent">
+
+                {/* Przycisk pobrania */}
+                <a
+                  href={`./pdf/${resource.title === "Ustawa o Obronie Cywilnej" ? "UOC.pdf" : "RMSWiAIU.pdf"}`}
+                  download
+                  className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+                >
                   <Download className="w-4 h-4 mr-2" />
-                  Pobierz
-                </Button>
+                  Pobierz PDF
+                </a>
               </div>
             ))}
           </div>

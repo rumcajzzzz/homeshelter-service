@@ -35,8 +35,8 @@ export function Gallery() {
       span: "md:col-span-1",
     },
     {
-      src: "/gallery/filtrowentyl.png",
-      alt: "System wentylacji",
+      src: "/gallery/profil.png",
+      alt: "Profile ramowe",
       span: "md:col-span-1",
     },
     {
@@ -97,6 +97,19 @@ export function Gallery() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground mb-4">
+              To tylko część naszych realizacji. Chcesz zobaczyć pełną galerię?
+            </p>
+            <a
+              href="/galeria"
+              className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
+            >
+              Zobacz więcej
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
