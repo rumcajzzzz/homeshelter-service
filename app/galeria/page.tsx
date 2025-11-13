@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { ArrowLeft, ArrowRight, X } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 interface ImageItem {
   src: string
@@ -150,9 +151,15 @@ export default function Gallery() {
                   style={{ transitionDelay: `${index * 100}ms` }}
                   onClick={() => openLightbox(index)}
                 >
-                  <img
+                  <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
+                    width={800}
+                    height={800}
+                    quality={75}
+                    placeholder="blur"
+                    blurDataURL="/placeholder.svg"
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
