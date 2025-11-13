@@ -4,17 +4,53 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { sanityClient } from "@/lib/sanityClient"
 
+type HeroData = {
+  heading1: string
+  heading2: string
+  subHeading1: string
+  subHeading2: string
+  buttonContact: string
+  buttonOffer: string
+  infoTile: string
+}
 
 export function Hero() {
+  const [heroData, setHeroData] = useState<HeroData | null>(null)
   const [isVisible, setIsVisible] = useState(false)
-
   useEffect(() => {
+    sanityClient.fetch<HeroData>(`
+      *[_type == "hero"][0]{
+        heading1,
+        heading2,
+        subHeading1,
+        subHeading2,
+        buttonContact,
+        buttonOffer,
+        infoTile
+      }
+    `)
+    .then((data) => setHeroData(data))
+    .catch(() => {
+    })
     setIsVisible(true)
   }, [])
+  const fallbackData: HeroData = {
+    heading1: "Schrony i ukrycia",
+    heading2: "nowej generacji",
+    subHeading1: "Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.",
+    subHeading2: "Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych.",
+    buttonContact: "Skontaktuj się z nami",
+    buttonOffer: "Zobacz ofertę",
+    infoTile: "Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności",
+  }
+
+  const currentHero = heroData || fallbackData
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+      
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,25 +73,31 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
+          {/* Info Tile */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 mb-8">
             <Shield className="w-4 h-4 text-accent" />
             <span className="text-xs font-medium text-primary-foreground">
-              Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności
+              {currentHero.infoTile}
             </span>
           </div>
 
+          {/* Headings */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 tracking-tight text-balance leading-[1.1]">
-            Schrony i ukrycia
-            <span className="block text-accent mt-2">nowej generacji</span>
+            {currentHero.heading1}
+            <span className="block text-accent mt-2">
+              {currentHero.heading2}
+            </span>
           </h1>
 
+          {/* Subheadings/Description */}
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed text-pretty">
-            <span className="font-extrabold">Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.</span> <br />
+            <span className="font-extrabold">{currentHero.subHeading1}</span> <br />
             <span className="text-primary-foreground/60">
-              Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych.
+              {currentHero.subHeading2}
             </span>
           </p>
 
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
@@ -63,7 +105,7 @@ export function Hero() {
               asChild
             >
               <a href="#kontakt">
-                Skontaktuj się z nami
+                {currentHero.buttonContact}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
@@ -73,7 +115,7 @@ export function Hero() {
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8 h-14 bg-transparent"
               asChild
             >
-              <a href="#oferta">Zobacz ofertę</a>
+              <a href="#oferta">{currentHero.buttonOffer}</a>
             </Button>
           </div>
         </div>

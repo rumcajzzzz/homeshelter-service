@@ -13,7 +13,7 @@ export const about = defineType({
     defineField({
       name: 'subHeading',
       title: 'Podtytuł / opis',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'stats',
@@ -40,7 +40,7 @@ export const about = defineType({
     defineField({
       name: 'solutionsSubHeading',
       title: 'Podtytuł / opis rozwiązań',
-      type: 'text',
+      type: 'string',
     }),
     defineField({
       name: 'solutionsList',

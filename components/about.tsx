@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Award, Users, Clock } from "lucide-react"
 import Image from "next/image"
 import { sanityClient } from "@/lib/sanityClient"
+import { PortableText } from "@portabletext/react"
+import { Award, Clock, Users } from "lucide-react"
 
 type Stat = { value: string; label: string }
 type AboutData = {
@@ -41,15 +42,15 @@ export function About() {
         solutionsSubHeading,
         solutionsList
       }`)
-      .then(setData)
+      .then((data) => {
+        console.log("About data:", data)
+        setData(data)
+      })
       .catch(() => setData(null))
   }, [])
 
-  // fallback
   const heading = data?.heading || "Nowoczesne schrony i ukrycia zgodne z wytycznymi MSWiA"
-  const subHeading =
-    data?.subHeading ||
-    "Od ponad 20 lat tworzymy konstrukcje ochronne spełniające wymogi MSWiA i Ustawy o Obronie Cywilnej. Łączymy doświadczenie inżynierskie z nowoczesnymi technologiami od schronów żelbetowych po systemy prefabrykowane produkowane w kontrolowanych warunkach."
+  const subHeading = data?.subHeading || "Od ponad 20 lat tworzymy konstrukcje ochronne spełniające wymogi MSWiA i Ustawy o Obronie Cywilnej."
   const stats: Stat[] =
     data?.stats || [
       { value: "20+", label: "Lat doświadczenia" },
@@ -57,79 +58,10 @@ export function About() {
       { value: "24/7", label: "Wsparcie techniczne" },
     ]
   const solutionsHeading = data?.solutionsHeading || "Nasze rozwiązania"
-  const solutionsSubHeading =
-    data?.solutionsSubHeading || [
-      {
-        _type: "block",
-        style: "normal",
-        children: [
-          {
-            _type: "span",
-            text: "Realizujemy projekty schronów i Doraźnych Miejsc Schronienia (DMS) w oparciu o wytyczne MSWiA. Nasze konstrukcje obejmują:",
-          },
-        ],
-      },
-    ]
-  const solutionsList =
-    data?.solutionsList || [
-      {
-        _type: "block",
-        style: "normal",
-        children: [{ _type: "span", text: "Schrony " }, { _type: "span", text: "żelbetowe monolityczne", marks: ["strong"] }],
-      },
-      {
-        _type: "block",
-        style: "normal",
-        children: [{ _type: "span", text: "Konstrukcje żelbetowe " }, { _type: "span", text: "wylewane „na mokro”", marks: ["strong"] }, { _type: "span", text: " na budowie" }],
-      },
-      {
-        _type: "block",
-        style: "normal",
-        children: [{ _type: "span", text: "Modułowe " }, { _type: "span", text: "prefabrykowane konstrukcje żelbetowe", marks: ["strong"] }, { _type: "span", text: " z kontrolą jakości produkcji" }],
-      },
-      {
-        _type: "block",
-        style: "normal",
-        children: [
-          { _type: "span", text: "Ukrycia z materiałów kompozytowych " },
-          { _type: "span", text: "GRP", marks: ["strong"] },
-          { _type: "span", text: ", " },
-          { _type: "span", text: "PEHD", marks: ["strong"] },
-          { _type: "span", text: ", rury i profile o przekrojach " },
-          { _type: "span", text: "okrągłych", marks: ["strong"] },
-          { _type: "span", text: " lub " },
-          { _type: "span", text: "prostokątnych", marks: ["strong"] },
-        ],
-      },
-      {
-        _type: "block",
-        style: "normal",
-        children: [
-          { _type: "span", text: "Systemy " },
-          { _type: "span", text: "wentylacji", marks: ["strong"] },
-          { _type: "span", text: ", " },
-          { _type: "span", text: "zasilania", marks: ["strong"] },
-          { _type: "span", text: " i " },
-          { _type: "span", text: "komunikacji awaryjnej", marks: ["strong"] },
-          { _type: "span", text: " zgodne z aktualnymi normami" },
-        ],
-      },
-    ]
+  const solutionsSubHeading = data?.solutionsSubHeading || "Realizujemy projekty schronów i Doraźnych Miejsc Schronienia (DMS) w oparciu o wytyczne MSWiA. Nasze konstrukcje obejmują:"
+  const solutionsList = data?.solutionsList || []
 
   const icons = [Award, Users, Clock]
-
-  function BlockContent({ blocks }: { blocks: any[] }) {
-    return (
-      <>
-        {blocks.map((block, i) => {
-          if (block._type === "block") {
-            return <p key={i}>{block.children.map((child: any) => child.text).join("")}</p>;
-          }
-          return null;
-        })}
-      </>
-    );
-  }
 
   return (
     <section id="o-nas" ref={sectionRef} className="py-24 md:py-32 bg-background">
@@ -182,14 +114,14 @@ export function About() {
             >
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{solutionsHeading}</h3>
               <div className="text-muted-foreground leading-relaxed mb-6">
-                <BlockContent blocks={[solutionsSubHeading]} />
+                {solutionsSubHeading}
               </div>
               <ul className="space-y-3">
                 {solutionsList.map((block, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
                     <span className="text-muted-foreground">
-                      <BlockContent blocks={[block]} />
+                      <PortableText value={[block]} />
                     </span>
                   </li>
                 ))}
