@@ -6,48 +6,76 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { sanityClient } from "@/lib/sanityClient"
+
+type ContactData = {
+  subHeading: string
+  Phone: string
+  Email: string
+  Address: string
+}
 
 export function Contact() {
+  const [contact, setContact] = useState<ContactData | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        if (entry.isIntersecting) setIsVisible(true)
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
+
+  useEffect(() => {
+    sanityClient
+      .fetch<ContactData>(`*[_type == "contact"][0]{
+        subHeading,
+        Phone,
+        Email,
+        Address
+      }`)
+      .then((data) => {
+        if (data) setContact(data)
+      })
+      .catch(() => {
+      })
+  }, [])
+
+  const fallbackContact: ContactData = {
+    subHeading: "Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.",
+    Phone: "+48 123 456 789",
+    Email: "office@fibersystem.eu",
+    Address: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
+  }
+
+  const currentContact = contact || fallbackContact
 
   const contactInfo = [
     {
       icon: Phone,
       label: "Telefon",
-      value: "+48 123 456 789",
-      href: "tel:+48123456789",
+      value: currentContact.Phone,
+      href: `tel:${currentContact.Phone.replace(/\s+/g, "")}`,
     },
     {
       icon: Mail,
       label: "Email",
-      value: "office@fibersystem.eu",
-      href: "mailto:office@fibersystem.eu",
+      value: currentContact.Email,
+      href: `mailto:${currentContact.Email}`,
     },
     {
       icon: MapPin,
       label: "Adres",
-      value: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
+      value: currentContact.Address,
       href: "#",
     },
   ]
+
 
   return (
     <section id="kontakt" ref={sectionRef} className="py-32 bg-muted/30">

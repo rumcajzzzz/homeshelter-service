@@ -1,8 +1,40 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import { sanityClient } from "@/lib/sanityClient"
+
+type FooterData = {
+  companyName: string
+  copyrightText: string
+  slogan: string
+}
 
 export function Footer() {
+  const [footer, setFooter] = useState<FooterData | null>(null)
   const currentYear = new Date().getFullYear()
+
+  useEffect(() => {
+    sanityClient.fetch<FooterData>(`
+      *[_type == "footer"][0]{
+        companyName,
+        copyrightText,
+        slogan
+      }
+    `)
+    .then((data) => setFooter(data))
+    .catch(() => {
+    })
+  }, [])
+
+  const fallbackFooter: FooterData = {
+    companyName: "FIBER SYSTEM",
+    copyrightText: "FIBER SYSTEM. Wszelkie prawa zastrzeżone.",
+    slogan: "Zaprojektowane z myślą o Twoim bezpieczeństwie",
+  }
+
+  const currentFooter = footer || fallbackFooter
 
   return (
     <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
@@ -25,7 +57,7 @@ export function Footer() {
                   />
                 </div>
               </a>
-                <span className="text-xl font-semibold tracking-tight">FIBER SYSTEM</span>
+                <span className="text-xl font-semibold tracking-tight">{currentFooter.companyName}</span>
               </div>
               <p className="text-primary-foreground/70 leading-relaxed max-w-md">
                 Profesjonalne projektowanie i budowa schronów domowych. Bezpieczeństwo i komfort dla Twojej rodziny.
@@ -68,9 +100,9 @@ export function Footer() {
           <div className="pt-8 border-t border-primary-foreground/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-primary-foreground/60">
-                © {currentYear} FIBER SYSTEM. Wszelkie prawa zastrzeżone.
+                © {currentYear} {currentFooter.copyrightText}
               </p>
-              <p className="text-sm text-primary-foreground/60">Zaprojektowane z myślą o Twoim bezpieczeństwie</p>
+              <p className="text-sm text-primary-foreground/60">{currentFooter.slogan}</p>
             </div>
             <Link href="https://rumcajzdev.netlify.app/" target="_blank">
               <div className="text-center flex flex-col items-center justify-center gap-3 mt-16">
