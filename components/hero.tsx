@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield } from "lucide-react"
 import { useEffect, useState } from "react"
+import Image from "next/image"
+
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -15,11 +17,16 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/front.jpeg"
           alt="Prefabrykowany schron żelbetowy"
+          width={1920}
+          height={1080}
+          priority
+          quality={85}
           className="w-full h-full object-cover opacity-30"
         />
+
         <div className="absolute inset-0 bg-linear-to-b from-primary/80 via-primary/70 to-primary" />
       </div>
 

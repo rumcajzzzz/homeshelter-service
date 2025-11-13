@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 export function Gallery() {
@@ -85,10 +86,16 @@ export function Gallery() {
                   transitionDelay: `${index * 100}ms`,
                 }}
               >
-                <img
+                <Image
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
+                  width={1200}
+                  height={1200}
+                  quality={80}
                   className="w-full h-full object-cover transition-transform duration-700 opacity-80 group-hover:scale-110"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/placeholder.svg"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/60 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">

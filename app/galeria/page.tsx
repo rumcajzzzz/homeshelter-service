@@ -16,7 +16,7 @@ export default function Gallery() {
   const [isVisible, setIsVisible] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("Wszystkie")
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -107,10 +107,11 @@ export default function Gallery() {
       
       <Navigation />
 
-      <section id="galeria" ref={sectionRef} className="py-32 bg-background">
+      <section id="galeria" className="py-32 bg-background">
         <div className="container px-6 lg:px-12 mx-auto">
           <div className="max-w-7xl mx-auto">
             <div
+              ref={sectionRef} 
               className={`text-center mb-12 transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
@@ -181,7 +182,7 @@ export default function Gallery() {
               src={filteredImages[lightboxIndex].src}
               alt={filteredImages[lightboxIndex].alt}
               className="max-h-full max-w-full rounded-lg shadow-lg"
-              onClick={(e) => e.stopPropagation()} // Kliknięcie na obraz nie zamyka lightboxa
+              onClick={(e) => e.stopPropagation()}
             />
             {/* Lewa strzałka */}
             <button
