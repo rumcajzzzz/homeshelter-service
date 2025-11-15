@@ -58,7 +58,11 @@ export function Gallery() {
   ]
 
   return (
-    <section id="galeria" ref={sectionRef} className="py-32 bg-background">
+    <section id="galeria" ref={sectionRef} className="py-32 bg-background"  style={{
+      backgroundImage: 'url(/fiber-background.jpg)',
+      backgroundColor: 'rgba(255,255,255,0.8)', // 10% w kierunku bieli
+      backgroundBlendMode: 'screen',            // rozjaśnia obraz
+    }}>
       <div className="container px-6 lg:px-12 mx-auto">
         <div className="max-w-7xl mx-auto">
           <div

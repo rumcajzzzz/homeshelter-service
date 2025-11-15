@@ -40,7 +40,7 @@ export function Contact() {
         Address
       }`)
       .then((data) => {
-        if (data) setContact(data)
+        if (data) setContact(data) 
       })
       .catch(() => {
       })

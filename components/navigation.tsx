@@ -76,7 +76,7 @@ export function Navigation() {
               </a>
             ))}
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a href="#kontakt">Skontaktuj się</a>
+              <a href={"/#kontakt"}>Skontaktuj się</a>
             </Button>
           </div>
 
@@ -109,7 +109,7 @@ export function Navigation() {
               </a>
             ))}
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
-              <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="/#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
                 Skontaktuj się
               </a>
             </Button>

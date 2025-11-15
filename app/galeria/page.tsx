@@ -31,20 +31,21 @@ export default function Gallery() {
 
   const images: ImageItem[] = [
     // --- Realizacje i budowa ---
-    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy schronu – prace fundamentowe", category: "Realizacje" },
-    { src: "/gallery2/budowa2.JPG", alt: "Zbrojenie konstrukcji schronu w trakcie budowy", category: "Realizacje" },
-    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
-    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
-    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjne przy budowie schronu", category: "Realizacje" },
-    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu schronu przy użyciu dźwigu", category: "Realizacje" },
+    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy – prace fundamentowe i podbudowa", category: "Realizacje" },
+    { src: "/gallery2/budowa2.JPG", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
+    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
+    { src: "/gallery2/d9acd4f7-2925-42d3-8450-2f8dae4c6232.jpeg", alt: "Prefabrykowany element umieszczony w zbrojeniu", category: "Realizacje" },
+    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjno-montażowe", category: "Realizacje" },
     { src: "/gallery2/schronmontaz.png", alt: "Wnętrze schronu w stanie surowym", category: "Realizacje" },
-    
+    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "Realizacje" },
+    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "Realizacje" },
+  
     // --- Schrony kompaktowe (2–4 osoby) ---
     { src: "/gallery2/schron2wejscie.jpeg", alt: "Wejście do schronu kompaktowego dla 2 osób", category: "Schrony kompaktowe" },
     { src: "/gallery2/schron2salon.jpeg", alt: "Wnętrze schronu kompaktowego – salon dla 2 osób", category: "Schrony kompaktowe" },
     { src: "/gallery2/schron2lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 2 osób", category: "Schrony kompaktowe" },
     { src: "/gallery2/schron4wejscie.jpeg", alt: "Wejście do schronu rodzinnego dla 4 osób", category: "Schrony kompaktowe" },
-    { src: "/gallery2/schron4lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 4 osób", category: "Schrony kompaktowe" },
+    // { src: "/gallery2/schron4lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 4 osób", category: "Schrony kompaktowe" },
     { src: "/gallery2/schron4widokzgory.jpeg", alt: "Schron kompaktowy dla 4 osób – widok z góry", category: "Schrony kompaktowe" },
   
     // --- Schrony żelbetowe i modułowe ---
@@ -53,18 +54,34 @@ export default function Gallery() {
     { src: "/gallery2/schron100sypialnia.jpeg", alt: "Sypialnia w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
     { src: "/gallery2/schron100magazyn.jpeg", alt: "Magazyn zapasów w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
     { src: "/gallery2/schron100lazienka.jpeg", alt: "Łazienka w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowyrzut.jpeg", alt: "Projekt schronu modułowego żelbetowego", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowysypialnia.jpeg", alt: "Sypialnia w schronie modułowym żelbetowym", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowysalonimagzyn.jpeg", alt: "Salon i magazyn w schronie modułowym żelbetowym", category: "Schrony żelbetowe" },
-  
+    { src: "/gallery2/schronmodulowyzelbetowyrzut.jpeg", alt: "Modułowy schron żelbetowy dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
+    { src: "/gallery2/schronmodulowyzelbetowysypialnia.jpeg", alt: "Sypialnia w schronie dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
+    { src: "/gallery2/schronmodulowyzelbetowysalonimagzyn.jpeg", alt: "Strefa dzienna i magazynowa w schronie dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
+    
+    
     // --- Systemy i urządzenia ---
-    { src: "/gallery2/drzwiwlazowe.JPG", alt: "Drzwi włazowe do schronu – widok z przodu", category: "Systemy i urządzenia" },
-    { src: "/gallery2/drzwiwlazowe2.JPG", alt: "Drzwi włazowe – wewnętrzny mechanizm zamknięcia", category: "Systemy i urządzenia" },
-    { src: "/gallery2/filtrowentyl.png", alt: "Schemat systemu filtrowentylacyjnego w schronie", category: "Systemy i urządzenia" },
-  
+    { src: "/gallery2/drzwiwlazowe.JPG", alt: "Drzwi frontowe – widok z wewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/drzwiwlazowe2.JPG", alt: "Drzwi frontowe – widok z boku z mechanizmem ryglowania", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_2609.jpg", alt: "System filtrowentylacji", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3566.jpg", alt: "Zespół filtrow do filtrowentylacji", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3564.jpg", alt: "System mocowań dla drzwi do schronu", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3563.jpg", alt: "Mechanizm drzwi wejściowych do schronu - widok z wewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3562.jpg", alt: "Drzwi do schronu - widok z wewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3561.jpg", alt: "Drzwi do schronu - widok z zewewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3560.jpg", alt: "Drzwi do schronu - widok z boku", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3559.jpg", alt: "Drzwi wejściowe gazoszcelne", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_3558.jpg", alt: "Drzwi wejściowe gazoszcelne - widok z wewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/df1de736-fb87-4690-9878-3c43580691e0.jpeg", alt: "Właz kanału ucieczkowego, szczelny - widok z zewnątrz", category: "Systemy i urządzenia" },
+    { src: "/gallery2/29a7e839-eecc-41d9-9fd7-b8b8ffbd916d.jpg", alt: "Włazy ucieczkowe ze schronu", category: "Systemy i urządzenia" },
+    { src: "/gallery2/33d65881-5541-4dee-918d-4fca513a0d3f.jpg", alt: "Właz ucieczkowy", category: "Systemy i urządzenia" },
+    { src: "/gallery2/4453d3fd-d7f3-45a3-871a-c60f51492692.jpg", alt: "Właz ucieczkowy", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_2621.jpg", alt: "Zawór ręczny", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_2619.jpg", alt: "Zawór nadciśnieniowy", category: "Systemy i urządzenia" },
+    { src: "/gallery2/IMG_2618.jpg", alt: "Zawór nadciśnieniowy", category: "Systemy i urządzenia" },
+
     // --- Konstrukcje żelbetowe ---
-    { src: "/gallery2/profilebudowa.png", alt: "Profil konstrukcyjny podczas budowy schronu", category: "Konstrukcje żelbetowe" },
-    { src: "/gallery2/profilramowy.png", alt: "Profil ramowy konstrukcji żelbetowej schronu", category: "Konstrukcje żelbetowe" },
+    { src: "/gallery2/profilebudowa.png", alt: "Profil konstrukcyjny na bazie okrągłych rur żelbetowych podczas budowy", category: "Konstrukcje żelbetowe" },
+    { src: "/gallery2/profilramowy.png", alt: "Profil ramowej konstrukcji żelbetowej podczas montażu", category: "Konstrukcje żelbetowe" },
   ];
   const categories = [
     "Wszystkie",

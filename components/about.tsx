@@ -64,7 +64,11 @@ export function About() {
   const icons = [Award, Users, Clock]
 
   return (
-    <section id="o-nas" ref={sectionRef} className="py-24 md:py-32 bg-background">
+    <section id="o-nas" ref={sectionRef} className="py-24 md:py-32 bg-background"  style={{
+      backgroundImage: 'url(/fiber-background.jpg)',
+      backgroundColor: 'rgba(255,255,255,0.9)',
+      backgroundBlendMode: 'screen',           
+    }}>
       <div className="container px-6 lg:px-12 mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
