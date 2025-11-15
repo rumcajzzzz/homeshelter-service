@@ -30,6 +30,15 @@ export default function Gallery() {
   }, [])
 
   const images: ImageItem[] = [
+    // --- Realizacje i budowa ---
+    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy schronu – prace fundamentowe", category: "Realizacje" },
+    { src: "/gallery2/budowa2.JPG", alt: "Zbrojenie konstrukcji schronu w trakcie budowy", category: "Realizacje" },
+    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
+    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
+    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjne przy budowie schronu", category: "Realizacje" },
+    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu schronu przy użyciu dźwigu", category: "Realizacje" },
+    { src: "/gallery2/schronmontaz.png", alt: "Wnętrze schronu w stanie surowym", category: "Realizacje" },
+    
     // --- Schrony kompaktowe (2–4 osoby) ---
     { src: "/gallery2/schron2wejscie.jpeg", alt: "Wejście do schronu kompaktowego dla 2 osób", category: "Schrony kompaktowe" },
     { src: "/gallery2/schron2salon.jpeg", alt: "Wnętrze schronu kompaktowego – salon dla 2 osób", category: "Schrony kompaktowe" },
@@ -56,17 +65,7 @@ export default function Gallery() {
     // --- Konstrukcje żelbetowe ---
     { src: "/gallery2/profilebudowa.png", alt: "Profil konstrukcyjny podczas budowy schronu", category: "Konstrukcje żelbetowe" },
     { src: "/gallery2/profilramowy.png", alt: "Profil ramowy konstrukcji żelbetowej schronu", category: "Konstrukcje żelbetowe" },
-  
-    // --- Realizacje i budowa ---
-    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy schronu – prace fundamentowe", category: "Realizacje" },
-    { src: "/gallery2/budowa2.JPG", alt: "Zbrojenie konstrukcji schronu w trakcie budowy", category: "Realizacje" },
-    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjne przy budowie schronu", category: "Realizacje" },
-    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu schronu przy użyciu dźwigu", category: "Realizacje" },
-    { src: "/gallery2/schronmontaz.png", alt: "Wnętrze schronu w stanie surowym", category: "Realizacje" },
-    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
-    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – kanał DN2400 mm, długość 20 m", category: "Realizacje" },
   ];
-  
   const categories = [
     "Wszystkie",
     "Schrony kompaktowe",
@@ -75,7 +74,6 @@ export default function Gallery() {
     "Konstrukcje żelbetowe",
     "Realizacje"
   ];
-
   const filteredImages =
     selectedCategory === "Wszystkie"
       ? images
@@ -143,31 +141,45 @@ export default function Gallery() {
 
             {/* Galeria */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`group relative overflow-hidden rounded-lg aspect-square cursor-pointer transition-all duration-1000 ${
-                    isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                  onClick={() => openLightbox(index)}
-                >
-                  <Image
-                    src={image.src || "/placeholder.svg"}
-                    alt={image.alt}
-                    width={800}
-                    height={800}
-                    quality={75}
-                    placeholder="blur"
-                    blurDataURL="/placeholder.svg"
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    {image.alt}
+              {filteredImages.map((image, index) => {
+                const isSpecialImage = image.src === "/gallery2/realizacja2.jpg"
+                
+                const containerClasses = `group relative overflow-hidden rounded-lg cursor-pointer transition-all duration-1000 ${
+                  isSpecialImage 
+                    ? "aspect-auto bg-orange-200 opacity-20"
+                    : "aspect-square"
+                } ${
+                  isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                }`
+              
+                const imageClasses = `w-full h-full ${
+                  isSpecialImage ? "object-contain" : "object-cover"
+                } transition-transform duration-700 group-hover:scale-105`
+
+                return (
+                  <div
+                    key={index}
+                    className={containerClasses}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                    onClick={() => openLightbox(index)}
+                  >
+                    <Image
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      width={800}
+                      height={isSpecialImage ? 500 : 800} 
+                      quality={75}
+                      placeholder="blur"
+                      blurDataURL="/placeholder.svg"
+                      loading="lazy"
+                      className={imageClasses}
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      {image.alt}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
