@@ -48,7 +48,7 @@ export function Contact() {
 
   const fallbackContact: ContactData = {
     subHeading: "Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.",
-    Phone: "+48 123 456 789",
+    Phone: "+48 576 210 845",
     Email: "office@fibersystem.eu",
     Address: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
   }
