@@ -34,7 +34,7 @@ export default function Gallery() {
     { src: "/gallery2/budowa1.jpg", alt: "Etap budowy – prace fundamentowe i podbudowa", category: "Realizacje" },
     { src: "/gallery2/budowa2.JPG", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
     { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
-    { src: "/gallery2/d9acd4f7-2925-42d3-8450-2f8dae4c6232.jpeg", alt: "Prefabrykowany element umieszczony w zbrojeniu", category: "Realizacje" },
+    { src: "/gallery2/d9acd4f7-2925-42d3-8450-2f8dae4c6232.jpeg", alt: "Montaż modułów prefabrykowanych", category: "Realizacje" },
     { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjno-montażowe", category: "Realizacje" },
     { src: "/gallery2/IMG_2994.jpeg", alt: "Wnętrze schronu w stanie surowym", category: "Realizacje" },
     { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "Realizacje" },
