@@ -1,15 +1,14 @@
+"use client"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { FileText, Users, Wrench, BookOpen, Download, Mail, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
-import { getPDPData } from "@/lib/getPDPdata"
-import { Catalog } from "@/components/catalog"
+import { Catalog, CatalogWrapper } from "@/components/catalog"
 
-export default function ProjektantPage() {
-
-  const katalog = getPDPData()
-
+export default async function ProjektantPage() {
+  
+  
 
   const supportAreas = [
     {
@@ -173,7 +172,7 @@ export default function ProjektantPage() {
               Przeglądaj <span className="font-bold">kategorie produktów</span>, szczegółowe <span className="font-bold">modele</span> oraz ich <span className="font-bold">warianty i podmodele</span>. 
               Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych w formatach <span className="font-bold">DWG</span> lub <span className="font-bold">RVT</span>, zapewniające pełną kompatybilność z profesjonalnym oprogramowaniem CAD/BIM.
             </p>
-            <Catalog data={katalog} />
+            <CatalogWrapper   />
           </div>
 
         </div>

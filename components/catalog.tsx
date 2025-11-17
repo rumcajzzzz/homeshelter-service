@@ -1,8 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronRight } from "lucide-react"
+import { getPDPData } from "@/lib/getPDPdata";
+import { motion } from "framer-motion"
 
+// -------------------- Typy --------------------
 interface Node {
   type: 'folder' | 'file';
   name: string;
@@ -10,10 +13,51 @@ interface Node {
   children?: Node[];
 }
 
-interface CatalogColumnsProps {
-  data: Node[];
+function Category({ node }: { node: Node }) {
+  if (node.type !== 'folder') return null;
+  return (
+    <div className="mb-8">
+      <h2 className="text-center text-2xl font-extrabold mb-4 text-orange-500">{node.name}</h2>
+      <div className="space-y-4 border-l-3 border-gray-700 pl-4">
+        {node.children?.map((model, i) => <Model key={i} node={model} />)}
+      </div>
+    </div>
+  )
+}
+// -------------------- Komponent wrapper --------------------
+export function CatalogWrapper() {
+  const [data, setData] = useState<Node[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      const nodes = await getPDPData();
+      setData(nodes);
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
+
+  if (loading)
+    return (
+<div className="flex flex-col items-center justify-center h-64">
+  <div className="w-12 h-12 border-4 border-t-orange-500 border-gray-300 rounded-full animate-spin"></div>
+  <p className="mt-4 text-gray-500">Ładowanie katalogu...</p>
+</div>
+    );
+    return (
+      <motion.div
+          key="catalog"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <Catalog data={data} />
+        </motion.div>
+    );
 }
 
+// -------------------- Twój aktualny komponent Catalog --------------------
 const modelDescriptions: Record<string, string> = {
   "AFU": "Jednostka filtrująca powietrze",
   "ARC": "System filtrowentylacji schronu",
@@ -26,7 +70,7 @@ const modelDescriptions: Record<string, string> = {
   "SU-IV": "Właz szczelny, odporny na eksplozje"
 };
 
-export function Catalog({ data }: CatalogColumnsProps) {
+export function Catalog({ data }: { data: Node[] }) {
   const half = Math.ceil(data.length / 2)
   const firstCol = data.slice(0, half)
   const secondCol = data.slice(half)
@@ -39,18 +83,6 @@ export function Catalog({ data }: CatalogColumnsProps) {
   )
 }
 
-function Category({ node }: { node: Node }) {
-  if (node.type !== 'folder') return null
-
-  return (
-    <div className="mb-8">
-      <h2 className="text-center text-2xl font-extrabold mb-4 text-orange-500">{node.name}</h2>
-      <div className="space-y-4 border-l-3 border-gray-700 pl-4">
-        {node.children?.map((model, i) => <Model key={i} node={model} />)}
-      </div>
-    </div>
-  )
-}
 
 function Model({ node }: { node: Node }) {
   if (node.type !== 'folder') return null

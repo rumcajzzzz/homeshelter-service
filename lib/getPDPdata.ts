@@ -1,33 +1,13 @@
-import fs from "fs"
-import path from "path"
-
-export function getPDPData() {
-  const root = path.join(process.cwd(), "public", "files", "projektant-pdp")
-
-  function readDirRecursive(dirPath: string): any {
-    const entries = fs.readdirSync(dirPath, { withFileTypes: true })
-
-    return entries.map((entry) => {
-      const fullPath = path.join(dirPath, entry.name)
-
-      if (entry.isDirectory()) {
-        return {
-          type: "folder",
-          name: entry.name,
-          children: readDirRecursive(fullPath),
-        }
-      }
-
-      return {
-        type: "file",
-        name: entry.name,
-        url: fullPath
-          .split("public")
-          .pop()
-          ?.replace(/\\/g, "/"),
-      }
-    })
+export async function getPDPData() {
+	try {
+	  const res = await fetch('/api/pdp-files');
+	  if (!res.ok) throw new Error('Błąd pobierania danych');
+  
+	  const data = await res.json();
+	  return data; 
+	} catch (err) {
+	  console.error('getPDPData error:', err);
+	  return [];
+	}
   }
-
-  return readDirRecursive(root)
-}
+  
