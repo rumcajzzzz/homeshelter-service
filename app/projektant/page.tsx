@@ -116,7 +116,11 @@ export default function ProjektantPage() {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-20 px-6 lg:px-12" style={{
+        backgroundImage: 'url(/fiber-background.jpg)',
+        backgroundColor: 'rgba(255,255,255,0.85)', // 10% w kierunku bieli
+        backgroundBlendMode: 'screen',            // rozjaśnia obraz
+      }}>
         <div className="container mx-auto max-w-6xl">
 
           <div className="text-center mb-12">
@@ -246,7 +250,11 @@ export default function ProjektantPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-20 px-6 lg:px-12"style={{
+        backgroundImage: 'url(/fiber-background2.jpg)',
+        backgroundColor: 'rgba(255,255,255,0.9)', // 10% w kierunku bieli
+        backgroundBlendMode: 'screen',            // rozjaśnia obraz
+      }}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Potrzebujesz wsparcia projektowego?
