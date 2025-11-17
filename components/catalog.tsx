@@ -74,7 +74,7 @@ export function Catalog({ data }: { data: Node[] }) {
   const secondCol = data.slice(half)
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
       <div>{firstCol.map((node, i) => <Category key={i} node={node} />)}</div>
       <div>{secondCol.map((node, i) => <Category key={i} node={node} />)}</div>
     </div>
@@ -92,19 +92,29 @@ function Model({ node }: { node: Node }) {
   const groupedFiles = groupFilesBySize(files)
 
   return (
-    <div className="ml-6 mb-6 border-gray-700 pl-4">
-      <div
-  className={`flex items-center gap-2 cursor-pointer mb-2 p-2 rounded-md transition-all duration-300 hover:bg-gray-100 hover:shadow-sm ${open ? "bg-gray-200!" : ""}`}
-  onClick={() => setOpen(!open)}
->
-  <ChevronRight
-    className={`w-4 h-4 text-gray-400 transform transition-transform duration-200 ${open ? 'rotate-90 text-orange-500' : 'rotate-0'}`}
-  />
-  <h3 className="text-xl font-semibold text-black">{node.name}</h3>
+    <div className="ml-2 mb-6 border-gray-700">
+      <div className={`flex items-center gap-2  cursor-pointer mb-2 p-2 rounded-md transition-all duration-300 hover:bg-gray-100 hover:shadow-sm ${open ? "bg-gray-200!" : ""}`}
+        onClick={() => setOpen(!open)}
+       >
+        <ChevronRight
+          className={`w-4 h-4 text-gray-400 transform transition-transform duration-200 ${open ? 'rotate-90 text-orange-500' : 'rotate-0'}`}
+        />
+       {/* Lewa część – nagłówek */}
+  <div className="w-1/3">
+    <h3 className="text-lg sm:text-xl font-semibold text-black whitespace-nowrap">
+      {node.name}
+    </h3>
+  </div>
+
+  {/* Prawa część – opis */}
   {modelDescriptions[node.name] && (
-    <p className="text-xs text-muted-foreground mt-1 ml-2 mx-2">- {modelDescriptions[node.name]}</p>
+    <div className="w-2/3 text-left">
+      <p className="text-[9px] md:text-xs text-muted-foreground ml-2">
+        - {modelDescriptions[node.name]}
+      </p>
+    </div>
   )}
-</div>
+      </div>
       
       {open && (
         <>
@@ -147,7 +157,7 @@ function SubModel({ node }: { node: Node }) {
                 key={i}
                 href={file.url}
                 download
-                className="w-16 px-3 py-1 rounded-md bg-accent text-center text-accent-foreground text-xs font-medium hover:bg-accent/90 transition"
+                className="w-8 md:w-16 p-0.5 md:px-3 rounded-md bg-accent text-center text-accent-foreground  text-[10px] md:text-xs font-medium hover:bg-accent/90 transition"
               >
                 {typeLabel}
               </a>

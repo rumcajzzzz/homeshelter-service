@@ -156,10 +156,10 @@ export default async function ProjektantPage() {
           </div>
           
           <div className="container mx-auto max-w-6xl p-10 my-10 flex flex-col justify-center bg-card rounded-2xl shadow-lg">
-            <h1 className="text-center text-3xl md:text-4xl font-bold mb-8 text-foreground">
+            <h1 className="text-center text-3xl md:text-4xl font-bold mb-8 text-foreground ">
               Katalog projektanta
             </h1>
-            <p className="text-center text-muted-foreground mb-6 max-w-3xl mx-auto">
+            <p className="text-xs md:text-base text-center text-muted-foreground mb-6 max-w-3xl mx-auto">
               Przeglądaj <span className="font-bold">kategorie produktów</span>, szczegółowe <span className="font-bold">modele</span> oraz ich <span className="font-bold">warianty i podmodele</span>. 
               Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych w formatach <span className="font-bold">DWG</span> lub <span className="font-bold">RVT</span>, zapewniające pełną kompatybilność z profesjonalnym oprogramowaniem CAD/BIM.
             </p>
