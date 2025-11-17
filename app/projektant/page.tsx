@@ -3,8 +3,13 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { FileText, Users, Wrench, BookOpen, Download, Mail, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
+import { getPDPData } from "@/lib/getPDPdata"
+import { Catalog } from "@/components/catalog"
 
 export default function ProjektantPage() {
+
+  const katalog = getPDPData()
+
 
   const supportAreas = [
     {
@@ -113,6 +118,7 @@ export default function ProjektantPage() {
       {/* Resources Section */}
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-6xl">
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Materiały dla projektantów
@@ -123,7 +129,6 @@ export default function ProjektantPage() {
                 Wszystkie dokumenty są aktualne i dostosowane do obowiązujących norm MSWiA
               </span>
             </p>
-
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -155,6 +160,18 @@ export default function ProjektantPage() {
               </div>
             ))}
           </div>
+          
+          <div className="container mx-auto max-w-6xl p-10 my-10 flex flex-col justify-center bg-card rounded-2xl shadow-lg">
+            <h1 className="text-center text-3xl md:text-4xl font-bold mb-8 text-foreground">
+              Katalog projektanta
+            </h1>
+            <p className="text-center text-muted-foreground mb-6 max-w-3xl mx-auto">
+              Przeglądaj <span className="font-bold">kategorie produktów</span>, szczegółowe <span className="font-bold">modele</span> oraz ich <span className="font-bold">warianty i podmodele</span>. 
+              Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych w formatach <span className="font-bold">DWG</span> lub <span className="font-bold">RVT</span>, zapewniające pełną kompatybilność z profesjonalnym oprogramowaniem CAD/BIM.
+            </p>
+            <Catalog data={katalog} />
+          </div>
+
         </div>
       </section>
 
