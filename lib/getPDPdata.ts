@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 
 export function getPDPData() {
-  const root = path.join(process.cwd(), "public", "projektant-pdp")
+  const root = path.join(process.cwd(), "public", "files", "projektant-pdp")
 
   function readDirRecursive(dirPath: string): any {
     const entries = fs.readdirSync(dirPath, { withFileTypes: true })

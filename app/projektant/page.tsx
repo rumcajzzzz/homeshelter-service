@@ -118,8 +118,8 @@ export default function ProjektantPage() {
       {/* Resources Section */}
       <section className="py-20 px-6 lg:px-12" style={{
         backgroundImage: 'url(/fiber-background.jpg)',
-        backgroundColor: 'rgba(255,255,255,0.85)', // 10% w kierunku bieli
-        backgroundBlendMode: 'screen',            // rozjaśnia obraz
+        backgroundColor: 'rgba(255,255,255,0.85)',
+        backgroundBlendMode: 'screen',            
       }}>
         <div className="container mx-auto max-w-6xl">
 
@@ -252,8 +252,8 @@ export default function ProjektantPage() {
       {/* CTA Section */}
       <section className="py-20 px-6 lg:px-12"style={{
         backgroundImage: 'url(/fiber-background2.jpg)',
-        backgroundColor: 'rgba(255,255,255,0.9)', // 10% w kierunku bieli
-        backgroundBlendMode: 'screen',            // rozjaśnia obraz
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        backgroundBlendMode: 'screen',           
       }}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
