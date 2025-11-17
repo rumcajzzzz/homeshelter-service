@@ -7,8 +7,6 @@ import Link from "next/link"
 import { Catalog, CatalogWrapper } from "@/components/catalog"
 
 export default async function ProjektantPage() {
-  
-  
 
   const supportAreas = [
     {
@@ -140,18 +138,11 @@ export default async function ProjektantPage() {
                 key={index}
                 className="p-6 bg-card rounded-lg border border-border hover:border-accent transition-colors flex flex-col items-center text-center"
               >
-                {/* Ikona */}
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                   <Download className="w-6 h-6 text-accent" />
                 </div>
-
-                {/* Tytuł */}
                 <h3 className="text-lg font-semibold text-foreground mb-2">{resource.title}</h3>
-
-                {/* Opis */}
                 <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
-
-                {/* Przycisk pobrania */}
                 <a
                   href={`./pdf/${resource.title === "Ustawa o Obronie Cywilnej" ? "UOC.pdf" : "RMSWiAIU.pdf"}`}
                   download

@@ -5,7 +5,6 @@ import { ChevronRight } from "lucide-react"
 import { getPDPData } from "@/lib/getPDPdata";
 import { motion } from "framer-motion"
 
-// -------------------- Typy --------------------
 interface Node {
   type: 'folder' | 'file';
   name: string;
@@ -24,7 +23,7 @@ function Category({ node }: { node: Node }) {
     </div>
   )
 }
-// -------------------- Komponent wrapper --------------------
+
 export function CatalogWrapper() {
   const [data, setData] = useState<Node[]>([]);
   const [loading, setLoading] = useState(true);
@@ -57,7 +56,6 @@ export function CatalogWrapper() {
     );
 }
 
-// -------------------- Twój aktualny komponent Catalog --------------------
 const modelDescriptions: Record<string, string> = {
   "AFU": "Jednostka filtrująca powietrze",
   "ARC": "System filtrowentylacji schronu",
