@@ -14,6 +14,18 @@ interface CatalogColumnsProps {
   data: Node[];
 }
 
+const modelDescriptions: Record<string, string> = {
+  "AFU": "Jednostka filtrująca powietrze",
+  "ARC": "System filtrowentylacji schronu",
+  "BVNC": "Zawory przeciwwybuchowe standardowe",
+  "BVNO": "Zawory przeciwwybuchowe wzmocnione",
+  "SAFE360": "System bezpiecznej filtracji CBRN",
+  "DU-I": "Drzwi gazoszczelne, odporne wybuchy",
+  "DU-III": "Drzwi zawiasowe przeciwwybuchowe",
+  "DU-IV": "Drzwi wytrzymałe mechanicznie",
+  "SU-IV": "Właz szczelny, odporny na eksplozje"
+};
+
 export function Catalog({ data }: CatalogColumnsProps) {
   const half = Math.ceil(data.length / 2)
   const firstCol = data.slice(0, half)
@@ -52,14 +64,17 @@ function Model({ node }: { node: Node }) {
   return (
     <div className="ml-6 mb-6 border-gray-700 pl-4">
       <div
-        className="flex items-center gap-2 cursor-pointer mb-2"
-        onClick={() => setOpen(!open)}
-      >
-        <ChevronRight
-          className={`w-4 h-4 text-gray-400 transform transition-transform duration-200 ${open ? 'rotate-90' : 'rotate-0'}`}
-        />
-        <h3 className="text-xl font-semibold text-black">{node.name}</h3>
-      </div>
+  className={`flex items-center gap-2 cursor-pointer mb-2 p-2 rounded-md transition-all duration-300 hover:bg-gray-100 hover:shadow-sm ${open ? "bg-gray-200!" : ""}`}
+  onClick={() => setOpen(!open)}
+>
+  <ChevronRight
+    className={`w-4 h-4 text-gray-400 transform transition-transform duration-200 ${open ? 'rotate-90 text-orange-500' : 'rotate-0'}`}
+  />
+  <h3 className="text-xl font-semibold text-black">{node.name}</h3>
+  {modelDescriptions[node.name] && (
+    <p className="text-xs text-muted-foreground mt-1 ml-2 mx-2">- {modelDescriptions[node.name]}</p>
+  )}
+</div>
       
       {open && (
         <>
