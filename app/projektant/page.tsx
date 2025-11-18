@@ -4,10 +4,10 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { FileText, Users, Wrench, BookOpen, Download, Mail, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
-import { Catalog, CatalogWrapper } from "@/components/catalog"
+import { CatalogWrapper } from "@/components/catalog"
+import { PartnerForm } from "@/components/designerForm"
 
 export default async function ProjektantPage() {
-
   const supportAreas = [
     {
       icon: FileText,
@@ -193,47 +193,12 @@ export default async function ProjektantPage() {
             <div className="bg-background rounded-lg border border-border p-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">Zostań partnerem</h3>
               <p className="text-muted-foreground mb-6">
-                Wypełnij formularz, a nasz zespół skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły
+                Wypełnij formularz, a nasz zespół skontaktuje się z Tobą, aby omówić szczegóły
                 współpracy.
               </p>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Imię i nazwisko</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="Jan Kowalski"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="jan.kowalski@gmail.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Firma / Studio</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="Nazwa firmy"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Wiadomość</label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent resize-none"
-                    placeholder="Opisz swoje potrzeby..."
-                  />
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Wyślij zapytanie
-                </Button>
-              </form>
+
+              <PartnerForm />
+
             </div>
           </div>
         </div>

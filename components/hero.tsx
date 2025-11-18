@@ -40,7 +40,7 @@ export function Hero() {
     heading1: "Schrony i ukrycia",
     heading2: "nowej generacji",
     subHeading1: "Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.",
-    subHeading2: "Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych.",
+    subHeading2: "Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych oraz rur.",
     buttonContact: "Skontaktuj się z nami",
     buttonOffer: "Zobacz ofertę",
     infoTile: "Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności",
