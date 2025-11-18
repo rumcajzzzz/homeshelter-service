@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: `"Strona Homeshelter" <${process.env.MAIL_USER}>`,
+      from: `"Strona Domoweschrony" <${process.env.MAIL_USER}>`,
       to: process.env.MAIL_TO,
       subject: `Nowa wiadomość ze strony od: ${name}`,
       text: `

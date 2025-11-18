@@ -10,8 +10,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "SafeHaven - Profesjonalne Schrony Domowe",
-  description: "Projektujemy i budujemy najwyższej jakości schrony domowe.",
+  title: "FIBER SYSTEM Polska",
+  description: "Bezpieczne, nowoczesne schrony i ukrycia zgodne z normami MSWiA.",
   icons: {
     icon: "/shelter.ico",              
     shortcut: "/shelter.ico",        
