@@ -104,7 +104,7 @@ export function Footer() {
               </p>
               <p className="text-sm text-primary-foreground/60">{currentFooter.slogan}</p>
             </div>
-            <Link href="https://rumcajzdev.netlify.app/" target="_blank">
+            <Link href="https://rumcajzdev.pl/" target="_blank">
               <div className="text-center flex flex-col items-center justify-center gap-3 mt-16">
                 <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
                   <img
