@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Target } from "lucide-react"
 import { sanityClient } from "@/lib/sanityClient"
 import ContactForm from "./contactForm"
+import Link from "next/link"
 
 type ContactData = {
   subHeading: string
@@ -72,7 +73,7 @@ export function Contact() {
       icon: MapPin,
       label: "Adres",
       value: currentContact.Address,
-      href: "#",
+      href: "https://maps.app.goo.gl/Y1wsRfAZ9pEtcQjKA",
     },
   ]
 
@@ -105,15 +106,21 @@ export function Contact() {
                   transitionDelay: `${index * 150}ms`,
                 }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
-                    <info.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">{info.label}</h3>
-                  <a href={info.href} className="text-foreground font-medium hover:text-accent transition-colors">
-                    {info.value}
-                  </a>
-                </CardContent>
+                <Link   href={info.href}
+                        target={info.label === "Adres" ? "_blank" : undefined}
+                        rel={info.label === "Adres" ? "noopener noreferrer" : undefined}
+                        className="block"
+                 >
+                  <CardContent className="p-6 text-center" >
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
+                      <info.icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2">{info.label}</h3>
+                    <a className="text-foreground font-medium hover:text-accent transition-colors">
+                      {info.value}
+                    </a>
+                  </CardContent>
+                </Link>
               </Card>
             ))}
           </div>
