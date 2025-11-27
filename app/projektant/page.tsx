@@ -39,16 +39,25 @@ export default async function ProjektantPage() {
     {
       title: "Ustawa o Obronie Cywilnej",
       description: "Aktualne przepisy i wymagania dotyczące budownictwa ochronnego",
+      file: "UOC.pdf",
       type: "PDF",
-      size: "2 MB",
+      size: "0,7 MB",
     },
     {
-      title: "Rozporządzenie MSWiA dotyczące ukryć",
-      description: "Wytyczne dotyczące warunków, jakie muszą spełniać Doraźne Miejsca Schronienia (DMS)",
+      title: "Rozporządzenie MSWiA – 4.11.2025",
+      description: "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania",
+      file: "RMSWiAIU_2025_11.pdf",
       type: "PDF",
-      size: "1,5 MB",
+      size: "3 MB",
     },
-  ]
+    {
+      title: "Rozporządzenie MSWiA – 1.07.2025",
+      description: "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji",
+      file: "RMSWiAIU_2025_07.pdf",
+      type: "PDF",
+      size: "0,2 MB",
+    }
+  ];
 
   const benefits = [
     "Dostęp do certyfikowanych rozwiązań konstrukcyjnych i instalacyjnych",
@@ -132,7 +141,7 @@ export default async function ProjektantPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {resources.map((resource, index) => (
               <div
                 key={index}
@@ -143,14 +152,14 @@ export default async function ProjektantPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{resource.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
-                <a
-                  href={`./pdf/${resource.title === "Ustawa o Obronie Cywilnej" ? "UOC.pdf" : "RMSWiAIU.pdf"}`}
-                  download
-                  className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Pobierz PDF
-                </a>
+                  <a
+                    href={`./pdf/${resource.file}`}
+                    download
+                    className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+                   >
+                    <Download className="w-4 h-4 mr-2" />
+                    Pobierz PDF
+                  </a>
               </div>
             ))}
           </div>

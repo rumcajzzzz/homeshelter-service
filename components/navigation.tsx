@@ -70,7 +70,7 @@ export function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-background hover:text-background/60 transition-colors"
+                className="text-sm font-medium text-muted-background hover:opacity-50 transition-opacity"
               >
                 {link.label}
               </a>
