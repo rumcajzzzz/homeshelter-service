@@ -44,19 +44,19 @@ export default async function ProjektantPage() {
       size: "0,7 MB",
     },
     {
-      title: "Rozporządzenie MSWiA – 4.11.2025",
-      description: "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania",
-      file: "RMSWiAIU_2025_11.pdf",
-      type: "PDF",
-      size: "3 MB",
-    },
-    {
       title: "Rozporządzenie MSWiA – 1.07.2025",
       description: "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji",
       file: "RMSWiAIU_2025_07.pdf",
       type: "PDF",
       size: "0,2 MB",
-    }
+    },
+    {
+      title: "Rozporządzenie MSWiA – 13.11.2025",
+      description: "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania",
+      file: "RMSWiAIU_2025_11.pdf",
+      type: "PDF",
+      size: "3 MB",
+    },
   ];
 
   const benefits = [
