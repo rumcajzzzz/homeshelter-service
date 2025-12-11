@@ -20,7 +20,7 @@ export function VirtualTour() {
     },
     bunker3: {
       name: "Schron Modułowy",
-      src: "https://evryplace.com/p/incnhy",
+      src: "https://evryplace.com/p/uusici",
     },
   }
 
