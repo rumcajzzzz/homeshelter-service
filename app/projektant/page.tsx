@@ -7,7 +7,7 @@ import Link from "next/link"
 import { CatalogWrapper } from "@/components/catalog"
 import { PartnerForm } from "@/components/designerForm"
 
-export default async function ProjektantPage() {
+export default function ProjektantPage() {
   const supportAreas = [
     {
       icon: FileText,
