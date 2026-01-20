@@ -44,7 +44,7 @@ export default function ProjektantPage() {
       size: "0,7 MB",
     },
     {
-      title: "Rozporządzenie MSWiA – 1.07.2025",
+      title: "Rozporządzenie MSWiA – 14.07.2025",
       description: "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji",
       file: "RMSWiAIU_2025_07.pdf",
       type: "PDF",
