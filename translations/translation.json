@@ -1,0 +1,1005 @@
+{
+	"PL": {
+	  "navigation": {
+		"about": "O nas",
+		"offer": "Oferta",
+		"investors": "Dla inwestorów",
+		"designers": "Dla projektantów",
+		"gallery": "Galeria",
+		"virtualTour": "Spacer Wirtualny",
+		"contact": "Skontaktuj się",
+		"faq": "FAQ",
+		"blog": "Aktualności",
+		"careers": "Kariera"
+	  },
+	  "hero": {
+		"infoTile": "Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności",
+		"heading1": "Schrony i ukrycia",
+		"heading2": "nowej generacji",
+		"subHeading1": "Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.",
+		"subHeading2": "Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych oraz rur.",
+		"buttonContact": "Skontaktuj się z nami",
+		"buttonOffer": "Zobacz ofertę"
+	  },
+	  "about": {
+		"heading": "Nowoczesne schrony i ukrycia zgodne z wytycznymi MSWiA",
+		"subHeading": "Od ponad 20 lat tworzymy konstrukcje ochronne spełniające wymogi MSWiA i Ustawy o Obronie Cywilnej.",
+		"stats": [
+		  { "value": "20+", "label": "Lat doświadczenia" },
+		  { "value": "200+", "label": "Zrealizowanych projektów" },
+		  { "value": "24/7", "label": "Wsparcie techniczne" }
+		],
+		"solutionsHeading": "Nasze rozwiązania",
+		"solutionsSubHeading": "Realizujemy projekty schronów i Doraźnych Miejsc Schronienia (DMS) w oparciu o wytyczne MSWiA. Nasze konstrukcje obejmują:",
+		"solutionsList": [
+		  "Schrony modułowe z gotowych elementów żelbetowych",
+		  "Ukrycia doraźne (DMS) dostosowane do indywidualnych potrzeb",
+		  "Kompletny montaż oraz instalacje wentylacyjne i filtrowentylacyjne"
+		]
+	  },
+	  "offerings": {
+		"heading": "Nasza oferta",
+		"subHeading": "Realizujemy obiekty ochronne zgodne z Ustawą o Obronie Cywilnej oraz wytycznymi MSWiA. Nasza oferta obejmuje zarówno schrony żelbetowe, jak i Doraźne Miejsca Schronienia (DMS) wykonane z materiałów kompozytowych.",
+		"cards": [
+		  {
+			"title": "Doraźne Miejsca Schronienia (DMS)",
+			"description": "Konstrukcje przeznaczone do szybkiego wdrożenia w warunkach zagrożenia. Wykonywane z materiałów kompozytowych (GRP, PEHD, żelbet prefabrykowany), zgodne z wytycznymi MSWiA.",
+			"features": [
+			  "Elastyczne w montażu i adaptacji",
+			  "Dopuszczone materiały: GRP, PEHD, żelbet",
+			  "Dla obiektów cywilnych i użyteczności publicznej"
+			]
+		  },
+		  {
+			"title": "Schrony żelbetowe prefabrykowane",
+			"description": "Modułowe konstrukcje wytwarzane w warCzas fabrycznych z pełną kontrolą jakości. Dostarczane gotowe do montażu, gwarantujące szczelność i wytrzymałość konstrukcji.",
+			"features": [
+			  "Badane pod kątem szczelności i wytrzymałości",
+			  "Szybki montaż na placu budowy",
+			  "Pełna zgodność z normami MSWiA"
+			]
+		  },
+		  {
+			"title": "Schrony żelbetowe wylewane na mokro",
+			"description": "Tradycyjna technologia wznoszenia schronów wylewanych bezpośrednio na miejscu inwestycji. Zapewnia maksymalną trwałość i dopasowanie do warunków terenowych.",
+			"features": [
+			  "Realizacja zgodna z projektem indywidualnym",
+			  "Technologia monolityczna żelbetowa",
+			  "Dla instytucji, firm i obiektów strategicznych"
+			]
+		  },
+		  {
+			"title": "Modernizacja i adaptacja obiektów",
+			"description": "Przeprowadzamy audyty techniczne, modernizacje i adaptacje istniejących schronów oraz przestrzeni mogących pełnić funkcję DMS.",
+			"features": [
+			  "Audyt konstrukcyjny i systemowy",
+			  "Modernizacja systemów wentylacji i zasilania",
+			  "Adaptacja do obowiązujących norm MSWiA"
+			]
+		  }
+		]
+	  },
+	  "gallery": {
+		"heading": "Galeria realizacji",
+		"subHeading": "Zobacz przykłady naszych projektów. Każdy schron jest unikalny i dostosowany do indywidualnych potrzeb klienta.",
+		"footerText": "To tylko część naszych realizacji. Chcesz zobaczyć pełną galerię?",
+		"button": "Zobacz więcej",
+		"catAll": "Wszystkie",
+		"catCompact": "Schrony kompaktowe",
+		"catConcrete": "Schrony żelbetowe",
+		"catSystems": "Systemy i urządzenia",
+		"catConstructions": "Konstrukcje żelbetowe",
+		"catRealizations": "Realizacje",
+		"images": [
+		  { "alt": "Łazienka w schronie premium" },
+		  { "alt": "Wnętrze schronu kompaktowego" },
+		  { "alt": "Profile ramowe" },
+		  { "alt": "Schron kompaktowy - wejście" },
+		  { "alt": "Toaleta w schronie premium" },
+		  { "alt": "Schron specjalistyczny - magazyn zapasów" }
+		]
+	  },
+	  "virtualTour": {
+		"heading": "Przejdź się z nami po schronie",
+		"subHeading": "Odkryj nasze projekty schronów w 3D. Obracaj, przybliżaj i zwiedzaj każdy szczegół bezpośrednio w przeglądarce.",
+		"tours": {
+		  "bunker1": "Schron L = 6m",
+		  "bunker2": "Schron L = 11,5m",
+		  "bunker3": "Schron Modułowy"
+		}
+	  },
+	  "faq": {
+		"heading": "Najczęściej zadawane pytania",
+		"subHeading": "Znajdź odpowiedzi na najważniejsze pytania dotyczące budowy, formalności i technologii schronów."
+	  },
+	  "blog": {
+		"heading": "Aktualności i wiedza",
+		"subHeading": "Sprawdź najnowsze artykuły, porady eksperckie oraz informacje o normach prawnych i technicznych."
+	  },
+	  "careers": {
+		"heading": "Kariera",
+		"subHeading": "Dołącz do naszego zespołu ekspertów i twórz nowoczesne systemy bezpieczeństwa razem z nami."
+	  },
+	  "contact": {
+		"heading": "Skontaktuj się z nami",
+		"subHeading": "Chętnie odpowiemy na wszystkie pytania dotyczące naszych schronów i rozwiązań ochronnych.",
+		"phoneLabel": "Telefon",
+		"emailLabel": "E-mail",
+		"addressLabel": "Adres",
+		"form": {
+		  "nameLabel": "Imię i nazwisko",
+		  "namePlaceholder": "np. Jan Kowalski",
+		  "emailLabel": "Adres e-mail",
+		  "emailPlaceholder": "jan.kowalski@example.com",
+		  "phoneLabel": "Numer telefonu",
+		  "phonePlaceholder": "+48 123 456 789",
+		  "companyLabel": "Firma (opcjonalnie)",
+		  "companyPlaceholder": "Nazwa Twojej firmy",
+		  "messageLabel": "Wiadomość",
+		  "messagePlaceholder": "Opisz swoje zapotrzebowanie...",
+		  "rodoAccept": "Akceptuję",
+		  "rodoModalTitle": "Politykę prywatności i RODO",
+		  "rodoText": "oraz wyrażam zgodę na przetwarzanie moich danych osobowych.",
+		  "rodoError": "Musisz zaakceptować politykę prywatności RODO przed wysłaniem formularza.",
+		  "rodoModalContent": "Klauzula informacyjna RODO (art. 13 ust. 1 i 2 RODO)\n\nZgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych – RODO) informujemy, że:\n\n1. Administratorem Pani/Pana danych osobowych jest spółka „Fiber System Polska sp. z o.o.” z siedzibą w Warszawie (01-042), ul. Okopowa 59A/97.\n2. W sprawach związanych z ochroną danych osobowych mogą Państwo kontaktować się z nami pod adresem e-mail: office@fibersystem.eu.\n3. Pani/Pana dane osobowe będą przetwarzane w celu:\n   - realizacji umów i świadczenia usług doradczych oraz technicznych (art. 6 ust. 1 lit. b RODO),\n   - bieżącego kontaktu telefonicznego, mailowego lub bezpośredniego (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes administratora),\n   - prowadzenia działań marketingowych, wysyłki informacji handlowych i newsletterów (art. 6 ust. 1 lit. a RODO – zgoda),\n   - celów analitycznych, statystycznych oraz archiwalnych (art. 6 ust. 1 lit. f RODO).\n4. Odbiorcami Państwa danych osobowych będą wyłącznie podmioty uprawnione do uzyskania danych osobowych na podstawie przepisów prawa oraz podmioty przetwarzające dane na zlecenie Administratora (np. dostawcy usług IT, podmioty świadczące usługi księgowe i prawne).\n5. Pani/Pana dane osobowe będą przechowywane przez okres niezbędny do realizacji celów, a po tym czasie przez okres 5 lat lub do momentu przedawnienia ewentualnych roszczeń albo wycofania zgody.\n6. Posiada Pani/Pan prawo do:\n   - dostępu do treści swoich danych oraz ich sprostowania,\n   - usunięcia danych („prawo do bycia zapomnianym”) lub ograniczenia ich przetwarzania,\n   - wniesienia sprzeciwu wobec przetwarzania danych,\n   - przenoszenia danych,\n   - cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem.\n7. Ma Pani/Pan prawo wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych (PUODO), gdy uzna Pani/Pan, iż przetwarzanie danych osobowych narusza przepisy RODO.\n8. Podanie danych osobowych jest dobrowolne, jednakże niezbędne do nawiązania kontaktu, odpowiedzi na zapytanie lub zawarcia i realizacji umowy.",
+		  "submitButton": "Wyślij wiadomość",
+		  "sendingButton": "Wysyłanie...",
+		  "successMessage": "Wiadomość została wysłana pomyślnie!",
+		  "close": "Zamknij"
+		}
+	  },
+	  "footer": {
+		"companyName": "FIBER SYSTEM",
+		"description": "Profesjonalne projektowanie i budowa schronów domowych. Bezpieczeństwo i komfort dla Twojej rodziny.",
+		"slogan": "Zaprojektowane z myślą o Twoim bezpieczeństwie",
+		"copyrightText": "FIBER SYSTEM. Wszelkie prawa zastrzeżone.",
+		"navTitle": "Nawigacja",
+		"infoTitle": "Informacje",
+		"developedBy": "Developed by"
+	  },
+	  "catalog": {
+		"loading": "Ładowanie katalogu...",
+		"modelDescriptions": {
+		  "AFU": "Jednostka filtrująca powietrze",
+		  "ARC": "System filtrowentylacji schronu",
+		  "BVNC": "Zawory przeciwwybuchowe standardowe",
+		  "BVNO": "Zawory przeciwwybuchowe wzmocnione",
+		  "SAFE360": "System bezpiecznej filtracji CBRN",
+		  "DU-I": "Drzwi gazoszczelne, odporne wybuchy",
+		  "DU-III": "Drzwi zawiasowe przeciwwybuchowe",
+		  "DU-IV": "Drzwi wytrzymałe mechanicznie",
+		  "SU-IV": "Właz szczelny, odporny na eksplozje"
+		}
+	  },
+	  "investor": {
+		"heading": "Dla inwestorów",
+		"subHeading": "Kompleksowe wsparcie inwestycji w zakresie nowoczesnych schronów i ukryć.",
+		"heroTitle": "Dla Inwestorów",
+		"heroDesc": "Pomagamy inwestorom indywidualnym i instytucjonalnym w realizacji nowoczesnych schronów oraz bezpiecznych przestrzeni ochronnych. Od koncepcji i projektu po finalne wykonanie gwarantujemy kompleksowe wsparcie na każdym etapie.",
+		"benefitsTitle": "Dlaczego warto z nami współpracować",
+		"benefits": [
+		  {
+			"title": "Bezpieczeństwo gwarantowane",
+			"description": "Certyfikowane rozwiązania spełniające najwyższe normy ochrony"
+		  },
+		  {
+			"title": "Kompleksowa dokumentacja",
+			"description": "Pełna dokumentacja techniczna i prawna dla Twojej inwestycji"
+		  },
+		  {
+			"title": "Transparentna wycena",
+			"description": "Jasne i szczegółowe kosztorysy bez ukrytych opłat"
+		  },
+		  {
+			"title": "Wsparcie 24/7",
+			"description": "Dedykowany opiekun projektu dostępny na każdym etapie"
+		  }
+		],
+		"packagesTitle": "Nasza oferta",
+		"packagesSubtitle": "Projektujemy i realizujemy schrony żelbetowe oraz Doraźne Miejsca Schronienia (DMS) zgodne z aktualnymi wytycznymi MSWiA i przepisami Ustawy o Obronie Cywilnej. Każdy projekt opracowujemy indywidualnie z pełną dokumentacją i nadzorem technicznym.",
+		"popularBadge": "Najczęściej wybierany",
+		"inquiryButton": "Zapytaj o ofertę",
+		"packagesFooter": "Wszystkie realizacje wykonujemy zgodnie z aktualnymi wytycznymi MSWiA oraz zasadami nowej Ustawy o Obronie Cywilnej.",
+		"packages": [
+		  {
+			"name": "Wersja Podstawowa",
+			"price": "od 150 000 zł",
+			"features": [
+			  "Schron dla 4–6 osób",
+			  "Konstrukcja z rur PEHD Ø2500–3600 mm",
+			  "Wejście z zamykanym włazem i podłogą",
+			  "Oświetlenie LED, wentylacja podstawowa",
+			  "Materiały całkowicie wodoodporne",
+			  "Projekt techniczny i architektoniczny"
+			]
+		  },
+		  {
+			"name": "Wersja Rozszerzona",
+			"price": "od 280 000 zł",
+			"features": [
+			  "Dodatkowe pomieszczenia: techniczne, sanitarne, magazynowe",
+			  "Komora dezaktywacyjna Ø2000 mm z prysznicem",
+			  "Toaleta, prysznic, umywalka lub zlewozmywak",
+			  "Łóżka piętrowe i szafki magazynowe",
+			  "Drzwi gazoszczelne i przeciwwybuchowe",
+			  "Filtrowentylacja renomowanych firm szwajcarskich"
+			]
+		  },
+		  {
+			"name": "Wersja Premium",
+			"price": "od 420 000 zł",
+			"features": [
+			  "System modułowy z możliwością łączenia w labirynt pomieszczeń",
+			  "Ogrzewanie elektryczne i system zasilania awaryjnego",
+			  "Monitoring, TV, radio, Internet, telefon satelitarny",
+			  "Zbiorniki na wodę i ścieki z możliwością podłączenia do sieci",
+			  "Czujniki bezpieczeństwa (CO₂, ruch, wodór, poziom mediów)",
+			  "Panel sterowania i aplikacja do obsługi automatyki"
+			]
+		  }
+		],
+		"processTitle": "Proces realizacji",
+		"steps": [
+		  { "title": "Konsultacja", "desc": "Analiza potrzeb i lokalizacji" },
+		  { "title": "Projekt", "desc": "Opracowanie dokumentacji technicznej" },
+		  { "title": "Realizacja", "desc": "Budowa i instalacja systemów" },
+		  { "title": "Odbiór", "desc": "Testy i przekazanie obiektu" }
+		],
+		"ctaTitle": "Gotowy na rozmowę o swoim projekcie?",
+		"ctaDesc": "Skontaktuj się z nami, aby otrzymać indywidualną wycenę i bezpłatną konsultację techniczną.",
+		"ctaButton": "Umów konsultację",
+		"ctaBack": "Wróć do strony głównej"
+	  },
+	  "designer": {
+		"heading": "Dla projektantów",
+		"subHeading": "Dokumentacja techniczna, wytyczne i wsparcie inżynieryjne dla projektów budowlanych.",
+		"heroTitle": "Dla Projektantów",
+		"heroDesc": "Oferujemy wsparcie techniczne i merytoryczne dla architektów oraz biur projektowych realizujących inwestycje z zakresu budownictwa ochronnego. Udostępniamy wiedzę, narzędzia i dokumentację, które ułatwiają tworzenie nowoczesnych i bezpiecznych obiektów.",
+		"supportTitle": "Obszary wsparcia",
+		"supportAreas": [
+		  {
+			"title": "Dokumentacja techniczna",
+			"description": "Kompletne opracowania rysunkowe, schematy instalacyjne i wytyczne branżowe zgodne z obowiązującymi normami MSWiA."
+		  },
+		  {
+			"title": "Konsultacje eksperckie",
+			"description": "Bezpośredni kontakt z naszymi specjalistami w zakresie konstrukcji, wentylacji i zabezpieczeń obiektów ochronnych."
+		  },
+		  {
+			"title": "Wsparcie techniczne",
+			"description": "Pomoc przy doborze materiałów, komponentów systemowych i technologii dedykowanych projektom schronowym."
+		  },
+		  {
+			"title": "Baza wiedzy",
+			"description": "Zbiór aktualnych wytycznych projektowych, analiz technicznych oraz przykładów zrealizowanych obiektów."
+		  }
+		],
+		"resourcesTitle": "Materiały dla projektantów",
+		"resourcesSubtitle": "Dysponujemy najnowszymi wytycznymi, które ułatwiają projektantom pracę i wspierają tworzenie bezpiecznych, nowoczesnych obiektów ochronnych.",
+		"resourcesNote": "Wszystkie dokumenty są aktualne i dostosowane do obowiązujących norm MSWiA",
+		"resources": [
+		  {
+			"title": "Ustawa o Obronie Cywilnej",
+			"description": "Aktualne przepisy i wymagania dotyczące budownictwa ochronnego"
+		  },
+		  {
+			"title": "Rozporządzenie MSWiA – 14.07.2025",
+			"description": "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji"
+		  },
+		  {
+			"title": "Rozporządzenie MSWiA – 13.11.2025",
+			"description": "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania"
+		  }
+		],
+		"downloadButton": "Pobierz PDF",
+		"catalogTitle": "Katalog projektanta",
+		"catalogDesc": "Przeglądaj kategorie produktów, szczegółowe modele oraz ich warianty i podmodele. Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych.",
+		"benefitsTitle": "Korzyści ze współpracy",
+		"benefitsDesc": "Współpraca z nami to dostęp do specjalistycznej wiedzy i zaplecza technicznego, które wspierają projektantów w tworzeniu bezpiecznych, zgodnych z przepisami obiektów.",
+		"benefits": [
+		  "Dostęp do certyfikowanych rozwiązań konstrukcyjnych i instalacyjnych",
+		  "Wsparcie w zakresie interpretacji norm i wytycznych MSWiA",
+		  "Priorytetowe konsultacje przy projektach technicznych",
+		  "Możliwość współpracy przy realizacji inwestycji",
+		  "Udział w szkoleniach i webinarach branżowych",
+		  "Dostęp do sieci partnerów technologicznych"
+		],
+		"formTitle": "Zostań partnerem",
+		"formDesc": "Wypełnij formularz, a nasz zespół skontaktuje się z Tobą, aby omówić szczegóły współpracy.",
+		"ctaTitle": "Potrzebujesz wsparcia projektowego?",
+		"ctaDesc": "Skontaktuj się z naszym działem technicznym — pomożemy dobrać odpowiednie rozwiązania do Twojego projektu.",
+		"ctaButton": "Skontaktuj się z ekspertem",
+		"ctaBack": "Wróć do strony głównej",
+		"designerForm": {
+			"nameLabel": "Imię i nazwisko",
+			"namePlaceholder": "np. Jan Kowalski",
+			"emailLabel": "Adres e-mail",
+			"emailPlaceholder": "jan.kowalski@example.com",
+			"phoneLabel": "Numer telefonu",
+			"phonePlaceholder": "+48 123 456 789",
+			"companyLabel": "Firma / Studio",
+			"companyPlaceholder": "Nazwa firmy",
+			"messageLabel": "Wiadomość",
+			"messagePlaceholder": "Opisz swoje zapotrzebowanie...",
+			"rodoAccept": "Akceptuję",
+			"rodoModalTitle": "RODO",
+			"rodoText": "oraz wyrażam zgodę na przetwarzanie moich danych osobowych.",
+			"rodoError": "Musisz zaakceptować RODO, aby wysłać wiadomość.",
+			"rodoModalContent": "Klauzula informacyjna RODO (art. 13 ust. 1 i 2 RODO)\n\nZgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych – RODO) informujemy, że:\n\n1. Administratorem Pani/Pana danych osobowych jest spółka „Fiber System Polska sp. z o.o.” z siedzibą w Warszawie (01-042), ul. Okopowa 59A/97.\n2. W sprawach związanych z ochroną danych osobowych mogą Państwo kontaktować się z nami pod adresem e-mail: office@fibersystem.eu.\n3. Pani/Pana dane osobowe będą przetwarzane w celu:\n   - realizacji umów i świadczenia usług doradczych oraz technicznych (art. 6 ust. 1 lit. b RODO),\n   - bieżącego kontaktu telefonicznego, mailowego lub bezpośredniego (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes administratora),\n   - prowadzenia działań marketingowych, wysyłki informacji handlowych i newsletterów (art. 6 ust. 1 lit. a RODO – zgoda),\n   - celów analitycznych, statystycznych oraz archiwalnych (art. 6 ust. 1 lit. f RODO).\n4. Odbiorcami Państwa danych osobowych będą wyłącznie podmioty uprawnione do uzyskania danych osobowych na podstawie przepisów prawa oraz podmioty przetwarzające dane na zlecenie Administratora (np. dostawcy usług IT, podmioty świadczące usługi księgowe i prawne).\n5. Pani/Pana dane osobowe będą przechowywane przez okres niezbędny do realizacji celów, a po tym czasie przez okres 5 lat lub do momentu przedawnienia ewentualnych roszczeń albo wycofania zgody.\n6. Posiada Pani/Pan prawo do:\n   - dostępu do treści swoich danych oraz ich sprostowania,\n   - usunięcia danych („prawo do bycia zapomnianym”) lub ograniczenia ich przetwarzania,\n   - wniesienia sprzeciwu wobec przetwarzania danych,\n   - przenoszenia danych,\n   - cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem.\n7. Ma Pani/Pan prawo wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych (PUODO), gdy uzna Pani/Pan, iż przetwarzanie danych osobowych narusza przepisy RODO.\n8. Podanie danych osobowych jest dobrowolne, jednakże niezbędne do nawiązania kontaktu, odpowiedzi na zapytanie lub zawarcia i realizacji umowy.",
+			"submitButton": "Wyślij zapytanie",
+			"sendingButton": "Wysyłanie...",
+			"successMessage": "Wiadomość została wysłana pomyślnie!",
+			"close": "Zamknij"
+		}
+		
+	  }
+	},
+	"EN": {
+	  "navigation": {
+		"about": "About Us",
+		"offer": "Offer",
+		"investors": "For Investors",
+		"designers": "For Designers",
+		"gallery": "Gallery",
+		"virtualTour": "Virtual Tour",
+		"contact": "Contact us",
+		"faq": "FAQ",
+		"blog": "News",
+		"careers": "Careers"
+	  },
+	  "hero": {
+		"infoTile": "Compliant with Ministry guidelines and civil protection laws",
+		"heading1": "Shelters and hideouts",
+		"heading2": "next generation",
+		"subHeading1": "Fast, solid, and always compliant with applicable standards.",
+		"subHeading2": "We build modern shelters and hideouts (DMS) using certified reinforced concrete modules and pipes.",
+		"buttonContact": "Contact us",
+		"buttonOffer": "See offer"
+	  },
+	  "about": {
+		"heading": "Modern shelters and hideouts compliant with Ministry guidelines",
+		"subHeading": "For over 20 years, we have been building protective structures meeting the requirements of the Ministry and Civil Defense Law.",
+		"stats": [
+		  { "value": "20+", "label": "Years of experience" },
+		  { "value": "200+", "label": "Completed projects" },
+		  { "value": "24/7", "label": "Technical support" }
+		],
+		"solutionsHeading": "Our Solutions",
+		"solutionsSubHeading": "We implement shelter projects and Temporary Shelters (DMS) based on Ministry guidelines. Our structures include:",
+		"solutionsList": [
+		  "Modular shelters made of prefabricated reinforced concrete elements",
+		  "Temporary shelters (DMS) tailored to individual needs",
+		  "Complete assembly as well as ventilation and filtration systems"
+		]
+	  },
+	  "offerings": {
+		"heading": "Our Offer",
+		"subHeading": "We construct protective facilities compliant with the Civil Defense Act and Ministry guidelines. Our offer includes both reinforced concrete shelters and Emergency Shelter Places (DMS) made of composite materials.",
+		"cards": [
+		  {
+			"title": "Emergency Shelter Places (DMS)",
+			"description": "Structures designed for rapid deployment in emergency conditions. Made of composite materials (GRP, PEHD, prefabricated reinforced concrete), fully compliant with Ministry guidelines.",
+			"features": [
+			  "Flexible in assembly and adaptation",
+			  "Approved materials: GRP, PEHD, reinforced concrete",
+			  "For civil and public utility buildings"
+			]
+		  },
+		  {
+			"title": "Prefabricated Reinforced Concrete Shelters",
+			"description": "Modular structures manufactured in factory conditions with full quality control. Delivered ready for assembly, guaranteeing tightness and structural durability.",
+			"features": [
+			  "Tested for tightness and durability",
+			  "Fast assembly on the construction site",
+			  "Full compliance with Ministry standards"
+			]
+		  },
+		  {
+			"title": "Cast-in-Place Concrete Shelters",
+			"description": "Traditional technology of building shelters poured directly at the investment site. Ensures maximum durability and adaptation to terrain conditions.",
+			"features": [
+			  "Execution according to individual design",
+			  "Monolithic reinforced concrete technology",
+			  "For institutions, companies, and strategic sites"
+			]
+		  },
+		  {
+			"title": "Modernization and Adaptation of Facilities",
+			"description": "We perform technical audits, modernizations, and adaptations of existing shelters and spaces capable of functioning as DMS.",
+			"features": [
+			  "Structural and system audit",
+			  "Modernization of ventilation and power systems",
+			  "Adaptation to current Ministry standards"
+			]
+		  }
+		]
+	  },
+	  "gallery": {
+		"heading": "Our Realizations",
+		"subHeading": "See examples of our projects. Each shelter is unique and tailored to individual client needs.",
+		"footerText": "This is only a part of our projects. Want to see the full gallery?",
+		"button": "See more",
+		"catAll": "All",
+		"catCompact": "Compact shelters",
+		"catConcrete": "Concrete shelters",
+		"catSystems": "Systems and equipment",
+		"catConstructions": "Concrete structures",
+		"catRealizations": "Realizations",
+		"images": [
+		  { "alt": "Bathroom in premium shelter" },
+		  { "alt": "Compact shelter interior" },
+		  { "alt": "Frame profiles" },
+		  { "alt": "Compact shelter - entrance" },
+		  { "alt": "Toilet in premium shelter" },
+		  { "alt": "Specialized shelter - supplies storage" }
+		]
+	  },
+	  "virtualTour": {
+		"heading": "Take a virtual tour of our shelter",
+		"subHeading": "Explore our shelter designs in 3D. Rotate, zoom, and inspect every detail directly in your browser.",
+		"tours": {
+		  "bunker1": "Shelter L = 6m",
+		  "bunker2": "Shelter L = 11.5m",
+		  "bunker3": "Modular Shelter"
+		}
+	  },
+	  "faq": {
+		"heading": "Frequently Asked Questions",
+		"subHeading": "Find answers to key questions regarding shelter construction, formalities, and technology."
+	  },
+	  "blog": {
+		"heading": "News and Knowledge",
+		"subHeading": "Check out the latest articles, expert advice, and information on legal and technical standards."
+	  },
+	  "careers": {
+		"heading": "Careers",
+		"subHeading": "Join our team of experts and build modern security systems with us."
+	  },
+	  "contact": {
+		"heading": "Contact Us",
+		"subHeading": "We will gladly answer all questions regarding our shelters and protective solutions.",
+		"phoneLabel": "Phone",
+		"emailLabel": "E-mail",
+		"addressLabel": "Address",
+		"form": {
+		  "nameLabel": "Full Name",
+		  "namePlaceholder": "e.g. John Doe",
+		  "emailLabel": "E-mail Address",
+		  "emailPlaceholder": "john.doe@example.com",
+		  "phoneLabel": "Phone Number",
+		  "phonePlaceholder": "+48 123 456 789",
+		  "companyLabel": "Company (optional)",
+		  "companyPlaceholder": "Your company name",
+		  "messageLabel": "Message",
+		  "messagePlaceholder": "Describe your requirements...",
+		  "rodoAccept": "I accept the",
+		  "rodoModalTitle": "Privacy policy and GDPR",
+		  "rodoText": "and I consent to the processing of my personal data.",
+		  "rodoError": "You must accept the GDPR privacy policy before submitting the form.",
+		  "rodoModalContent": "GDPR Information Clause (Article 13(1) and (2) GDPR)\n\nIn accordance with Article 13(1) and (2) of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation – GDPR), please be informed that:\n\n1. The Data Controller of your personal data is 'Fiber System Polska sp. z o.o.' based in Warsaw (01-042), ul. Okopowa 59A/97, Poland.\n2. For any matters regarding personal data protection, you can contact us via email at: office@fibersystem.eu.\n3. Your personal data will be processed for the purpose of:\n   - performance of contracts and provision of advisory and technical services (Art. 6(1)(b) GDPR),\n   - ongoing telephone, email, or direct contact (Art. 6(1)(f) GDPR – legitimate interest of the controller),\n   - conducting marketing activities, sending commercial information and newsletters (Art. 6(1)(a) GDPR – consent),\n   - analytical, statistical, and archiving purposes (Art. 6(1)(f) GDPR).\n4. The recipients of your personal data will only be entities authorized to obtain personal data under applicable law and entities processing data on behalf of the Controller (e.g., IT service providers, accounting, and legal services).\n5. Your personal data will be stored for the period necessary to fulfill the operational purposes, and thereafter for a period of 5 years or until the expiration of potential claims or withdrawal of consent.\n6. You have the right to:\n   - access your personal data and request its rectification,\n   - erasure of data ('right to be forgotten') or restriction of processing,\n   - object to data processing,\n   - data portability,\n   - withdraw consent at any time without affecting the lawfulness of processing based on consent before its withdrawal.\n7. You have the right to lodge a complaint with the supervisory authority (President of the Personal Data Protection Office - PUODO) if you believe that the processing of your personal data violates GDPR regulations.\n8. Providing personal data is voluntary, but necessary to initiate contact, answer inquiries, or conclude and execute an agreement.",
+		  "submitButton": "Send Message",
+		  "sendingButton": "Sending...",
+		  "successMessage": "Message sent successfully!",
+		  "close": "Close"
+		}
+	  },
+	  "footer": {
+		"companyName": "FIBER SYSTEM",
+		"description": "Professional design and construction of home shelters. Safety and comfort for your family.",
+		"slogan": "Designed with your safety in mind",
+		"copyrightText": "FIBER SYSTEM. All rights reserved.",
+		"navTitle": "Navigation",
+		"infoTitle": "Information",
+		"developedBy": "Developed by"
+	  },
+	  "catalog": {
+		"loading": "Loading catalog...",
+		"modelDescriptions": {
+		  "AFU": "Air filtration unit",
+		  "ARC": "Shelter filter-ventilation system",
+		  "BVNC": "Standard blast valves",
+		  "BVNO": "Reinforced blast valves",
+		  "SAFE360": "Safe CBRN filtration system",
+		  "DU-I": "Gas-tight, blast-resistant door",
+		  "DU-III": "Blast-resistant hinged door",
+		  "DU-IV": "Mechanically durable door",
+		  "SU-IV": "Sealed, blast-resistant hatch"
+		}
+	  },
+	  "investor": {
+		"heading": "For Investors",
+		"subHeading": "Comprehensive investment support for modern shelters and hideouts.",
+		"heroTitle": "For Investors",
+		"heroDesc": "We help individual and institutional investors implement modern shelters and safe protective spaces. From concept and design to final execution, we guarantee comprehensive support at every stage.",
+		"benefitsTitle": "Why work with us",
+		"benefits": [
+		  {
+			"title": "Guaranteed Safety",
+			"description": "Certified solutions meeting the highest protection standards"
+		  },
+		  {
+			"title": "Comprehensive Documentation",
+			"description": "Full technical and legal documentation for your investment"
+		  },
+		  {
+			"title": "Transparent Pricing",
+			"description": "Clear and detailed cost estimates with no hidden fees"
+		  },
+		  {
+			"title": "24/7 Support",
+			"description": "Dedicated project manager available at every stage"
+		  }
+		],
+		"packagesTitle": "Our Offer",
+		"packagesSubtitle": "We design and construct reinforced concrete shelters and Emergency Shelter Places (DMS) compliant with current Ministry guidelines and Civil Defense Act regulations. Each project is developed individually with full documentation and technical supervision.",
+		"popularBadge": "Most Popular",
+		"inquiryButton": "Inquire about the offer",
+		"packagesFooter": "All implementations are carried out in accordance with current Ministry guidelines and the rules of the new Civil Defense Act.",
+		"packages": [
+		  {
+			"name": "Basic Version",
+			"price": "from PLN 150,000",
+			"features": [
+			  "Shelter for 4–6 people",
+			  "Construction from HDPE pipes Ø2500–3600 mm",
+			  "Entrance with a lockable hatch and floor",
+			  "LED lighting, basic ventilation",
+			  "Completely waterproof materials",
+			  "Technical and architectural design"
+			]
+		  },
+		  {
+			"name": "Extended Version",
+			"price": "from PLN 280,000",
+			"features": [
+			  "Additional rooms: technical, sanitary, storage",
+			  "Decontamination chamber Ø2000 mm with shower",
+			  "Toilet, shower, washbasin or sink",
+			  "Bunk beds and storage lockers",
+			  "Gas-tight and blast-resistant doors",
+			  "Renowned Swiss filter-ventilation systems"
+			]
+		  },
+		  {
+			"name": "Premium Version",
+			"price": "from PLN 420,000",
+			"features": [
+			  "Modular system with room labyrinth connection capabilities",
+			  "Electric heating and emergency power supply system",
+			  "Monitoring, TV, radio, Internet, satellite phone",
+			  "Water and wastewater tanks with grid connection options",
+			  "Safety sensors (CO₂, motion, hydrogen, utility levels)",
+			  "Control panel and automation management app"
+			]
+		  }
+		],
+		"processTitle": "Implementation Process",
+		"steps": [
+		  { "title": "Consultation", "desc": "Needs and location analysis" },
+		  { "title": "Design", "desc": "Development of technical documentation" },
+		  { "title": "Execution", "desc": "Construction and system installation" },
+		  { "title": "Handover", "desc": "Tests and facility handover" }
+		],
+		"ctaTitle": "Ready to discuss your project?",
+		"ctaDesc": "Contact us to receive an individual quotation and free technical consultation.",
+		"ctaButton": "Book a consultation",
+		"ctaBack": "Back to home page"
+	  },
+	  "designer": {
+		"heading": "For Designers",
+		"subHeading": "Technical documentation, guidelines, and engineering support for construction projects.",
+		"heroTitle": "For Designers",
+		"heroDesc": "We offer technical and substantive support for architects and design offices carrying out investments in the field of protective construction. We provide knowledge, tools, and documentation that facilitate the creation of modern and safe facilities.",
+		"supportTitle": "Support Areas",
+		"supportAreas": [
+		  {
+			"title": "Technical Documentation",
+			"description": "Complete drawing studies, installation diagrams, and industry guidelines compliant with current Ministry standards."
+		  },
+		  {
+			"title": "Expert Consultations",
+			"description": "Direct contact with our specialists in the field of structures, ventilation, and protective facility security."
+		  },
+		  {
+			"title": "Technical Support",
+			"description": "Assistance in selecting materials, system components, and technologies dedicated to shelter projects."
+		  },
+		  {
+			"title": "Knowledge Base",
+			"description": "A collection of current design guidelines, technical analyses, and examples of completed facilities."
+		  }
+		],
+		"resourcesTitle": "Materials for Designers",
+		"resourcesSubtitle": "We have the latest guidelines that make designers' work easier and support the creation of safe, modern protective facilities.",
+		"resourcesNote": "All documents are up-to-date and adapted to current Ministry standards",
+		"resources": [
+		  {
+			"title": "Civil Defense Act",
+			"description": "Current regulations and requirements regarding protective construction"
+		  },
+		  {
+			"title": "Ministry Regulation – 14.07.2025",
+			"description": "Guidelines on how to prepare collective protection facilities for use and detailed operating conditions"
+		  },
+		  {
+			"title": "Ministry Regulation – 13.11.2025",
+			"description": "Technical conditions of protective structures and rules for their use and location"
+		  }
+		],
+		"downloadButton": "Download PDF",
+		"catalogTitle": "Designer Catalog",
+		"catalogDesc": "Browse product categories, detailed models, and their variants and submodels. Under each submodel, you will find dedicated buttons allowing quick access to drawing files.",
+		"benefitsTitle": "Benefits of Cooperation",
+		"benefitsDesc": "Cooperation with us means access to specialized knowledge and technical facilities that support designers in creating safe, compliant facilities.",
+		"benefits": [
+		  "Access to certified construction and installation solutions",
+		  "Support in interpreting standards and Ministry guidelines",
+		  "Priority consultations on technical projects",
+		  "Opportunity for cooperation in investment implementation",
+		  "Participation in training sessions and industry webinars",
+		  "Access to a network of technological partners"
+		],
+		"formTitle": "Become a Partner",
+		"formDesc": "Fill out the form and our team will contact you to discuss the details of cooperation.",
+		"ctaTitle": "Need Design Support?",
+		"ctaDesc": "Contact our technical department — we will help you choose the right solutions for your project.",
+		"ctaButton": "Contact an Expert",
+		"ctaBack": "Back to Home Page",
+		"designerForm": {
+			"nameLabel": "Full Name",
+			"namePlaceholder": "e.g. John Doe",
+			"emailLabel": "E-mail Address",
+			"emailPlaceholder": "john.doe@example.com",
+			"phoneLabel": "Phone Number",
+			"phonePlaceholder": "+48 123 456 789",
+			"companyLabel": "Company / Studio",
+			"companyPlaceholder": "Your company name",
+			"messageLabel": "Message",
+			"messagePlaceholder": "Describe your requirements...",
+			"rodoAccept": "I accept the",
+			"rodoModalTitle": "GDPR Policy",
+			"rodoModalContent": "GDPR Information Clause (Article 13(1) and (2) GDPR)\n\nIn accordance with Article 13(1) and (2) of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation – GDPR), please be informed that:\n\n1. The Data Controller of your personal data is 'Fiber System Polska sp. z o.o.' based in Warsaw (01-042), ul. Okopowa 59A/97, Poland.\n2. For any matters regarding personal data protection, you can contact us via email at: office@fibersystem.eu.\n3. Your personal data will be processed for the purpose of:\n   - performance of contracts and provision of advisory and technical services (Art. 6(1)(b) GDPR),\n   - ongoing telephone, email, or direct contact (Art. 6(1)(f) GDPR – legitimate interest of the controller),\n   - conducting marketing activities, sending commercial information and newsletters (Art. 6(1)(a) GDPR – consent),\n   - analytical, statistical, and archiving purposes (Art. 6(1)(f) GDPR).\n4. The recipients of your personal data will only be entities authorized to obtain personal data under applicable law and entities processing data on behalf of the Controller (e.g., IT service providers, accounting, and legal services).\n5. Your personal data will be stored for the period necessary to fulfill the operational purposes, and thereafter for a period of 5 years or until the expiration of potential claims or withdrawal of consent.\n6. You have the right to:\n   - access your personal data and request its rectification,\n   - erasure of data ('right to be forgotten') or restriction of processing,\n   - object to data processing,\n   - data portability,\n   - withdraw consent at any time without affecting the lawfulness of processing based on consent before its withdrawal.\n7. You have the right to lodge a complaint with the supervisory authority (President of the Personal Data Protection Office - PUODO) if you believe that the processing of your personal data violates GDPR regulations.\n8. Providing personal data is voluntary, but necessary to initiate contact, answer inquiries, or conclude and execute an agreement.",
+			"rodoText": "and I consent to the processing of my personal data.",
+			"rodoError": "You must accept the GDPR policy before sending the message.",
+			"submitButton": "Send Inquiry",
+			"sendingButton": "Sending...",
+			"successMessage": "Message sent successfully!",
+			"close": "Close"
+		}
+	  }
+	},
+	"DE": {
+	  "navigation": {
+		"about": "Über uns",
+		"offer": "Angebot",
+		"investors": "Für Investoren",
+		"designers": "Für Planer",
+		"gallery": "Galerie",
+		"virtualTour": "Virtueller Rundgang",
+		"contact": "Kontaktieren Sie uns",
+		"faq": "FAQ",
+		"blog": "Aktuelles",
+		"careers": "Karriere"
+	  },
+	  "hero": {
+		"infoTile": "Konform mit den Richtlinien des Ministeriums und dem Zivilschutzgesetz",
+		"heading1": "Schutzräume und Unterstände",
+		"heading2": "der neuen Generation",
+		"subHeading1": "Schnell, solide und stets gemäß den geltenden Normen.",
+		"subHeading2": "Wir realisieren moderne Schutzräume und Unterstände (DMS) aus zertifizierten Stahlbetonmodulen und Rohren.",
+		"buttonContact": "Kontaktieren Sie uns",
+		"buttonOffer": "Angebot ansehen"
+	  },
+	  "about": {
+		"heading": "Moderne Schutzräume und Unterstände gemäß den Richtlinien des Ministeriums",
+		"subHeading": "Seit über 20 Jahren bauen wir Schutzkonstruktionen, die den Anforderungen des Ministeriums und des Zivilschutzgesetzes entsprechen.",
+		"stats": [
+		  { "value": "20+", "label": "Jahre Erfahrung" },
+		  { "value": "200+", "label": "Realisierte Projekte" },
+		  { "value": "24/7", "label": "Technischer Support" }
+		],
+		"solutionsHeading": "Unsere Lösungen",
+		"solutionsSubHeading": "Wir realisieren Schutzraumprojekte und temporäre Unterstände (DMS) auf der Grundlage der Richtlinien des Ministeriums. Unsere Konstruktionen umfassen:",
+		"solutionsList": [
+		  "Modulschutzeinrichtungen aus Stahlbeton-Fertigteilen",
+		  "Temporäre Unterstände (DMS), angepasst an individuelle Bedürfnisse",
+		  "Komplette Montage sowie Belüftungs- und Filterlüftungsanlagen"
+		]
+	  },
+	  "offerings": {
+		"heading": "Unser Angebot",
+		"subHeading": "Wir realisieren Schutzbauten gemäß dem Zivilschutzgesetz und den Richtlinien des Ministeriums. Unser Angebot umfasst sowohl Stahlbetonschutzräume als auch temporäre Unterstände (DMS) aus Verbundwerkstoffen.",
+		"cards": [
+		  {
+			"title": "Temporäre Unterstände (DMS)",
+			"description": "Konstruktionen zur schnellen Bereitstellung im Gefahrenfall. Hergestellt aus Verbundwerkstoffen (GFK, PEHD, Stahlbeton-Fertigteile), konform mit den Richtlinien des Ministeriums.",
+			"features": [
+			  "Flexibel in Montage und Anpassung",
+			  "Zugelassene Materialien: GFK, PEHD, Stahlbeton",
+			  "Für zivile und öffentliche Gebäude"
+			]
+		  },
+		  {
+			"title": "Stahlbeton-Fertigteilunterstände",
+			"description": "Modulare Konstruktionen, die unter Werksbedingungen mit vollständiger Qualitätskontrolle hergestellt werden. Montagefertig geliefert, um Dichtheit und Festigkeit zu garantieren.",
+			"features": [
+			  "Geprüft auf Dichtheit und Festigkeit",
+			  "Schnelle Montage auf der Baustelle",
+			  "Vollständige Konformität mit den Standards des Ministeriums"
+			]
+		  },
+		  {
+			"title": "Vor Ort gegossene Stahlbetonschutzräume",
+			"description": "Traditionelle Technologie des Baus von Schutzräumen, die direkt am Investitionsort gegossen werden. Gewährleistet maximale Haltbarkeit und Anpassung an die Geländebedingungen.",
+			"features": [
+			  "Ausführung nach individuellem Entwurf",
+			  "Monolithische Stahlbetontechnologie",
+			  "Für Institutionen, Unternehmen und strategische Objekte"
+			]
+		  },
+		  {
+			"title": "Modernisierung und Adaptierung von Objekten",
+			"description": "Wir führen technische Audits, Modernisierungen und Anpassungen bestehender Schutzräume und Räume durch, die als DMS dienen können.",
+			"features": [
+			  "Bau- und Systemaudit",
+			  "Modernisierung von Lüftungs- und Stromversorgungssystemen",
+			  "Anpassung an geltende Standards des Ministeriums"
+			]
+		  }
+		]
+	  },
+	  "gallery": {
+		"heading": "Unsere Realisierungen",
+		"subHeading": "Sehen Sie Beispiele unserer Projekte. Jeder Schutzraum ist einzigartig und an die individuellen Bedürfnisse des Kunden angepasst.",
+		"footerText": "Dies ist nur ein Teil unserer Realisierungen. Möchten Sie die gesamte Galerie sehen?",
+		"button": "Mehr sehen",
+		"catAll": "Alle",
+		"catCompact": "Kompakte Schutzräume",
+		"catConcrete": "Stahlbetonschutzräume",
+		"catSystems": "Systeme und Anlagen",
+		"catConstructions": "Stahlbetonkonstruktionen",
+		"catRealizations": "Realisierungen",
+		"images": [
+		  { "alt": "Badezimmer im Premium-Schutzraum" },
+		  { "alt": "Innenraum des Kompaktschutzraums" },
+		  { "alt": "Rahmenprofile" },
+		  { "alt": "Kompaktschutzraum - Eingang" },
+		  { "alt": "Toilette im Premium-Schutzraum" },
+		  { "alt": "Spezialschutzraum - Vorratslager" }
+		]
+	  },
+	  "virtualTour": {
+		"heading": "Machen Sie einen virtuellen Rundgang durch unseren Schutzraum",
+		"subHeading": "Entdecken Sie unsere Schutzraum-Entwürfe in 3D. Drehen, zoomen und erkunden Sie jedes Detail direkt im Browser.",
+		"tours": {
+		  "bunker1": "Schutzraum L = 6m",
+		  "bunker2": "Schutzraum L = 11,5m",
+		  "bunker3": "Modulschutzeinrichtung"
+		}
+	  },
+	  "faq": {
+		"heading": "Häufig gestellte Fragen",
+		"subHeading": "Hier finden Sie Antworten auf die wichtigsten Fragen zu Bau, Formalitäten und Schutzraumtechnologie."
+	  },
+	  "blog": {
+		"heading": "Aktuelles und Wissen",
+		"subHeading": "Entdecken Sie die neuesten Artikel, Expertenrat und Informationen zu rechtlichen und technischen Standards."
+	  },
+	  "careers": {
+		"heading": "Karriere",
+		"subHeading": "Werden Sie Teil unseres Expertenteams und entwickeln Sie mit uns moderne Sicherheitssysteme."
+	  },
+	  "contact": {
+		"heading": "Kontaktieren Sie uns",
+		"subHeading": "Wir beantworten gerne alle Ihre Fragen zu unseren Schutzräumen und Schutzlösungen.",
+		"phoneLabel": "Telefon",
+		"emailLabel": "E-Mail",
+		"addressLabel": "Adresse",
+		"form": {
+		  "nameLabel": "Vor- und Nachname",
+		  "namePlaceholder": "z.B. Max Mustermann",
+		  "emailLabel": "E-Mail-Adresse",
+		  "emailPlaceholder": "max.mustermann@example.com",
+		  "phoneLabel": "Telefonnummer",
+		  "phonePlaceholder": "+49 123 456 789",
+		  "companyLabel": "Firma (optional)",
+		  "companyPlaceholder": "Name Ihres Unternehmens",
+		  "messageLabel": "Nachricht",
+		  "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
+		  "rodoAccept": "Ich akzeptiere die",
+		  "rodoModalTitle": "Datenschutzrichtlinie und DSGVO",
+		  "rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
+		  "rodoError": "Sie müssen die DSGVO-Datenschutzrichtlinie akzeptieren, bevor Sie das Formular absenden.",
+		  "rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
+		  "submitButton": "Nachricht senden",
+		  "sendingButton": "Senden...",
+		  "successMessage": "Nachricht erfolgreich gesendet!",
+		  "close": "Schließen"
+		}
+	  },
+	  "footer": {
+		"companyName": "FIBER SYSTEM",
+		"description": "Professionelle Planung und Bau von Hausschutzräumen. Sicherheit und Komfort für Ihre Familie.",
+		"slogan": "Entworfen für Ihre Sicherheit",
+		"copyrightText": "FIBER SYSTEM. Alle Rechte vorbehalten.",
+		"navTitle": "Navigation",
+		"infoTitle": "Informationen",
+		"developedBy": "Developed by"
+	  },
+	  "catalog": {
+		"loading": "Katalog wird geladen...",
+		"modelDescriptions": {
+		  "AFU": "Luftfiltereinheit",
+		  "ARC": "Schutzraum-Filterlüftungssystem",
+		  "BVNC": "Standard-Explosionsschutzventile",
+		  "BVNO": "Verstärkte Explosionsschutzventile",
+		  "SAFE360": "Sicheres CBRN-Filtersystem",
+		  "DU-I": "Gasdichte, explosionsgeschützte Tür",
+		  "DU-III": "Explosionsgeschützte Scharniertür",
+		  "DU-IV": "Mechanisch robuste Tür",
+		  "SU-IV": "Dichte, explosionsgeschützte Luke"
+		}
+	  },
+	  "investor": {
+		"heading": "Für Investoren",
+		"subHeading": "Umfassende Investitionsunterstützung für moderne Schutzräume und Unterstände.",
+		"heroTitle": "Für Investoren",
+		"heroDesc": "Wir unterstützen private und institutionelle Investoren bei der Realisierung moderner Schutzräume und sicherer Schutzbereiche. Von der Konzeption und Planung bis zur finalen Ausführung garantieren wir umfassende Unterstützung in jeder Phase.",
+		"benefitsTitle": "Warum Sie mit uns arbeiten sollten",
+		"benefits": [
+		  {
+			"title": "Garantierte Sicherheit",
+			"description": "Zertifizierte Lösungen, die höchsten Schutzstandards entsprechen"
+		  },
+		  {
+			"title": "Umfassende Dokumentation",
+			"description": "Vollständige technische und rechtliche Dokumentation für Ihre Investition"
+		  },
+		  {
+			"title": "Transparente Preisgestaltung",
+			"description": "Klare und detaillierte Kostenvoranschläge ohne versteckte Gebühren"
+		  },
+		  {
+			"title": "24/7 Support",
+			"description": "Dedizierter Projektmanager in jeder Phase verfügbar"
+		  }
+		],
+		"packagesTitle": "Unser Angebot",
+		"packagesSubtitle": "Wir planen und realisieren Stahlbetonschutzräume und temporäre Unterstände (DMS) gemäß den aktuellen Richtlinien des Ministeriums und den Bestimmungen des Zivilschutzgesetzes. Jedes Projekt wird individuell mit vollständiger Dokumentation und technischer Überwachung entwickelt.",
+		"popularBadge": "Am beliebtesten",
+		"inquiryButton": "Angebot anfragen",
+		"packagesFooter": "Alle Umsetzungen erfolgen gemäß den aktuellen Richtlinien des Ministeriums und den Regeln des neuen Zivilschutzgesetzes.",
+		"packages": [
+		  {
+			"name": "Basisversion",
+			"price": "ab 150.000 PLN",
+			"features": [
+			  "Schutzraum für 4–6 Personen",
+			  "Konstruktion aus PE-HD-Rohren Ø2500–3600 mm",
+			  "Eingang mit abschließbarer Luke und Boden",
+			  "LED-Beleuchtung, Grundlüftung",
+			  "Vollständig wasserdichte Materialien",
+			  "Technische und architektonische Planung"
+			]
+		  },
+		  {
+			"name": "Erweiterte Version",
+			"price": "ab 280.000 PLN",
+			"features": [
+			  "Zusätzliche Räume: Technik-, Sanitär-, Lagerraum",
+			  "Dekontaminationskammer Ø2000 mm mit Dusche",
+			  "Toilette, Dusche, Waschbecken oder Spüle",
+			  "Etagenbetten und Spinde",
+			  "Gasdichte und explosionsgeschützte Türen",
+			  "Renommierte Schweizer Filterlüftungssysteme"
+			]
+		  },
+		  {
+			"name": "Premium-Version",
+			"price": "ab 420.000 PLN",
+			"features": [
+			  "Modulares System mit Verbindungsmöglichkeit zu einem Raumgefüge",
+			  "Elektrische Heizung und Notstromversorgung",
+			  "Überwachung, TV, Radio, Internet, Satellitentelefon",
+			  "Wasser- und Abwassertanks mit Netzanschlussoption",
+			  "Sicherheitssensoren (CO₂, Bewegung, Wasserstoff, Füllstände)",
+			  "Bedienfeld und Automatisierungs-App"
+			]
+		  }
+		],
+		"processTitle": "Ablauf der Realisierung",
+		"steps": [
+		  { "title": "Beratung", "desc": "Bedarfs- und Standortanalyse" },
+		  { "title": "Planung", "desc": "Ausarbeitung der technischen Dokumentation" },
+		  { "title": "Ausführung", "desc": "Bau und Systeminstallation" },
+		  { "title": "Übergabe", "desc": "Tests und Übergabe des Objekts" }
+		],
+		"ctaTitle": "Bereit, über Ihr Projekt zu sprechen?",
+		"ctaDesc": "Kontaktieren Sie uns für ein individuelles Angebot und eine kostenlose technische Beratung.",
+		"ctaButton": "Beratung vereinbaren",
+		"ctaBack": "Zurück zur Startseite"
+	  },
+	  "designer": {
+		"heading": "Für Planer",
+		"subHeading": "Technische Dokumentation, Richtlinien und ingenieurtechnische Unterstützung für Bauprojekte.",
+		"heroTitle": "Für Planer und Architekten",
+		"heroDesc": "Wir bieten technische und fachliche Unterstützung für Architekten und Planungsbüros bei Investitionen im Bereich des Schutzbaus. Wir stellen Wissen, Werkzeuge und Dokumentationen zur Verfügung, die die Erstellung moderner und sicherer Anlagen erleichtern.",
+		"supportTitle": "Unterstützungsbereiche",
+		"supportAreas": [
+		  {
+			"title": "Technische Dokumentation",
+			"description": "Vollständige Planungsstudien, Installationsschemata und Branchenrichtlinien gemäß den geltenden Normen des Ministeriums."
+		  },
+		  {
+			"title": "Expertenberatung",
+			"description": "Direkter Kontakt mit unseren Spezialisten in den Bereichen Konstruktion, Belüftung und Schutzraumsicherheit."
+		  },
+		  {
+			"title": "Technischer Support",
+			"description": "Unterstützung bei der Auswahl von Materialien, Systemkomponenten und Technologien für Schutzraumprojekte."
+		  },
+		  {
+			"title": "Wissensdatenbank",
+			"description": "Eine Sammlung aktueller Planungsrichtlinien, technischer Analysen und Beispiele realisierter Objekte."
+		  }
+		],
+		"resourcesTitle": "Materialien für Planer",
+		"resourcesSubtitle": "Wir verfügen über die neuesten Richtlinien, die Planern die Arbeit erleichtern und die Erstellung sicherer, moderner Schutzanlagen unterstützen.",
+		"resourcesNote": "Alle Dokumente sind aktuell und an die geltenden Standards des Ministeriums angepasst",
+		"resources": [
+		  {
+			"title": "Zivilschutzgesetz",
+			"description": "Aktuelle Vorschriften und Anforderungen an den baulichen Zivilschutz"
+		  },
+		  {
+			"title": "Verordnung des Ministeriums – 14.07.2025",
+			"description": "Richtlinien zur Vorbereitung von Gemeinschaftsschutzanlagen auf die Nutzung und detaillierte Betriebsbedingungen"
+		  },
+		  {
+			"title": "Verordnung des Ministeriums – 13.11.2025",
+			"description": "Technische Bedingungen von Schutzbauten sowie Regeln für deren Nutzung und Standort"
+		  }
+		],
+		"downloadButton": "PDF herunterladen",
+		"catalogTitle": "Planerkatalog",
+		"catalogDesc": "Durchsuchen Sie Produktkategorien, detaillierte Modelle sowie deren Varianten und Untermodelle. Unter jedem Untermodell finden Sie dedizierte Schaltflächen für den schnellen Zugriff auf Zeichnungsdateien.",
+		"benefitsTitle": "Vorteile der Zusammenarbeit",
+		"benefitsDesc": "Die Zusammenarbeit mit uns bedeutet Zugang zu Fachwissen und technischer Infrastruktur, die Planer bei der Schaffung sicherer, regelkonformer Anlagen unterstützen.",
+		"benefits": [
+		  "Zugang zu zertifizierten Konstruktions- und Installationslösungen",
+		  "Unterstützung bei der Auslegung von Normen und Richtlinien des Ministeriums",
+		  "Prioritäre Beratung bei technischen Projekten",
+		  "Möglichkeit der Zusammenarbeit bei der Projektumsetzung",
+		  "Teilnahme an Schulungen und Branchen-Webinaren",
+		  "Zugang zu einem Netzwerk technologischer Partner"
+		],
+		"formTitle": "Partner werden",
+		"formDesc": "Füllen Sie das Formular aus und unser Team wird sich mit Ihnen in Verbindung setzen, um die Details der Zusammenarbeit zu besprechen.",
+		"ctaTitle": "Benötigen Sie Planungsunterstützung?",
+		"ctaDesc": "Kontaktieren Sie unsere technische Abteilung – wir helfen Ihnen bei der Auswahl der richtigen Lösungen für Ihr Projekt.",
+		"ctaButton": "Experten kontaktieren",
+		"ctaBack": "Zurück zur Startseite",
+		"designerForm": {
+			"nameLabel": "Vor- und Nachname",
+			"namePlaceholder": "z.B. Max Mustermann",
+			"emailLabel": "E-Mail-Adresse",
+			"emailPlaceholder": "max.mustermann@example.com",
+			"phoneLabel": "Telefonnummer",
+			"phonePlaceholder": "+49 123 456 789",
+			"companyLabel": "Firma / Studio",
+			"companyPlaceholder": "Name Ihres Unternehmens",
+			"messageLabel": "Nachricht",
+			"messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
+			"rodoAccept": "Ich akzeptiere die",
+			"rodoModalTitle": "DSGVO-Richtlinie",
+			"rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
+			"rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
+			"rodoError": "Sie müssen die DSGVO-Richtlinie akzeptieren, um die Nachricht zu senden.",
+			"submitButton": "Anfrage senden",
+			"sendingButton": "Senden...",
+			"successMessage": "Nachricht erfolgreich gesendet!",
+			"close": "Schließen"
+		}
+	  }
+	}
+}

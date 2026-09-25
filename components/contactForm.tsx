@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CardContent } from "./ui/card";
+import { useLanguage } from "@/translations/context";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -11,11 +12,12 @@ export default function ContactForm() {
   const [error, setError] = useState<string | null>(null);
   const [acceptedRODO, setAcceptedRODO] = useState(false);
   const [showRODO, setShowRODO] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!acceptedRODO) {
-      setError("Musisz zaakceptować Klauzulę RODO, aby wysłać wiadomość.");
+      setError(t.contact.form.rodoError);
       return;
     }
 
@@ -38,9 +40,9 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Błąd serwera");
+      if (!res.ok) throw new Error("Server error");
 
-      setSuccess("Wiadomość została wysłana pomyślnie!");
+      setSuccess(t.contact.form.successMessage);
       form.reset();
       setAcceptedRODO(false);
     } catch {
@@ -55,25 +57,50 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label htmlFor="name" className="text-sm font-medium text-foreground">Imię i nazwisko</label>
-            <Input id="name" placeholder="Jan Kowalski" className="bg-background" required/>
+            <label htmlFor="name" className="text-sm font-medium text-foreground">
+              {t.contact.form.nameLabel}
+            </label>
+            <Input 
+              id="name" 
+              placeholder={t.contact.form.namePlaceholder} 
+              className="bg-background" 
+              required
+            />
           </div>
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
-            <Input id="email" type="email" placeholder="jan.kowalski@gmail.com" className="bg-background" required/>
+            <label htmlFor="email" className="text-sm font-medium text-foreground">
+              {t.contact.form.emailLabel}
+            </label>
+            <Input 
+              id="email" 
+              type="email" 
+              placeholder={t.contact.form.emailPlaceholder} 
+              className="bg-background" 
+              required
+            />
           </div>
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="phone" className="text-sm font-medium text-foreground">Telefon</label>
-          <Input id="phone" type="tel" placeholder="+48 123 456 789" className="bg-background" required />
+          <label htmlFor="phone" className="text-sm font-medium text-foreground">
+            {t.contact.form.phoneLabel}
+          </label>
+          <Input 
+            id="phone" 
+            type="tel" 
+            placeholder={t.contact.form.phonePlaceholder} 
+            className="bg-background" 
+            required 
+          />
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="message" className="text-sm font-medium text-foreground">Wiadomość</label>
+          <label htmlFor="message" className="text-sm font-medium text-foreground">
+            {t.contact.form.messageLabel}
+          </label>
           <Textarea
             id="message"
-            placeholder="Opisz swoje potrzeby..."
+            placeholder={t.contact.form.messagePlaceholder}
             rows={6}
             className="bg-background resize-none"
             required
@@ -89,12 +116,14 @@ export default function ContactForm() {
             className="mt-1"
           />
           <label htmlFor="rodo" className="text-sm text-foreground">
-            Akceptuję <span
+            {t.contact.form.rodoAccept}{" "}
+            <span
               onClick={() => setShowRODO(true)}
               className="text-accent underline cursor-pointer font-semibold"
             >
-              RODO
-            </span> i wyrażam zgodę na przetwarzanie moich danych osobowych.
+              {t.contact.form.rodoModalTitle}
+            </span>{" "}
+            {t.contact.form.rodoText}
           </label>
         </div>
 
@@ -104,41 +133,35 @@ export default function ContactForm() {
           disabled={loading}
           className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
         >
-          {loading ? "Wysyłanie..." : "Wyślij wiadomość"}
+          {loading ? t.contact.form.sendingButton : t.contact.form.submitButton}
         </Button>
       </form>
 
-      {success && <p className="text-green-600 text-center font-medium">{success}</p>}
-      {error && <p className="text-red-600 text-center font-medium">{error}</p>}
+      {success && <p className="text-green-600 text-center font-medium mt-4">{success}</p>}
+      {error && <p className="text-red-600 text-center font-medium mt-4">{error}</p>}
 
       {showRODO && (
         <div
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
           onClick={() => setShowRODO(false)}
         >
           <div
-            className="bg-white max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 rounded-lg shadow-lg"
+            className="bg-white max-w-[800px] w-full max-h-[400px] flex flex-col p-6 rounded-lg shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-xl font-bold mb-4">Klauzula RODO</h2>
-            <p className="text-sm text-gray-700 whitespace-pre-line">
-				{`Zgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679
-				z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem
-				danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
-				dyrektywy 95/46/WE (dalej „RODO”) informuję, iż:
+            <h2 className="text-xl font-bold mb-4 shrink-0">{t.contact.form.rodoModalTitle}</h2>
+            
+            <div className="overflow-y-auto pr-2 my-2 flex-1">
+              <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+                {t.contact.form.rodoModalContent}
+              </p>
+            </div>
 
-				1) administratorem Pani/Pana danych osobowych jest spółka „Fiber System Polska sp. z o.o.” z siedzibą w Warszawie ul. Okopowa 59A/97,
-				2) kontakt z Inspektorem Ochrony Danych – office@fibersystem.eu,
-				3) Pani/Pana dane osobowe przetwarzane będą w celu realizacji umowy, świadczenia pomocy technicznej, doradczej, kontaktu telefonicznego, mailowego lub bezpośredniego kontaktu, wysyłania informacji handlowych, marketingowych, newsletterów, kampanii marketingowych, realizacji uzasadnionego interesu Administratora oraz do celów badawczych, statystycznych i/lub historycznych,
-				4) odbiorcami danych będą wyłącznie podmioty uprawnione do uzyskania danych osobowych na podstawie przepisów prawa,
-				5) dane przechowywane będą przez okres 5 lat,
-				6) posiada Pani/Pan prawo do żądania od administratora dostępu do danych, sprostowania, usunięcia lub ograniczenia przetwarzania, wniesienia sprzeciwu wobec przetwarzania, przenoszenia danych oraz prawo do cofnięcia zgody,
-				7) ma Pani/Pan prawo wniesienia skargi do organu nadzorczego,
-				8) podanie danych osobowych jest wymogiem ustawowym i dobrowolnym, ich niepodanie może skutkować niezawarciem umowy lub uniemożliwieniem kontaktu ze strony Fiber System Polska sp. z o.o.`}
-            </p>
-            <Button onClick={() => setShowRODO(false)} className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              Zamknij
-            </Button>
+            <div className="mt-4 pt-3 border-t shrink-0 flex justify-end">
+              <Button onClick={() => setShowRODO(false)} className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                {t.contact.form.close}
+              </Button>
+            </div>
           </div>
         </div>
       )}

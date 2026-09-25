@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, X } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import { useLanguage } from "@/translations/context"
 
 interface ImageItem {
   src: string
@@ -12,11 +13,15 @@ interface ImageItem {
   category: string
 }
 
-export default function Gallery() {
+export default function GalleryPage() {
+  const { t } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("Wszystkie")
+  const [selectedCategory, setSelectedCategory] = useState("catAll")
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
+
+  // Bezpieczne odwołanie do słownika galerii (poprawiony klucz z subPageGallery na gallery)
+  const galleryTranslations = (t as any).gallery || {}
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,68 +36,77 @@ export default function Gallery() {
 
   const images: ImageItem[] = [
     // --- Realizacje i budowa ---
-    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy – prace fundamentowe i podbudowa", category: "Realizacje" },
-    { src: "/gallery2/budowa2.JPG", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
-    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "Realizacje" },
-    { src: "/gallery2/d9acd4f7-2925-42d3-8450-2f8dae4c6232.jpeg", alt: "Montaż modułów prefabrykowanych", category: "Realizacje" },
-    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjno-montażowe", category: "Realizacje" },
-    { src: "/gallery2/IMG_2994.jpeg", alt: "Wnętrze schronu w stanie surowym", category: "Realizacje" },
-    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "Realizacje" },
-    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "Realizacje" },
+    { src: "/gallery2/budowa1.jpg", alt: "Etap budowy – prace fundamentowe i podbudowa", category: "catRealizations" },
+    { src: "/gallery2/budowa2.JPG", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "catRealizations" },
+    { src: "/gallery2/budowa4.jpg", alt: "Montaż prefabrykowanego elementu przy użyciu dźwigu", category: "catRealizations" },
+    { src: "/gallery2/d9acd4f7-2925-42d3-8450-2f8dae4c6232.jpeg", alt: "Montaż modułów prefabrykowanych", category: "catRealizations" },
+    { src: "/gallery2/budowa3.jpg", alt: "Prace konstrukcyjno-montażowe", category: "catRealizations" },
+    { src: "/gallery2/IMG_2994.jpeg", alt: "Wnętrze schronu w stanie surowym", category: "catRealizations" },
+    { src: "/gallery2/realizacja.png", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "catRealizations" },
+    { src: "/gallery2/realizacja2.jpg", alt: "Realizacja w Piasecznie – PEHD DN2400 mm, długość 20 m", category: "catRealizations" },
   
     // --- Schrony kompaktowe (2–4 osoby) ---
-    { src: "/gallery2/schron2wejscie.jpeg", alt: "Wejście do schronu kompaktowego dla 2 osób", category: "Schrony kompaktowe" },
-    { src: "/gallery2/schron2salon.jpeg", alt: "Wnętrze schronu kompaktowego – salon dla 2 osób", category: "Schrony kompaktowe" },
-    { src: "/gallery2/schron2lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 2 osób", category: "Schrony kompaktowe" },
-    { src: "/gallery2/schron4wejscie.jpeg", alt: "Wejście do schronu rodzinnego dla 4 osób", category: "Schrony kompaktowe" },
-    // { src: "/gallery2/schron4lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 4 osób", category: "Schrony kompaktowe" },
-    { src: "/gallery2/schron4widokzgory.jpeg", alt: "Schron kompaktowy dla 4 osób – widok z góry", category: "Schrony kompaktowe" },
+    { src: "/gallery2/schron2wejscie.jpeg", alt: "Wejście do schronu kompaktowego dla 2 osób", category: "catCompact" },
+    { src: "/gallery2/schron2salon.jpeg", alt: "Wnętrze schronu kompaktowego – salon dla 2 osób", category: "catCompact" },
+    { src: "/gallery2/schron2lazienka.jpeg", alt: "Łazienka w schronie kompaktowym dla 2 osób", category: "catCompact" },
+    { src: "/gallery2/schron4wejscie.jpeg", alt: "Wejście do schronu rodzinnego dla 4 osób", category: "catCompact" },
+    { src: "/gallery2/schron4widokzgory.jpeg", alt: "Schron kompaktowy dla 4 osób – widok z góry", category: "catCompact" },
   
     // --- Schrony żelbetowe i modułowe ---
-    { src: "/gallery2/schron100rzut.jpeg", alt: "Projekt schronu żelbetowego dla 100 osób – rzut techniczny", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schron100techniczne.jpeg", alt: "Pomieszczenie techniczne w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schron100sypialnia.jpeg", alt: "Sypialnia w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schron100magazyn.jpeg", alt: "Magazyn zapasów w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schron100lazienka.jpeg", alt: "Łazienka w schronie żelbetowym dla 100 osób", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowyrzut.jpeg", alt: "Modułowy schron żelbetowy dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowysypialnia.jpeg", alt: "Sypialnia w schronie dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
-    { src: "/gallery2/schronmodulowyzelbetowysalonimagzyn.jpeg", alt: "Strefa dzienna i magazynowa w schronie dla 20 osób i 2 osób z obsługi", category: "Schrony żelbetowe" },
-    
+    { src: "/gallery2/schron100rzut.jpeg", alt: "Projekt schronu żelbetowego dla 100 osób – rzut techniczny", category: "catConcrete" },
+    { src: "/gallery2/schron100techniczne.jpeg", alt: "Pomieszczenie techniczne w schronie żelbetowym dla 100 osób", category: "catConcrete" },
+    { src: "/gallery2/schron100sypialnia.jpeg", alt: "Sypialnia w schronie żelbetowym dla 100 osób", category: "catConcrete" },
+    { src: "/gallery2/schron100magazyn.jpeg", alt: "Magazyn zapasów w schronie żelbetowym dla 100 osób", category: "catConcrete" },
+    { src: "/gallery2/schron100lazienka.jpeg", alt: "Łazienka w schronie żelbetowym dla 100 osób", category: "catConcrete" },
+    { src: "/gallery2/schronmodulowyzelbetowyrzut.jpeg", alt: "Modułowy schron żelbetowy dla 20 osób i 2 osób z obsługi", category: "catConcrete" },
+    { src: "/gallery2/schronmodulowyzelbetowysypialnia.jpeg", alt: "Sypialnia w schronie dla 20 osób i 2 osób z obsługi", category: "catConcrete" },
+    { src: "/gallery2/schronmodulowyzelbetowysalonimagzyn.jpeg", alt: "Strefa dzienna i magazynowa w schronie dla 20 osób i 2 osób z obsługi", category: "catConcrete" },
     
     // --- Systemy i urządzenia ---
-    { src: "/gallery2/drzwiwlazowe.JPG", alt: "Drzwi frontowe – widok z wewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/drzwiwlazowe2.JPG", alt: "Drzwi frontowe – widok z boku z mechanizmem ryglowania", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_2609.jpg", alt: "System filtrowentylacji", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3566.jpg", alt: "Zespół filtrow do filtrowentylacji", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3564.jpg", alt: "System mocowań dla drzwi do schronu", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3563.jpg", alt: "Mechanizm drzwi wejściowych do schronu - widok z wewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3562.jpg", alt: "Drzwi do schronu - widok z wewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3561.jpg", alt: "Drzwi do schronu - widok z zewewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3560.jpg", alt: "Drzwi do schronu - widok z boku", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3559.jpg", alt: "Drzwi wejściowe gazoszcelne", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_3558.jpg", alt: "Drzwi wejściowe gazoszcelne - widok z wewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/df1de736-fb87-4690-9878-3c43580691e0.jpeg", alt: "Właz kanału ucieczkowego, szczelny - widok z zewnątrz", category: "Systemy i urządzenia" },
-    { src: "/gallery2/29a7e839-eecc-41d9-9fd7-b8b8ffbd916d.jpg", alt: "Włazy ucieczkowe ze schronu", category: "Systemy i urządzenia" },
-    { src: "/gallery2/33d65881-5541-4dee-918d-4fca513a0d3f.jpg", alt: "Właz ucieczkowy", category: "Systemy i urządzenia" },
-    { src: "/gallery2/4453d3fd-d7f3-45a3-871a-c60f51492692.jpg", alt: "Właz ucieczkowy", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_2621.jpg", alt: "Zawór ręczny", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_2619.jpg", alt: "Zawór nadciśnieniowy", category: "Systemy i urządzenia" },
-    { src: "/gallery2/IMG_2618.jpg", alt: "Zawór nadciśnieniowy", category: "Systemy i urządzenia" },
+    { src: "/gallery2/drzwiwlazowe.JPG", alt: "Drzwi frontowe – widok z wewnątrz", category: "catSystems" },
+    { src: "/gallery2/drzwiwlazowe2.JPG", alt: "Drzwi frontowe – widok z boku z mechanizmem ryglowania", category: "catSystems" },
+    { src: "/gallery2/IMG_2609.jpg", alt: "System filtrowentylacji", category: "catSystems" },
+    { src: "/gallery2/IMG_3566.jpg", alt: "Zespół filtrow do filtrowentylacji", category: "catSystems" },
+    { src: "/gallery2/IMG_3564.jpg", alt: "System mocowań dla drzwi do schronu", category: "catSystems" },
+    { src: "/gallery2/IMG_3563.jpg", alt: "Mechanizm drzwi wejściowych do schronu - widok z wewnątrz", category: "catSystems" },
+    { src: "/gallery2/IMG_3562.jpg", alt: "Drzwi do schronu - widok z wewnątrz", category: "catSystems" },
+    { src: "/gallery2/IMG_3561.jpg", alt: "Drzwi do schronu - widok z zewewnątrz", category: "catSystems" },
+    { src: "/gallery2/IMG_3560.jpg", alt: "Drzwi do schronu - widok z boku", category: "catSystems" },
+    { src: "/gallery2/IMG_3559.jpg", alt: "Drzwi wejściowe gazoszcelne", category: "catSystems" },
+    { src: "/gallery2/IMG_3558.jpg", alt: "Drzwi wejściowe gazoszcelne - widok z wewnątrz", category: "catSystems" },
+    { src: "/gallery2/df1de736-fb87-4690-9878-3c43580691e0.jpeg", alt: "Właz kanału ucieczkowego, szczelny - widok z zewnątrz", category: "catSystems" },
+    { src: "/gallery2/29a7e839-eecc-41d9-9fd7-b8b8ffbd916d.jpg", alt: "Włazy ucieczkowe ze schronu", category: "catSystems" },
+    { src: "/gallery2/33d65881-5541-4dee-918d-4fca513a0d3f.jpg", alt: "Właz ucieczkowy", category: "catSystems" },
+    { src: "/gallery2/4453d3fd-d7f3-45a3-871a-c60f51492692.jpg", alt: "Właz ucieczkowy", category: "catSystems" },
+    { src: "/gallery2/IMG_2621.jpg", alt: "Zawór ręczny", category: "catSystems" },
+    { src: "/gallery2/IMG_2619.jpg", alt: "Zawór nadciśnieniowy", category: "catSystems" },
+    { src: "/gallery2/IMG_2618.jpg", alt: "Zawór nadciśnieniowy", category: "catSystems" },
 
     // --- Konstrukcje żelbetowe ---
-    { src: "/gallery2/profilebudowa.png", alt: "Profil konstrukcyjny na bazie okrągłych rur żelbetowych podczas budowy", category: "Konstrukcje żelbetowe" },
-    { src: "/gallery2/profilramowy.png", alt: "Profil ramowej konstrukcji żelbetowej podczas montażu", category: "Konstrukcje żelbetowe" },
+    { src: "/gallery2/profilebudowa.png", alt: "Profil konstrukcyjny na bazie okrągłych rur żelbetowych podczas budowy", category: "catConstructions" },
+    { src: "/gallery2/profilramowy.png", alt: "Profil ramowej konstrukcji żelbetowej podczas montażu", category: "catConstructions" },
   ];
-  const categories = [
-    "Wszystkie",
-    "Schrony kompaktowe",
-    "Schrony żelbetowe",
-    "Systemy i urządzenia",
-    "Konstrukcje żelbetowe",
-    "Realizacje"
+
+  const categoryKeys = [
+    "catAll",
+    "catCompact",
+    "catConcrete",
+    "catSystems",
+    "catConstructions",
+    "catRealizations"
   ];
+
+  const fallbackNames: Record<string, string> = {
+    catAll: "Wszystkie",
+    catCompact: "Schrony kompaktowe",
+    catConcrete: "Schrony żelbetowe",
+    catSystems: "Systemy i urządzenia",
+    catConstructions: "Konstrukcje żelbetowe",
+    catRealizations: "Realizacje"
+  };
+
   const filteredImages =
-    selectedCategory === "Wszystkie"
+    selectedCategory === "catAll"
       ? images
       : images.filter((img) => img.category === selectedCategory)
 
@@ -117,9 +131,9 @@ export default function Gallery() {
     window.addEventListener("keydown", handleKey)
     return () => window.removeEventListener("keydown", handleKey)
   }, [lightboxIndex, filteredImages.length])
+
   return (
     <main className="min-h-screen bg-background">
-      
       <Navigation />
 
       <section id="galeria" className="py-32 bg-background">
@@ -132,25 +146,25 @@ export default function Gallery() {
               }`}
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight text-balance">
-                Galeria
+                {galleryTranslations.heading || "Galeria realizacji"}
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-                Zobacz przykłady naszych projektów. Każdy schron jest unikalny i dostosowany do indywidualnych potrzeb klienta.
+                {galleryTranslations.subHeading || "Zobacz przykłady naszych projektów. Każdy schron jest unikalny i dostosowany do indywidualnych potrzeb klienta."}
               </p>
 
               {/* Filtry kategorii */}
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                {categories.map((cat) => (
+                {categoryKeys.map((catKey) => (
                   <button
-                    key={cat}
+                    key={catKey}
                     className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                      selectedCategory === cat
+                      selectedCategory === catKey
                         ? "bg-accent text-accent-foreground border-accent"
                         : "bg-background text-foreground border-border hover:bg-accent/20"
                     }`}
-                    onClick={() => setSelectedCategory(cat)}
+                    onClick={() => setSelectedCategory(catKey)}
                   >
-                    {cat}
+                    {galleryTranslations[catKey] || fallbackNames[catKey]}
                   </button>
                 ))}
               </div>
@@ -161,11 +175,7 @@ export default function Gallery() {
               {filteredImages.map((image, index) => {
                 const isSpecialImage = image.src === "/gallery2/realizacja2.jpg"
                 
-                const containerClasses = `group relative overflow-hidden rounded-lg cursor-pointer transition-all duration-1000 ${
-                  isSpecialImage 
-                    ? "aspect-auto bg-orange-200 opacity-20"
-                    : "aspect-square"
-                } ${
+                const containerClasses = `group relative overflow-hidden rounded-lg cursor-pointer transition-all duration-1000 ${ isSpecialImage ? "aspect-auto bg-orange-200 opacity-20" : "aspect-square" } ${
                   isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`
               
@@ -177,7 +187,7 @@ export default function Gallery() {
                   <div
                     key={index}
                     className={containerClasses}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={{ transitionDelay: `${index * 100}ms`}}
                     onClick={() => openLightbox(index)}
                   >
                     <Image
@@ -239,7 +249,6 @@ export default function Gallery() {
       </section>
 
       <Footer />
-
     </main>
   )
 }

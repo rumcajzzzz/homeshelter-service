@@ -1,38 +1,43 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Shield, FileText, Calculator, Headphones, CheckCircle2, ArrowRight, ArrowDown } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/translations/context"
 
 export default function InwestorPage() {
+  const { t } = useLanguage()
 
   const benefits = [
     {
       icon: Shield,
-      title: "Bezpieczeństwo gwarantowane",
-      description: "Certyfikowane rozwiązania spełniające najwyższe normy ochrony",
+      title: t.investor?.benefits?.[0]?.title || "Bezpieczeństwo gwarantowane",
+      description: t.investor?.benefits?.[0]?.description || "Certyfikowane rozwiązania spełniające najwyższe normy ochrony",
     },
     {
       icon: FileText,
-      title: "Kompleksowa dokumentacja",
-      description: "Pełna dokumentacja techniczna i prawna dla Twojej inwestycji",
+      title: t.investor?.benefits?.[1]?.title || "Kompleksowa dokumentacja",
+      description: t.investor?.benefits?.[1]?.description || "Pełna dokumentacja techniczna i prawna dla Twojej inwestycji",
     },
     {
       icon: Calculator,
-      title: "Transparentna wycena",
-      description: "Jasne i szczegółowe kosztorysy bez ukrytych opłat",
+      title: t.investor?.benefits?.[2]?.title || "Transparentna wycena",
+      description: t.investor?.benefits?.[2]?.description || "Jasne i szczegółowe kosztorysy bez ukrytych opłat",
     },
     {
       icon: Headphones,
-      title: "Wsparcie 24/7",
-      description: "Dedykowany opiekun projektu dostępny na każdym etapie",
+      title: t.investor?.benefits?.[3]?.title || "Wsparcie 24/7",
+      description: t.investor?.benefits?.[3]?.description || "Dedykowany opiekun projektu dostępny na każdym etapie",
     },
   ]
+
   const packages = [
     {
-      name: "Wersja Podstawowa",
-      price: "od 150 000 zł",
-      features: [
+      name: t.investor?.packages?.[0]?.name || "Wersja Podstawowa",
+      price: t.investor?.packages?.[0]?.price || "od 150 000 zł",
+      features: t.investor?.packages?.[0]?.features || [
         "Schron dla 4–6 osób",
         "Konstrukcja z rur PEHD Ø2500–3600 mm",
         "Wejście z zamykanym włazem i podłogą",
@@ -42,10 +47,10 @@ export default function InwestorPage() {
       ],
     },
     {
-      name: "Wersja Rozszerzona",
-      price: "od 280 000 zł",
+      name: t.investor?.packages?.[1]?.name || "Wersja Rozszerzona",
+      price: t.investor?.packages?.[1]?.price || "od 280 000 zł",
       highlighted: true,
-      features: [
+      features: t.investor?.packages?.[1]?.features || [
         "Dodatkowe pomieszczenia: techniczne, sanitarne, magazynowe",
         "Komora dezaktywacyjna Ø2000 mm z prysznicem",
         "Toaleta, prysznic, umywalka lub zlewozmywak",
@@ -55,9 +60,9 @@ export default function InwestorPage() {
       ],
     },
     {
-      name: "Wersja Premium",
-      price: "od 420 000 zł",
-      features: [
+      name: t.investor?.packages?.[2]?.name || "Wersja Premium",
+      price: t.investor?.packages?.[2]?.price || "od 420 000 zł",
+      features: t.investor?.packages?.[2]?.features || [
         "System modułowy z możliwością łączenia w labirynt pomieszczeń",
         "Ogrzewanie elektryczne i system zasilania awaryjnego",
         "Monitoring, TV, radio, Internet, telefon satelitarny",
@@ -67,16 +72,16 @@ export default function InwestorPage() {
       ],
     },
   ]
+
   const steps = [
-    { step: "1", title: "Konsultacja", desc: "Analiza potrzeb i lokalizacji" },
-    { step: "2", title: "Projekt", desc: "Opracowanie dokumentacji technicznej" },
-    { step: "3", title: "Realizacja", desc: "Budowa i instalacja systemów" },
-    { step: "4", title: "Odbiór", desc: "Testy i przekazanie obiektu" },
+    { step: "1", title: t.investor?.steps?.[0]?.title || "Konsultacja", desc: t.investor?.steps?.[0]?.desc || "Analiza potrzeb i lokalizacji" },
+    { step: "2", title: t.investor?.steps?.[1]?.title || "Projekt", desc: t.investor?.steps?.[1]?.desc || "Opracowanie dokumentacji technicznej" },
+    { step: "3", title: t.investor?.steps?.[2]?.title || "Realizacja", desc: t.investor?.steps?.[2]?.desc || "Budowa i instalacja systemów" },
+    { step: "4", title: t.investor?.steps?.[3]?.title || "Odbiór", desc: t.investor?.steps?.[3]?.desc || "Testy i przekazanie obiektu" },
   ]
   
   return (
     <main className="min-h-screen bg-background">
-      
       <Navigation />
     
       {/* Hero Section */}
@@ -84,10 +89,10 @@ export default function InwestorPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Dla Inwestorów
+              {t.investor?.heroTitle || "Dla Inwestorów"}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Pomagamy inwestorom indywidualnym i instytucjonalnym w realizacji nowoczesnych schronów oraz bezpiecznych przestrzeni ochronnych. Od koncepcji i projektu po finalne wykonanie gwarantujemy kompleksowe wsparcie na każdym etapie.
+              {t.investor?.heroDesc || "Pomagamy inwestorom indywidualnym i instytucjonalnym w realizacji nowoczesnych schronów oraz bezpiecznych przestrzeni ochronnych. Od koncepcji i projektu po finalne wykonanie gwarantujemy kompleksowe wsparcie na każdym etapie."}
             </p>
           </div>
         </div>
@@ -104,7 +109,7 @@ export default function InwestorPage() {
     
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-background mb-12 text-center">
-            Dlaczego warto z nami współpracować
+            {t.investor?.benefitsTitle || "Dlaczego warto z nami współpracować"}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
@@ -131,12 +136,11 @@ export default function InwestorPage() {
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nasza oferta</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {t.investor?.packagesTitle || "Nasza oferta"}
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Projektujemy i realizujemy <strong>schrony żelbetowe</strong> oraz 
-              <strong> Doraźne Miejsca Schronienia (DMS)</strong> zgodne z aktualnymi wytycznymi 
-              <strong> MSWiA</strong> i przepisami <strong>Ustawy o Obronie Cywilnej</strong>.
-              Każdy projekt opracowujemy indywidualnie z pełną dokumentacją i nadzorem technicznym.
+              {t.investor?.packagesSubtitle || "Projektujemy i realizujemy schrony żelbetowe oraz Doraźne Miejsca Schronienia (DMS) zgodne z aktualnymi wytycznymi MSWiA i przepisami Ustawy o Obronie Cywilnej. Każdy projekt opracowujemy indywidualnie z pełną dokumentacją i nadzorem technicznym."}
             </p>
           </div>
 
@@ -150,7 +154,7 @@ export default function InwestorPage() {
               >
                 {pkg.highlighted && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    Najczęściej wybierany
+                    {t.investor?.popularBadge || "Najczęściej wybierany"}
                   </div>
                 )}
                 <div className="mb-6">
@@ -174,7 +178,7 @@ export default function InwestorPage() {
                   asChild
                 >
                   <Link href="/#kontakt">
-                    Zapytaj o ofertę
+                    {t.investor?.inquiryButton || "Zapytaj o ofertę"}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
@@ -183,7 +187,7 @@ export default function InwestorPage() {
           </div>
 
           <p className="text-sm text-muted-foreground text-center mt-12">
-            Wszystkie realizacje wykonujemy zgodnie z aktualnymi wytycznymi <strong>MSWiA</strong> oraz zasadami nowej <strong>Ustawy o Obronie Cywilnej</strong>.
+            {t.investor?.packagesFooter || "Wszystkie realizacje wykonujemy zgodnie z aktualnymi wytycznymi MSWiA oraz zasadami nowej Ustawy o Obronie Cywilnej."}
           </p>
         </div>
       </section>
@@ -192,7 +196,7 @@ export default function InwestorPage() {
       <section className="py-20 px-6 lg:px-12 bg-card">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            Proces realizacji
+            {t.investor?.processTitle || "Proces realizacji"}
           </h2>
     
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -227,24 +231,23 @@ export default function InwestorPage() {
       <section className="py-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Gotowy na rozmowę o swoim projekcie?
+            {t.investor?.ctaTitle || "Gotowy na rozmowę o swoim projekcie?"}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Skontaktuj się z nami, aby otrzymać indywidualną wycenę i bezpłatną konsultację techniczną.
+            {t.investor?.ctaDesc || "Skontaktuj się z nami, aby otrzymać indywidualną wycenę i bezpłatną konsultację techniczną."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <a href="/#kontakt">Umów konsultację</a>
+              <a href="/#kontakt">{t.investor?.ctaButton || "Umów konsultację"}</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="/">Wróć do strony głównej</a>
+              <a href="/">{t.investor?.ctaBack || "Wróć do strony głównej"}</a>
             </Button>
           </div>
         </div>
       </section>
 
       <Footer />
-      
     </main>
   )
 }

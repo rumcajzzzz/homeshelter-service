@@ -4,53 +4,20 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { sanityClient } from "@/lib/sanityClient"
-
-type HeroData = {
-  heading1: string
-  heading2: string
-  subHeading1: string
-  subHeading2: string
-  buttonContact: string
-  buttonOffer: string
-  infoTile: string
-}
+import { useLanguage } from "@/translations/context"
 
 export function Hero() {
-  const [heroData, setHeroData] = useState<HeroData | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useLanguage()
+
   useEffect(() => {
-    sanityClient.fetch<HeroData>(`
-      *[_type == "hero"][0]{
-        heading1,
-        heading2,
-        subHeading1,
-        subHeading2,
-        buttonContact,
-        buttonOffer,
-        infoTile
-      }
-    `)
-    .then((data) => setHeroData(data))
-    .catch(() => {
-    })
     setIsVisible(true)
   }, [])
-  const fallbackData: HeroData = {
-    heading1: "Schrony i ukrycia",
-    heading2: "nowej generacji",
-    subHeading1: "Szybko, solidnie i zawsze zgodnie z obowiązującymi normami.",
-    subHeading2: "Realizujemy nowoczesne schrony i ukrycia (DMS) z certyfikowanych modułów żelbetowych oraz rur.",
-    buttonContact: "Skontaktuj się z nami",
-    buttonOffer: "Zobacz ofertę",
-    infoTile: "Zgodne z wytycznymi MSWiA i ustawą o ochronie ludności",
-  }
 
-  const currentHero = heroData || fallbackData
+  const currentHero = t.hero
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-      
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

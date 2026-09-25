@@ -6,60 +6,59 @@ import { FileText, Users, Wrench, BookOpen, Download, Mail, CheckCircle2 } from 
 import Link from "next/link"
 import { CatalogWrapper } from "@/components/catalog"
 import { PartnerForm } from "@/components/designerForm"
+import { useLanguage } from "@/translations/context"
 
 export default function ProjektantPage() {
+  const { t } = useLanguage()
+
   const supportAreas = [
     {
       icon: FileText,
-      title: "Dokumentacja techniczna",
-      description:
-        "Kompletne opracowania rysunkowe, schematy instalacyjne i wytyczne branżowe zgodne z obowiązującymi normami MSWiA.",
+      title: t.designer?.supportAreas?.[0]?.title || "Dokumentacja techniczna",
+      description: t.designer?.supportAreas?.[0]?.description || "Kompletne opracowania rysunkowe, schematy instalacyjne i wytyczne branżowe zgodne z obowiązującymi normami MSWiA.",
     },
     {
       icon: Users,
-      title: "Konsultacje eksperckie",
-      description:
-        "Bezpośredni kontakt z naszymi specjalistami w zakresie konstrukcji, wentylacji i zabezpieczeń obiektów ochronnych.",
+      title: t.designer?.supportAreas?.[1]?.title || "Konsultacje eksperckie",
+      description: t.designer?.supportAreas?.[1]?.description || "Bezpośredni kontakt z naszymi specjalistami w zakresie konstrukcji, wentylacji i zabezpieczeń obiektów ochronnych.",
     },
     {
       icon: Wrench,
-      title: "Wsparcie techniczne",
-      description:
-        "Pomoc przy doborze materiałów, komponentów systemowych i technologii dedykowanych projektom schronowym.",
+      title: t.designer?.supportAreas?.[2]?.title || "Wsparcie techniczne",
+      description: t.designer?.supportAreas?.[2]?.description || "Pomoc przy doborze materiałów, komponentów systemowych i technologii dedykowanych projektom schronowym.",
     },
     {
       icon: BookOpen,
-      title: "Baza wiedzy",
-      description:
-        "Zbiór aktualnych wytycznych projektowych, analiz technicznych oraz przykładów zrealizowanych obiektów.",
+      title: t.designer?.supportAreas?.[3]?.title || "Baza wiedzy",
+      description: t.designer?.supportAreas?.[3]?.description || "Zbiór aktualnych wytycznych projektowych, analiz technicznych oraz przykładów zrealizowanych obiektów.",
     },
   ]
 
   const resources = [
     {
-      title: "Ustawa o Obronie Cywilnej",
-      description: "Aktualne przepisy i wymagania dotyczące budownictwa ochronnego",
+      title: t.designer?.resources?.[0]?.title || "Ustawa o Obronie Cywilnej",
+      description: t.designer?.resources?.[0]?.description || "Aktualne przepisy i wymagania dotyczące budownictwa ochronnego",
       file: "UOC.pdf",
       type: "PDF",
       size: "0,7 MB",
     },
     {
-      title: "Rozporządzenie MSWiA – 14.07.2025",
-      description: "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji",
+      title: t.designer?.resources?.[1]?.title || "Rozporządzenie MSWiA – 14.07.2025",
+      description: t.designer?.resources?.[1]?.description || "Wytyczne dotyczące sposobu przygotowania obiektów zbiorowej ochrony do użycia i szczegółowych warunków eksploatacji",
       file: "RMSWiAIU_2025_07.pdf",
       type: "PDF",
       size: "0,2 MB",
     },
     {
-      title: "Rozporządzenie MSWiA – 13.11.2025",
-      description: "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania",
+      title: t.designer?.resources?.[2]?.title || "Rozporządzenie MSWiA – 13.11.2025",
+      description: t.designer?.resources?.[2]?.description || "Warunki techniczne budowli ochronnych oraz zasady ich użytkowania i usytuowania",
       file: "RMSWiAIU_2025_11.pdf",
       type: "PDF",
       size: "3 MB",
     },
   ];
 
-  const benefits = [
+  const benefits = t.designer?.benefits || [
     "Dostęp do certyfikowanych rozwiązań konstrukcyjnych i instalacyjnych",
     "Wsparcie w zakresie interpretacji norm i wytycznych MSWiA",
     "Priorytetowe konsultacje przy projektach technicznych",
@@ -77,12 +76,10 @@ export default function ProjektantPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Dla Projektantów
+              {t.designer?.heroTitle || "Dla Projektantów"}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Oferujemy wsparcie techniczne i merytoryczne dla architektów oraz biur projektowych
-              realizujących inwestycje z zakresu budownictwa ochronnego. 
-              Udostępniamy wiedzę, narzędzia i dokumentację, które ułatwiają tworzenie nowoczesnych i bezpiecznych obiektów.
+              {t.designer?.heroDesc || "Oferujemy wsparcie techniczne i merytoryczne dla architektów oraz biur projektowych realizujących inwestycje z zakresu budownictwa ochronnego. Udostępniamy wiedzę, narzędzia i dokumentację, które ułatwiają tworzenie nowoczesnych i bezpiecznych obiektów."}
             </p>
           </div>
         </div>
@@ -90,7 +87,6 @@ export default function ProjektantPage() {
 
       {/* Support Areas Section */}
       <section className="relative py-20 px-6 lg:px-12">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{ backgroundImage: "url('/professional-construction-team-modern-architecture.jpg')" }}
@@ -99,7 +95,9 @@ export default function ProjektantPage() {
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-background mb-12 text-center">Obszary wsparcia</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-background mb-12 text-center">
+            {t.designer?.supportTitle || "Obszary wsparcia"}
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {supportAreas.map((area, index) => (
               <div
@@ -131,12 +129,12 @@ export default function ProjektantPage() {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Materiały dla projektantów
+              {t.designer?.resourcesTitle || "Materiały dla projektantów"}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Dysponujemy najnowszymi wytycznymi, które ułatwiają projektantom pracę i wspierają tworzenie bezpiecznych, nowoczesnych obiektów ochronnych. <br />
+              {t.designer?.resourcesSubtitle || "Dysponujemy najnowszymi wytycznymi, które ułatwiają projektantom pracę i wspierają tworzenie bezpiecznych, nowoczesnych obiektów ochronnych."} <br />
               <span className="text-orange-500 text-sm">
-                Wszystkie dokumenty są aktualne i dostosowane do obowiązujących norm MSWiA
+                {t.designer?.resourcesNote || "Wszystkie dokumenty są aktualne i dostosowane do obowiązujących norm MSWiA"}
               </span>
             </p>
           </div>
@@ -158,21 +156,20 @@ export default function ProjektantPage() {
                     className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
                    >
                     <Download className="w-4 h-4 mr-2" />
-                    Pobierz PDF
+                    {t.designer?.downloadButton || "Pobierz PDF"}
                   </a>
               </div>
             ))}
           </div>
           
           <div className="container mx-auto max-w-6xl p-10 my-10 flex flex-col justify-center bg-card rounded-2xl shadow-lg">
-            <h1 className="text-center text-3xl md:text-4xl font-bold mb-8 text-foreground ">
-              Katalog projektanta
-            </h1>
+            <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 text-foreground ">
+              {t.designer?.catalogTitle || "Katalog projektanta"}
+            </h2>
             <p className="text-xs md:text-base text-center text-muted-foreground mb-6 max-w-3xl mx-auto">
-              Przeglądaj <span className="font-bold">kategorie produktów</span>, szczegółowe <span className="font-bold">modele</span> oraz ich <span className="font-bold">warianty i podmodele</span>. 
-              Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych w formatach <span className="font-bold">DWG</span> lub <span className="font-bold">RVT</span>, zapewniające pełną kompatybilność z profesjonalnym oprogramowaniem CAD/BIM.
+              {t.designer?.catalogDesc || "Przeglądaj kategorie produktów, szczegółowe modele oraz ich warianty i podmodele. Pod każdym podmodelem znajdziesz dedykowane przyciski umożliwiające szybki dostęp do plików rysunkowych."}
             </p>
-            <CatalogWrapper   />
+            <CatalogWrapper />
           </div>
 
         </div>
@@ -184,11 +181,10 @@ export default function ProjektantPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Korzyści ze współpracy
+              {t.designer?.benefitsTitle || "Korzyści ze współpracy"}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Współpraca z nami to dostęp do specjalistycznej wiedzy i zaplecza technicznego,
-              które wspierają projektantów w tworzeniu bezpiecznych, zgodnych z przepisami obiektów.
+              {t.designer?.benefitsDesc || "Współpraca z nami to dostęp do specjalistycznej wiedzy i zaplecza technicznego, które wspierają projektantów w tworzeniu bezpiecznych, zgodnych z przepisami obiektów."}
             </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -200,38 +196,35 @@ export default function ProjektantPage() {
               </ul>
             </div>
             <div className="bg-background rounded-lg border border-border p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Zostań partnerem</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t.designer?.formTitle || "Zostań partnerem"}</h3>
               <p className="text-muted-foreground mb-6">
-                Wypełnij formularz, a nasz zespół skontaktuje się z Tobą, aby omówić szczegóły
-                współpracy.
+                {t.designer?.formDesc || "Wypełnij formularz, a nasz zespół skontaktuje się z Tobą, aby omówić szczegóły współpracy."}
               </p>
-
               <PartnerForm />
-
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 lg:px-12"style={{
+      <section className="py-20 px-6 lg:px-12" style={{
         backgroundImage: 'url(/fiber-background2.jpg)',
         backgroundColor: 'rgba(255,255,255,0.9)',
         backgroundBlendMode: 'screen',           
       }}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Potrzebujesz wsparcia projektowego?
+            {t.designer?.ctaTitle || "Potrzebujesz wsparcia projektowego?"}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Skontaktuj się z naszym działem technicznym — pomożemy dobrać odpowiednie rozwiązania do Twojego projektu.
+            {t.designer?.ctaDesc || "Skontaktuj się z naszym działem technicznym — pomożemy dobrać odpowiednie rozwiązania do Twojego projektu."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <Link href="/#kontakt">Skontaktuj się z ekspertem</Link>
+              <Link href="/#kontakt">{t.designer?.ctaButton || "Skontaktuj się z ekspertem"}</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/">Wróć do strony głównej</Link>
+              <Link href="/">{t.designer?.ctaBack || "Wróć do strony głównej"}</Link>
             </Button>
           </div>
         </div>

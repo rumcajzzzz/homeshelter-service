@@ -3,18 +3,22 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
+import { useLanguage } from "@/translations/context"
 
 export function PartnerForm() {
+  const { t } = useLanguage()
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [acceptedRODO, setAcceptedRODO] = useState(false)
   const [showRODO, setShowRODO] = useState(false)
 
+  const formDict = t.designer?.designerForm || {}
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!acceptedRODO) {
-      setError("Musisz zaakceptować Klauzulę RODO, aby wysłać wiadomość.")
+      setError(formDict.rodoError || "Musisz zaakceptować RODO, aby wysłać wiadomość.")
       return
     }
 
@@ -40,7 +44,7 @@ export function PartnerForm() {
 
       if (!res.ok) throw new Error("Server error")
 
-      setSuccess("Twoje zapytanie zostało wysłane. Skontaktujemy się z Tobą wkrótce!")
+      setSuccess(formDict.successMessage || "Wiadomość została wysłana pomyślnie!")
       form.reset()
       setAcceptedRODO(false)
     } catch {
@@ -53,56 +57,66 @@ export function PartnerForm() {
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Imię i nazwisko</label>
+        <label className="block text-sm font-medium text-foreground mb-2">
+          {formDict.nameLabel || "Imię i nazwisko"}
+        </label>
         <input
           name="name"
           type="text"
           className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-          placeholder="Jan Kowalski"
+          placeholder={formDict.namePlaceholder || "np. Jan Kowalski"}
           required
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+        <label className="block text-sm font-medium text-foreground mb-2">
+          {formDict.emailLabel || "Adres e-mail"}
+        </label>
         <input
           name="email"
           type="email"
           className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-          placeholder="jan.kowalski@gmail.com"
+          placeholder={formDict.emailPlaceholder || "jan.kowalski@example.com"}
           required
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
+        <label className="block text-sm font-medium text-foreground mb-2">
+          {formDict.phoneLabel || "Numer telefonu"}
+        </label>
         <input
           name="phone"
           type="tel"
           required
           className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-          placeholder="+48 123 456 789"
+          placeholder={formDict.phonePlaceholder || "+48 123 456 789"}
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Firma / Studio</label>
+        <label className="block text-sm font-medium text-foreground mb-2">
+          {formDict.companyLabel || "Firma / Studio"}
+        </label>
         <input
           name="company"
           type="text"
           required
           className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-          placeholder="Nazwa firmy"
+          placeholder={formDict.companyPlaceholder || "Nazwa firmy"}
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">Wiadomość</label>
+        <label className="block text-sm font-medium text-foreground mb-2">
+          {formDict.messageLabel || "Wiadomość"}
+        </label>
         <textarea
           name="message"
           rows={4}
           className="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent resize-none"
-          placeholder="Opisz swoje potrzeby..."
+          placeholder={formDict.messagePlaceholder || "Opisz swoje zapotrzebowanie..."}
           required
         />
       </div>
@@ -117,12 +131,14 @@ export function PartnerForm() {
           className="mt-1"
         />
         <label htmlFor="rodo" className="text-sm text-foreground">
-          Akceptuję <span
+          {formDict.rodoAccept || "Akceptuję"}{" "}
+          <span
             onClick={() => setShowRODO(true)}
             className="text-accent underline cursor-pointer font-semibold"
           >
-            RODO
-          </span> i wyrażam zgodę na przetwarzanie moich danych osobowych.
+            {formDict.rodoModalTitle || "RODO"}
+          </span>{" "}
+          {formDict.rodoText || "oraz wyrażam zgodę na przetwarzanie moich danych osobowych."}
         </label>
       </div>
 
@@ -132,7 +148,7 @@ export function PartnerForm() {
         disabled={loading}
       >
         <Mail className="w-4 h-4 mr-2" />
-        {loading ? "Wysyłanie..." : "Wyślij zapytanie"}
+        {loading ? (formDict.sendingButton || "Wysyłanie...") : (formDict.submitButton || "Wyślij zapytanie")}
       </Button>
 
       {success && (
@@ -150,26 +166,17 @@ export function PartnerForm() {
         >
           <div
             className="bg-white max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 rounded-lg shadow-lg"
-            onClick={(e) => e.stopPropagation()} // kliknięcie wewnątrz nie zamyka
+            onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-xl font-bold mb-4">Klauzula RODO</h2>
+            <h2 className="text-xl font-bold mb-4">{formDict.rodoModalTitle || "Klauzula RODO"}</h2>
             <p className="text-sm text-gray-700 whitespace-pre-line">
-              {`Zgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679
-              z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem
-              danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
-              dyrektywy 95/46/WE (dalej „RODO”) informuję, iż:
-
-              1) administratorem Pani/Pana danych osobowych jest spółka „Fiber System Polska sp. z o.o.” z siedzibą w Warszawie ul. Okopowa 59A/97,
-              2) kontakt z Inspektorem Ochrony Danych – office@fibersystem.eu,
-              3) Pani/Pana dane osobowe przetwarzane będą w celu realizacji umowy, świadczenia pomocy technicznej, doradczej, kontaktu telefonicznego, mailowego lub bezpośredniego kontaktu, wysyłania informacji handlowych, marketingowych, newsletterów, kampanii marketingowych, realizacji uzasadnionego interesu Administratora oraz do celów badawczych, statystycznych i/lub historycznych,
-              4) odbiorcami danych będą wyłącznie podmioty uprawnione do uzyskania danych osobowych na podstawie przepisów prawa,
-              5) dane przechowywane będą przez okres 5 lat,
-              6) posiada Pani/Pan prawo do żądania od administratora dostępu do danych, sprostowania, usunięcia lub ograniczenia przetwarzania, wniesienia sprzeciwu wobec przetwarzania, przenoszenia danych oraz prawo do cofnięcia zgody,
-              7) ma Pani/Pan prawo wniesienia skargi do organu nadzorczego,
-              8) podanie danych osobowych jest wymogiem ustawowym i dobrowolnym, ich niepodanie może skutkować niezawarciem umowy lub uniemożliwieniem kontaktu ze strony Fiber System Polska sp. z o.o.`}
+              {formDict.rodoModalContent}
             </p>
-            <Button onClick={() => setShowRODO(false)} className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              Zamknij
+            <Button
+              onClick={() => setShowRODO(false)}
+              className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
+            >
+              {formDict.close || "Zamknij"}
             </Button>
           </div>
         </div>

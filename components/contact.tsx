@@ -2,24 +2,15 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Target } from "lucide-react"
-import { sanityClient } from "@/lib/sanityClient"
+import { Mail, Phone, MapPin } from "lucide-react"
 import ContactForm from "./contactForm"
 import Link from "next/link"
-
-type ContactData = {
-  subHeading: string
-  Phone: string
-  Email: string
-  Address: string
-}
+import { useLanguage } from "@/translations/context"
 
 export function Contact() {
-  const [contact, setContact] = useState<ContactData | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
-
-
+  const { t } = useLanguage()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,51 +23,38 @@ export function Contact() {
     return () => observer.disconnect()
   }, [])
 
-  useEffect(() => {
-    sanityClient
-      .fetch<ContactData>(`*[_type == "contact"][0]{
-        subHeading,
-        Phone,
-        Email,
-        Address
-      }`)
-      .then((data) => {
-        if (data) setContact(data) 
-      })
-      .catch(() => {
-      })
-  }, [])
-
-  const fallbackContact: ContactData = {
-    subHeading: "Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.",
-    Phone: "+48 576 210 845",
-    Email: "office@fibersystem.eu",
-    Address: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
+  const contactData = {
+    phone: "+48 576 210 845",
+    email: "office@fibersystem.eu",
+    address: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
   }
-
-  const currentContact = contact || fallbackContact
 
   const contactInfo = [
     {
+      id: "phone",
       icon: Phone,
-      label: "Telefon",
-      value: currentContact.Phone,
-      href: `tel:${currentContact.Phone.replace(/\s+/g, "")}`,
+      label: t.contact.phoneLabel,
+      value: contactData.phone,
+      href: `tel:${contactData.phone.replace(/\s+/g, "")}`,
+      isExternal: false,
     },
     {
+      id: "email",
       icon: Mail,
-      label: "Email",
-      value: currentContact.Email,
-      href: `mailto:${currentContact.Email}`,
+      label: t.contact.emailLabel,
+      value: contactData.email,
+      href: `mailto:${contactData.email}`,
+      isExternal: false,
     },
     {
+      id: "address",
       icon: MapPin,
-      label: "Adres",
-      value: currentContact.Address,
+      label: t.contact.addressLabel,
+      value: contactData.address,
       href: "https://maps.app.goo.gl/Y1wsRfAZ9pEtcQjKA",
+      isExternal: true,
     },
   ]
-
 
   return (
     <section id="kontakt" ref={sectionRef} className="py-32 bg-muted/30">
@@ -88,17 +66,17 @@ export function Contact() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight text-balance">
-              Skontaktuj się z nami
+              {t.contact.heading}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-              Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami, aby omówić szczegóły Twojego projektu.
+              {t.contact.subHeading}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {contactInfo.map((info, index) => (
               <Card
-                key={index}
+                key={info.id}
                 className={`transition-all duration-500 border-border bg-card ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
@@ -106,19 +84,20 @@ export function Contact() {
                   transitionDelay: `${index * 150}ms`,
                 }}
               >
-                <Link   href={info.href}
-                        target={info.label === "Adres" ? "_blank" : undefined}
-                        rel={info.label === "Adres" ? "noopener noreferrer" : undefined}
-                        className="block"
-                 >
-                  <CardContent className="p-6 text-center" >
+                <Link
+                  href={info.href}
+                  target={info.isExternal ? "_blank" : undefined}
+                  rel={info.isExternal ? "noopener noreferrer" : undefined}
+                  className="block h-full"
+                >
+                  <CardContent className="p-6 text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
                       <info.icon className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="text-sm font-medium text-muted-foreground mb-2">{info.label}</h3>
-                    <a className="text-foreground font-medium hover:text-accent transition-colors">
+                    <span className="text-foreground font-medium hover:text-accent transition-colors block">
                       {info.value}
-                    </a>
+                    </span>
                   </CardContent>
                 </Link>
               </Card>

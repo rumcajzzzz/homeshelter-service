@@ -2,24 +2,13 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { sanityClient } from "@/lib/sanityClient"
-import { PortableText } from "@portabletext/react"
 import { Award, Clock, Users } from "lucide-react"
-
-type Stat = { value: string; label: string }
-type AboutData = {
-  heading: string
-  subHeading: string
-  stats: Stat[]
-  solutionsHeading: string
-  solutionsSubHeading: any[]
-  solutionsList: any[]
-}
+import { useLanguage } from "@/translations/context"
 
 export function About() {
-  const [data, setData] = useState<AboutData | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,43 +21,19 @@ export function About() {
     return () => observer.disconnect()
   }, [])
 
-  useEffect(() => {
-    sanityClient
-      .fetch<AboutData>(`*[_type == "about"][0]{
-        heading,
-        subHeading,
-        stats,
-        solutionsHeading,
-        solutionsSubHeading,
-        solutionsList
-      }`)
-      .then((data) => {
-        console.log("About data:", data)
-        setData(data)
-      })
-      .catch(() => setData(null))
-  }, [])
-
-  const heading = data?.heading || "Nowoczesne schrony i ukrycia zgodne z wytycznymi MSWiA"
-  const subHeading = data?.subHeading || "Od ponad 20 lat tworzymy konstrukcje ochronne spełniające wymogi MSWiA i Ustawy o Obronie Cywilnej."
-  const stats: Stat[] =
-    data?.stats || [
-      { value: "20+", label: "Lat doświadczenia" },
-      { value: "200+", label: "Zrealizowanych projektów" },
-      { value: "24/7", label: "Wsparcie techniczne" },
-    ]
-  const solutionsHeading = data?.solutionsHeading || "Nasze rozwiązania"
-  const solutionsSubHeading = data?.solutionsSubHeading || "Realizujemy projekty schronów i Doraźnych Miejsc Schronienia (DMS) w oparciu o wytyczne MSWiA. Nasze konstrukcje obejmują:"
-  const solutionsList = data?.solutionsList || []
-
   const icons = [Award, Users, Clock]
 
   return (
-    <section id="o-nas" ref={sectionRef} className="py-24 md:py-32 bg-background"  style={{
-      backgroundImage: 'url(/fiber-background.jpg)',
-      backgroundColor: 'rgba(255,255,255,0.9)',
-      backgroundBlendMode: 'screen',           
-    }}>
+    <section
+      id="o-nas"
+      ref={sectionRef}
+      className="py-24 md:py-32 bg-background"
+      style={{
+        backgroundImage: "url(/fiber-background.jpg)",
+        backgroundColor: "rgba(255,255,255,0.9)",
+        backgroundBlendMode: "screen",
+      }}
+    >
       <div className="container px-6 lg:px-12 mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -78,16 +43,16 @@ export function About() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight text-balance">
-              {heading}
+              {t.about.heading}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-              {subHeading}
+              {t.about.subHeading}
             </p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            {stats.map((stat, index) => {
+            {t.about.stats.map((stat: { value: string; label: string }, index: number) => {
               const Icon = icons[index] || Award
               return (
                 <div
@@ -116,17 +81,15 @@ export function About() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{solutionsHeading}</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{t.about.solutionsHeading}</h3>
               <div className="text-muted-foreground leading-relaxed mb-6">
-                {solutionsSubHeading}
+                {t.about.solutionsSubHeading}
               </div>
               <ul className="space-y-3">
-                {solutionsList.map((block, index) => (
+                {t.about.solutionsList.map((item: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
-                    <span className="text-muted-foreground">
-                      <PortableText value={[block]} />
-                    </span>
+                    <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
