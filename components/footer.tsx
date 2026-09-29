@@ -37,14 +37,14 @@ export function Footer() {
   const slogan = t.footer.slogan || footer?.slogan
 
   const navLinks = [
-    { label: t.navigation.about, href: "#o-nas" },
-    { label: t.navigation.offer, href: "#oferta" },
-    { label: t.navigation.gallery, href: "#galeria" },
-    { label: t.navigation.contact, href: "#kontakt" },
+    { label: t.navigation.about, href: "/#o-nas" },
+    { label: t.navigation.offer, href: "/#oferta" },
+    { label: t.navigation.gallery, href: "/#galeria" },
+    { label: t.navigation.contact, href: "/#kontakt" },
   ]
 
   const legalLinks = [
-    { label: t.contact.form.rodoModalTitle || "RODO", href: "#" },
+    { label: t.contact.form.rodoModalTitle || "RODO", href: "/projektant/#materialy" },
   ]
 
   return (

@@ -24,7 +24,6 @@ export function Contact() {
   }, [])
 
   const contactData = {
-    phone: "+48 576 210 845",
     email: "office@fibersystem.eu",
     address: "Ul. Okopowa 59a lok.97, 01-043 Warszawa",
   }
@@ -34,8 +33,8 @@ export function Contact() {
       id: "phone",
       icon: Phone,
       label: t.contact.phoneLabel,
-      value: contactData.phone,
-      href: `tel:${contactData.phone.replace(/\s+/g, "")}`,
+      value: t.footer.phoneNumber,
+      href: `tel:${t.footer.phoneNumber.replace(/\s+/g, "")}`,
       isExternal: false,
     },
     {

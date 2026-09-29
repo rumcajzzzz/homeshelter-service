@@ -120,7 +120,7 @@ export default function ProjektantPage() {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 px-6 lg:px-12" style={{
+      <section id="materialy" className="py-20 px-6 lg:px-12" style={{
         backgroundImage: 'url(/fiber-background.jpg)',
         backgroundColor: 'rgba(255,255,255,0.85)',
         backgroundBlendMode: 'screen',            
