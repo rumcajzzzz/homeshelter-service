@@ -755,380 +755,414 @@
 	  }
 	},
 	"DE": {
-	  "navigation": {
-		"about": "Über uns",
-		"offer": "Angebot",
-		"investors": "Für Investoren",
-		"designers": "Für Planer",
-		"gallery": "Galerie",
-		"virtualTour": "Virtueller Rundgang",
-		"contact": "Kontaktieren Sie uns",
-		"faq": "FAQ",
-		"blog": "Aktuelles",
-		"careers": "Karriere"
-	  },
-	  "hero": {
-		"infoTile": "Konform mit den Richtlinien des Ministeriums und dem Zivilschutzgesetz",
-		"heading1": "Schutzräume und Unterstände",
-		"heading2": "der neuen Generation",
-		"subHeading1": "Schnell, solide und stets gemäß den geltenden Normen.",
-		"subHeading2": "Wir realisieren moderne Schutzräume und Unterstände (DMS) aus zertifizierten Stahlbetonmodulen und Rohren.",
-		"buttonContact": "Kontaktieren Sie uns",
-		"buttonOffer": "Angebot ansehen"
-	  },
-	  "about": {
-		"heading": "Moderne Schutzräume und Unterstände gemäß den Richtlinien des Ministeriums",
-		"subHeading": "Seit über 20 Jahren bauen wir Schutzkonstruktionen, die den Anforderungen des Ministeriums und des Zivilschutzgesetzes entsprechen.",
-		"stats": [
-		  { "value": "20+", "label": "Jahre Erfahrung" },
-		  { "value": "200+", "label": "Realisierte Projekte" },
-		  { "value": "24/7", "label": "Technischer Support" }
-		],
-		"solutionsHeading": "Unsere Lösungen",
-		"solutionsSubHeading": "Wir realisieren Schutzraumprojekte und temporäre Unterstände (DMS) auf der Grundlage der Richtlinien des Ministeriums. Unsere Konstruktionen umfassen:",
-		"solutionsList": [
-		  "Modulschutzeinrichtungen aus Stahlbeton-Fertigteilen",
-		  "Temporäre Unterstände (DMS), angepasst an individuelle Bedürfnisse",
-		  "Komplette Montage sowie Belüftungs- und Filterlüftungsanlagen"
-		]
-	  },
-	  "offerings": {
-		"heading": "Unser Angebot",
-		"subHeading": "Wir realisieren Schutzbauten gemäß dem Zivilschutzgesetz und den Richtlinien des Ministeriums. Unser Angebot umfasst sowohl Stahlbetonschutzräume als auch temporäre Unterstände (DMS) aus Verbundwerkstoffen.",
-		"cards": [
-		  {
-			"title": "Temporäre Unterstände (DMS)",
-			"description": "Konstruktionen zur schnellen Bereitstellung im Gefahrenfall. Hergestellt aus Verbundwerkstoffen (GFK, PEHD, Stahlbeton-Fertigteile), konform mit den Richtlinien des Ministeriums.",
-			"features": [
-			  "Flexibel in Montage und Anpassung",
-			  "Zugelassene Materialien: GFK, PEHD, Stahlbeton",
-			  "Für zivile und öffentliche Gebäude"
-			]
-		  },
-		  {
-			"title": "Stahlbeton-Fertigteilunterstände",
-			"description": "Modulare Konstruktionen, die unter Werksbedingungen mit vollständiger Qualitätskontrolle hergestellt werden. Montagefertig geliefert, um Dichtheit und Festigkeit zu garantieren.",
-			"features": [
-			  "Geprüft auf Dichtheit und Festigkeit",
-			  "Schnelle Montage auf der Baustelle",
-			  "Vollständige Konformität mit den Standards des Ministeriums"
-			]
-		  },
-		  {
-			"title": "Vor Ort gegossene Stahlbetonschutzräume",
-			"description": "Traditionelle Technologie des Baus von Schutzräumen, die direkt am Investitionsort gegossen werden. Gewährleistet maximale Haltbarkeit und Anpassung an die Geländebedingungen.",
-			"features": [
-			  "Ausführung nach individuellem Entwurf",
-			  "Monolithische Stahlbetontechnologie",
-			  "Für Institutionen, Unternehmen und strategische Objekte"
-			]
-		  },
-		  {
-			"title": "Modernisierung und Adaptierung von Objekten",
-			"description": "Wir führen technische Audits, Modernisierungen und Anpassungen bestehender Schutzräume und Räume durch, die als DMS dienen können.",
-			"features": [
-			  "Bau- und Systemaudit",
-			  "Modernisierung von Lüftungs- und Stromversorgungssystemen",
-			  "Anpassung an geltende Standards des Ministeriums"
-			]
-		  }
-		]
-	  },
-	  "gallery": {
-		"heading": "Unsere Realisierungen",
-		"subHeading": "Sehen Sie Beispiele unserer Projekte. Jeder Schutzraum ist einzigartig und an die individuellen Bedürfnisse des Kunden angepasst.",
-		"footerText": "Dies ist nur ein Teil unserer Realisierungen. Möchten Sie die gesamte Galerie sehen?",
-		"button": "Mehr sehen",
-		"catAll": "Alle",
-		"catCompact": "Kompakte Schutzräume",
-		"catConcrete": "Stahlbetonschutzräume",
-		"catSystems": "Systeme und Anlagen",
-		"catConstructions": "Stahlbetonkonstruktionen",
-		"catRealizations": "Realisierungen",
-		"images": [
-		  { "alt": "Badezimmer im Premium-Schutzraum" },
-		  { "alt": "Innenraum des Kompaktschutzraums" },
-		  { "alt": "Rahmenprofile" },
-		  { "alt": "Kompaktschutzraum - Eingang" },
-		  { "alt": "Toilette im Premium-Schutzraum" },
-		  { "alt": "Spezialschutzraum - Vorratslager" }
-		],
-		"altTexts": {
-			"budowa1": "Bauphase – Fundament- und Unterbauarbeiten",
-			"budowa2": "Montage eines vorgefertigten Elements mit einem Kran",
-			"budowa4": "Montage eines vorgefertigten Elements mit einem Kran",
-			"montaz_modulow": "Montage von vorgefertigten Modulen",
-			"budowa3": "Konstruktions- und Montagearbeiten",
-			"wnetrze_surowe": "Schutzraum-Innenraum im Rohbauzustand",
-			"realizacja_piaseczno1": "Realisierung in Piaseczno – PEHD DN2400 mm, Länge 20 m",
-			"realizacja_piaseczno2": "Realisierung in Piaseczno – PEHD DN2400 mm, Länge 20 m",
-			"schron2_wejscie": "Eingang zu einem kompakten Schutzraum für 2 Personen",
-			"schron2_salon": "Kompakter Schutzraum – Wohnzimmer für 2 Personen",
-			"schron2_lazienka": "Badezimmer in einem kompakten Schutzraum für 2 Personen",
-			"schron4_wejscie": "Eingang zu einem Familienschutzraum für 4 Personen",
-			"schron4_widok": "Kompakter Schutzraum für 4 Personen – Draufsicht",
-			"schron100_rzut": "Stahlbetonschutzraum-Projekt für 100 Personen – Technischer Grundriss",
-			"schron100_techniczne": "Technikraum in einem Stahlbetonschutzraum für 100 Personen",
-			"schron100_sypialnia": "Schlafzimmer in einem Stahlbetonschutzraum für 100 Personen",
-			"schron100_magazyn": "Lagerraum in einem Stahlbetonschutzraum für 100 Personen",
-			"schron100_lazienka": "Badezimmer in einem Stahlbetonschutzraum für 100 Personen",
-			"schron20_rzut": "Modularer Stahlbetonschutzraum für 20 Personen und 2 Betreuer",
-			"schron20_sypialnia": "Schlafzimmer in einem Schutzraum für 20 Personen und 2 Betreuer",
-			"schron20_salon": "Wohn- und Lagerbereich in einem Schutzraum für 20 Personen und 2 Betreuer",
-			"drzwi_wewnatrz": "Fronttür – Innenansicht",
-			"drzwi_bok": "Fronttür – Seitenansicht mit Verriegelungsmechanismus",
-			"filtrowentylacja": "Filterlüftungssystem",
-			"zespol_filtrow": "Filtersatz für Filterlüftung",
-			"mocowania_drzwi": "Befestigungssystem für Schutzraumtüren",
-			"mechanizm_drzwi_wew": "Eingangstürmechanismus für Schutzräume - Innenansicht",
-			"drzwi_wew": "Schutzraumtür - Innenansicht",
-			"drzwi_zew": "Schutzraumtür - Außenansicht",
-			"drzwi_bok2": "Schutzraumtür - Seitenansicht",
-			"drzwi_gazoszczelne": "Gasdichte Eingangstür",
-			"drzwi_gazoszczelne_wew": "Gasdichte Eingangstür - Innenansicht",
-			"wlaz_kanal_zew": "Fluchtkanalluke, dicht - Außenansicht",
-			"wlazy_ucieczkowe": "Fluchtluken aus dem Schutzraum",
-			"wlaz_ucieczkowy1": "Fluchtluke",
-			"wlaz_ucieczkowy2": "Fluchtluke",
-			"zawor_reczny": "Handventil",
-			"zawor_nadcisnieniowy1": "Überdruckventil",
-			"zawor_nadcisnieniowy2": "Überdruckventil",
-			"profil_rury": "Konstruktionsprofil basierend auf runden Stahlbetonrohren während des Baus",
-			"profil_rama": "Rahmenprofil der Stahlbetonstruktur während der Montage"
-		}
-	  },
-	  "virtualTour": {
-		"heading": "Machen Sie einen virtuellen Rundgang durch unseren Schutzraum",
-		"subHeading": "Entdecken Sie unsere Schutzraum-Entwürfe in 3D. Drehen, zoomen und erkunden Sie jedes Detail direkt im Browser.",
-		"tours": {
-		  "bunker1": "Schutzraum L = 6m",
-		  "bunker2": "Schutzraum L = 11,5m",
-		  "bunker3": "Modulschutzeinrichtung"
-		}
-	  },
-	  "faq": {
-		"heading": "Häufig gestellte Fragen",
-		"subHeading": "Hier finden Sie Antworten auf die wichtigsten Fragen zu Bau, Formalitäten und Schutzraumtechnologie."
-	  },
-	  "blog": {
-		"heading": "Aktuelles und Wissen",
-		"subHeading": "Entdecken Sie die neuesten Artikel, Expertenrat und Informationen zu rechtlichen und technischen Standards."
-	  },
-	  "careers": {
-		"heading": "Karriere",
-		"subHeading": "Werden Sie Teil unseres Expertenteams und entwickeln Sie mit uns moderne Sicherheitssysteme."
-	  },
-	  "contact": {
-		"heading": "Kontaktieren Sie uns",
-		"subHeading": "Wir beantworten gerne alle Ihre Fragen zu unseren Schutzräumen und Schutzlösungen.",
-		"phoneLabel": "Telefon",
-		"emailLabel": "E-Mail",
-		"addressLabel": "Adresse",
-		"form": {
-		  "nameLabel": "Vor- und Nachname",
-		  "namePlaceholder": "z.B. Max Mustermann",
-		  "emailLabel": "E-Mail-Adresse",
-		  "emailPlaceholder": "max.mustermann@example.com",
-		  "phoneLabel": "Telefonnummer",
-		  "phonePlaceholder": "+49 123 456 789",
-		  "companyLabel": "Firma (optional)",
-		  "companyPlaceholder": "Name Ihres Unternehmens",
-		  "messageLabel": "Nachricht",
-		  "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
-		  "rodoAccept": "Ich akzeptiere die",
-		  "rodoModalTitle": "Datenschutzrichtlinie und DSGVO",
-		  "rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
-		  "rodoError": "Sie müssen die DSGVO-Datenschutzrichtlinie akzeptieren, bevor Sie das Formular absenden.",
-		  "rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
-		  "submitButton": "Nachricht senden",
-		  "sendingButton": "Senden...",
-		  "successMessage": "Nachricht erfolgreich gesendet!",
-		  "close": "Schließen"
-		}
-	  },
-	  "footer": {
-		"companyName": "FIBER SYSTEM",
-		"description": "Professionelle Planung und Bau von Hausschutzräumen. Sicherheit und Komfort für Ihre Familie.",
-		"slogan": "Entworfen für Ihre Sicherheit",
-		"copyrightText": "FIBER SYSTEM. Alle Rechte vorbehalten.",
-		"navTitle": "Navigation",
-		"infoTitle": "Informationen",
-		"developedBy": "Developed by"
-	  },
-	  "catalog": {
-		"loading": "Katalog wird geladen...",
-		"modelDescriptions": {
-		  "AFU": "Luftfiltereinheit",
-		  "ARC": "Schutzraum-Filterlüftungssystem",
-		  "BVNC": "Standard-Explosionsschutzventile",
-		  "BVNO": "Verstärkte Explosionsschutzventile",
-		  "SAFE360": "Sicheres CBRN-Filtersystem",
-		  "DU-I": "Gasdichte, explosionsgeschützte Tür",
-		  "DU-III": "Explosionsgeschützte Scharniertür",
-		  "DU-IV": "Mechanisch robuste Tür",
-		  "SU-IV": "Dichte, explosionsgeschützte Luke"
-		}
-	  },
-	  "investor": {
-		"heading": "Für Investoren",
-		"subHeading": "Umfassende Investitionsunterstützung für moderne Schutzräume und Unterstände.",
-		"heroTitle": "Für Investoren",
-		"heroDesc": "Wir unterstützen private und institutionelle Investoren bei der Realisierung moderner Schutzräume und sicherer Schutzbereiche. Von der Konzeption und Planung bis zur finalen Ausführung garantieren wir umfassende Unterstützung in jeder Phase.",
-		"benefitsTitle": "Warum Sie mit uns arbeiten sollten",
-		"benefits": [
-		  {
-			"title": "Garantierte Sicherheit",
-			"description": "Zertifizierte Lösungen, die höchsten Schutzstandards entsprechen"
-		  },
-		  {
-			"title": "Umfassende Dokumentation",
-			"description": "Vollständige technische und rechtliche Dokumentation für Ihre Investition"
-		  },
-		  {
-			"title": "Transparente Preisgestaltung",
-			"description": "Klare und detaillierte Kostenvoranschläge ohne versteckte Gebühren"
-		  },
-		  {
-			"title": "24/7 Support",
-			"description": "Dedizierter Projektmanager in jeder Phase verfügbar"
-		  }
-		],
-		"packagesTitle": "Unser Angebot",
-		"packagesSubtitle": "Wir planen und realisieren Stahlbetonschutzräume und temporäre Unterstände (DMS) gemäß den aktuellen Richtlinien des Ministeriums und den Bestimmungen des Zivilschutzgesetzes. Jedes Projekt wird individuell mit vollständiger Dokumentation und technischer Überwachung entwickelt.",
-		"popularBadge": "Am beliebtesten",
-		"inquiryButton": "Angebot anfragen",
-		"packagesFooter": "Alle Umsetzungen erfolgen gemäß den aktuellen Richtlinien des Ministeriums und den Regeln des neuen Zivilschutzgesetzes.",
-		"packages": [
-		  {
-			"name": "Basisversion",
-			"price": "ab 150.000 PLN",
-			"features": [
-			  "Schutzraum für 4–6 Personen",
-			  "Konstruktion aus PE-HD-Rohren Ø2500–3600 mm",
-			  "Eingang mit abschließbarer Luke und Boden",
-			  "LED-Beleuchtung, Grundlüftung",
-			  "Vollständig wasserdichte Materialien",
-			  "Technische und architektonische Planung"
-			]
-		  },
-		  {
-			"name": "Erweiterte Version",
-			"price": "ab 280.000 PLN",
-			"features": [
-			  "Zusätzliche Räume: Technik-, Sanitär-, Lagerraum",
-			  "Dekontaminationskammer Ø2000 mm mit Dusche",
-			  "Toilette, Dusche, Waschbecken oder Spüle",
-			  "Etagenbetten und Spinde",
-			  "Gasdichte und explosionsgeschützte Türen",
-			  "Renommierte Schweizer Filterlüftungssysteme"
-			]
-		  },
-		  {
-			"name": "Premium-Version",
-			"price": "ab 420.000 PLN",
-			"features": [
-			  "Modulares System mit Verbindungsmöglichkeit zu einem Raumgefüge",
-			  "Elektrische Heizung und Notstromversorgung",
-			  "Überwachung, TV, Radio, Internet, Satellitentelefon",
-			  "Wasser- und Abwassertanks mit Netzanschlussoption",
-			  "Sicherheitssensoren (CO₂, Bewegung, Wasserstoff, Füllstände)",
-			  "Bedienfeld und Automatisierungs-App"
-			]
-		  }
-		],
-		"processTitle": "Ablauf der Realisierung",
-		"steps": [
-		  { "title": "Beratung", "desc": "Bedarfs- und Standortanalyse" },
-		  { "title": "Planung", "desc": "Ausarbeitung der technischen Dokumentation" },
-		  { "title": "Ausführung", "desc": "Bau und Systeminstallation" },
-		  { "title": "Übergabe", "desc": "Tests und Übergabe des Objekts" }
-		],
-		"ctaTitle": "Bereit, über Ihr Projekt zu sprechen?",
-		"ctaDesc": "Kontaktieren Sie uns für ein individuelles Angebot und eine kostenlose technische Beratung.",
-		"ctaButton": "Beratung vereinbaren",
-		"ctaBack": "Zurück zur Startseite"
-	  },
-	  "designer": {
-		"heading": "Für Planer",
-		"subHeading": "Technische Dokumentation, Richtlinien und ingenieurtechnische Unterstützung für Bauprojekte.",
-		"heroTitle": "Für Planer und Architekten",
-		"heroDesc": "Wir bieten technische und fachliche Unterstützung für Architekten und Planungsbüros bei Investitionen im Bereich des Schutzbaus. Wir stellen Wissen, Werkzeuge und Dokumentationen zur Verfügung, die die Erstellung moderner und sicherer Anlagen erleichtern.",
-		"supportTitle": "Unterstützungsbereiche",
-		"supportAreas": [
-		  {
-			"title": "Technische Dokumentation",
-			"description": "Vollständige Planungsstudien, Installationsschemata und Branchenrichtlinien gemäß den geltenden Normen des Ministeriums."
-		  },
-		  {
-			"title": "Expertenberatung",
-			"description": "Direkter Kontakt mit unseren Spezialisten in den Bereichen Konstruktion, Belüftung und Schutzraumsicherheit."
-		  },
-		  {
-			"title": "Technischer Support",
-			"description": "Unterstützung bei der Auswahl von Materialien, Systemkomponenten und Technologien für Schutzraumprojekte."
-		  },
-		  {
-			"title": "Wissensdatenbank",
-			"description": "Eine Sammlung aktueller Planungsrichtlinien, technischer Analysen und Beispiele realisierter Objekte."
-		  }
-		],
-		"resourcesTitle": "Materialien für Planer",
-		"resourcesSubtitle": "Wir verfügen über die neuesten Richtlinien, die Planern die Arbeit erleichtern und die Erstellung sicherer, moderner Schutzanlagen unterstützen.",
-		"resourcesNote": "Alle Dokumente sind aktuell und an die geltenden Standards des Ministeriums angepasst",
-		"resources": [
-		  {
-			"title": "Zivilschutzgesetz",
-			"description": "Aktuelle Vorschriften und Anforderungen an den baulichen Zivilschutz"
-		  },
-		  {
-			"title": "Verordnung des Ministeriums – 14.07.2025",
-			"description": "Richtlinien zur Vorbereitung von Gemeinschaftsschutzanlagen auf die Nutzung und detaillierte Betriebsbedingungen"
-		  },
-		  {
-			"title": "Verordnung des Ministeriums – 13.11.2025",
-			"description": "Technische Bedingungen von Schutzbauten sowie Regeln für deren Nutzung und Standort"
-		  }
-		],
-		"downloadButton": "PDF herunterladen",
-		"catalogTitle": "Planerkatalog",
-		"catalogDesc": "Durchsuchen Sie Produktkategorien, detaillierte Modelle sowie deren Varianten und Untermodelle. Unter jedem Untermodell finden Sie dedizierte Schaltflächen für den schnellen Zugriff auf Zeichnungsdateien.",
-		"benefitsTitle": "Vorteile der Zusammenarbeit",
-		"benefitsDesc": "Die Zusammenarbeit mit uns bedeutet Zugang zu Fachwissen und technischer Infrastruktur, die Planer bei der Schaffung sicherer, regelkonformer Anlagen unterstützen.",
-		"benefits": [
-		  "Zugang zu zertifizierten Konstruktions- und Installationslösungen",
-		  "Unterstützung bei der Auslegung von Normen und Richtlinien des Ministeriums",
-		  "Prioritäre Beratung bei technischen Projekten",
-		  "Möglichkeit der Zusammenarbeit bei der Projektumsetzung",
-		  "Teilnahme an Schulungen und Branchen-Webinaren",
-		  "Zugang zu einem Netzwerk technologischer Partner"
-		],
-		"formTitle": "Partner werden",
-		"formDesc": "Füllen Sie das Formular aus und unser Team wird sich mit Ihnen in Verbindung setzen, um die Details der Zusammenarbeit zu besprechen.",
-		"ctaTitle": "Benötigen Sie Planungsunterstützung?",
-		"ctaDesc": "Kontaktieren Sie unsere technische Abteilung – wir helfen Ihnen bei der Auswahl der richtigen Lösungen für Ihr Projekt.",
-		"ctaButton": "Experten kontaktieren",
-		"ctaBack": "Zurück zur Startseite",
-		"designerForm": {
-			"nameLabel": "Vor- und Nachname",
-			"namePlaceholder": "z.B. Max Mustermann",
-			"emailLabel": "E-Mail-Adresse",
-			"emailPlaceholder": "max.mustermann@example.com",
-			"phoneLabel": "Telefonnummer",
-			"phonePlaceholder": "+49 123 456 789",
-			"companyLabel": "Firma / Studio",
-			"companyPlaceholder": "Name Ihres Unternehmens",
-			"messageLabel": "Nachricht",
-			"messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
-			"rodoAccept": "Ich akzeptiere die",
-			"rodoModalTitle": "DSGVO-Richtlinie",
-			"rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
-			"rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
-			"rodoError": "Sie müssen die DSGVO-Richtlinie akzeptieren, um die Nachricht zu senden.",
-			"submitButton": "Anfrage senden",
-			"sendingButton": "Senden...",
-			"successMessage": "Nachricht erfolgreich gesendet!",
-			"close": "Schließen"
-		}
-	  }
-	}
+    "navigation": {
+      "about": "Über uns",
+      "offer": "Angebot",
+      "investors": "Für Investoren",
+      "designers": "Für Architekten",
+      "gallery": "Galerie",
+      "virtualTour": "Virtueller Rundgang",
+      "contact": "Kontakt",
+      "faq": "FAQ",
+      "blog": "Aktuelles",
+      "careers": "Karriere"
+    },
+    "hero": {
+      "infoTile": "Gemäß den geltenden Anforderungen und Richtlinien des Ministeriums für Inneres und Verwaltung (MSWiA) sowie dem Zivilschutzgesetz",
+      "heading1": "Schutzräume und Schutzbauten",
+      "heading2": "der neuen Generation",
+      "subHeading1": "Schnell, solide und stets gemäß den geltenden Normen.",
+      "subHeading2": "Wir realisieren moderne Schutzräume und Schutzbauten (DMS) aus zertifizierten Stahlbetonmodulen und Rohren.",
+      "buttonContact": "Kontakt",
+      "buttonOffer": "Angebot ansehen"
+    },
+    "about": {
+      "heading": "Moderne Schutzräume und Schutzbauten gemäß den geltenden Richtlinien",
+      "subHeading": "Seit über 20 Jahren bauen wir Schutzkonstruktionen gemäß den geltenden Anforderungen und Richtlinien des Ministeriums für Inneres und Verwaltung (MSWiA) sowie dem Zivilschutzgesetz.",
+      "stats": [
+        {
+          "value": "20+",
+          "label": "Jahre Erfahrung"
+        },
+        {
+          "value": "200+",
+          "label": "Realisierte Projekte"
+        },
+        {
+          "value": "24/7",
+          "label": "Technischer Support"
+        }
+      ],
+      "solutionsHeading": "Unsere Lösungen",
+      "solutionsSubHeading": "Wir realisieren Schutzraumprojekte und Schutzbauten (DMS) gemäß den geltenden Anforderungen und Richtlinien des MSWiA. Unsere Konstruktionen umfassen:",
+      "solutionsList": [
+        "Modulschutzeinrichtungen aus Stahlbeton-Fertigteilen",
+        "Temporäre Schutzbauten (DMS), angepasst an individuelle Bedürfnisse",
+        "Komplette Montage sowie Belüftungs- und Filterlüftungsanlagen"
+      ]
+    },
+    "offerings": {
+      "heading": "Unser Angebot",
+      "subHeading": "Wir realisieren Schutzbauten gemäß dem Zivilschutzgesetz sowie den geltenden Anforderungen und Richtlinien des MSWiA. Unser Angebot umfasst sowohl Stahlbetonschutzräume als auch temporäre Schutzbauten (DMS) aus Verbundwerkstoffen.",
+      "cards": [
+        {
+          "title": "Temporäre Schutzbauten (DMS)",
+          "description": "Konstruktionen zur schnellen Bereitstellung im Gefahrenfall. Hergestellt aus Verbundwerkstoffen (GFK, PEHD, Stahlbeton-Fertigteile), konform mit den Richtlinien des Ministeriums.",
+          "features": [
+            "Flexibel in Montage und Anpassung",
+            "Zugelassene Materialien: GFK, PEHD, Stahlbeton",
+            "Für zivile und öffentliche Gebäude"
+          ]
+        },
+        {
+          "title": "Bautechnologie von Schutzräumen",
+          "description": "Modulare Konstruktionen, die unter Werksbedingungen mit vollständiger Qualitätskontrolle hergestellt werden. Montagefertig geliefert, um Dichtheit und Festigkeit zu garantieren.",
+          "features": [
+            "Geprüft auf Dichtheit und Festigkeit",
+            "Schnelle Montage auf der Baustelle",
+            "Vollständige Konformität mit den Standards des MSWiA"
+          ]
+        },
+        {
+          "title": "Vor Ort gegossene Stahlbetonschutzräume",
+          "description": "Traditionelle Bautechnologie von Schutzräumen, die direkt am Investitionsort gegossen werden. Gewährleistet maximale Haltbarkeit und Anpassung an die Geländebedingungen.",
+          "features": [
+            "Ausführung nach individuellem Entwurf",
+            "Monolithische Stahlbetontechnologie",
+            "Für Institutionen, Unternehmen und strategische Objekte"
+          ]
+        },
+        {
+          "title": "Modernisierung und Adaptierung von Objekten",
+          "description": "Wir führen technische Audits, Modernisierungen und Anpassungen bestehender Schutzräume und Anlagen durch, die als DMS dienen können.",
+          "features": [
+            "Bau- und Systemaudit",
+            "Modernisierung von Lüftungs- und Stromversorgungssystemen",
+            "Anpassung an geltende Standards des MSWiA"
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "heading": "Unsere Realisierungen",
+      "subHeading": "Sehen Sie Beispiele unserer Projekte. Jeder Schutzraum ist einzigartig und an die individuellen Bedürfnisse des Kunden angepasst.",
+      "footerText": "Dies ist nur ein Teil unserer Realisierungen. Möchten Sie die gesamte Galerie sehen?",
+      "button": "Mehr sehen",
+      "catAll": "Alle",
+      "catCompact": "Kompakte Schutzräume",
+      "catConcrete": "Stahlbetonschutzräume",
+      "catSystems": "Anlagen",
+      "catConstructions": "Stahlbetonkonstruktionen",
+      "catRealizations": "Realisierungen",
+      "images": [
+        {
+          "alt": "Badezimmer im Premium-Schutzraum"
+        },
+        {
+          "alt": "Innenraum des Kompaktschutzraums"
+        },
+        {
+          "alt": "Rahmenprofile"
+        },
+        {
+          "alt": "Kompaktschutzraum - Eingang"
+        },
+        {
+          "alt": "Toilette im Premium-Schutzraum"
+        },
+        {
+          "alt": "Spezialschutzraum - Vorratslager"
+        }
+      ],
+      "altTexts": {
+        "budowa1": "Bauphase – Fundament- und Unterbauarbeiten",
+        "budowa2": "Montage eines vorgefertigten Elements mit einem Kran",
+        "budowa4": "Montage eines vorgefertigten Elements mit einem Kran",
+        "montaz_modulow": "Montage von vorgefertigten Modulen",
+        "budowa3": "Konstruktions- und Montagearbeiten",
+        "wnetrze_surowe": "Schutzraum im Rohbauzustand",
+        "realizacja_piaseczno1": "Realisierung in Piaseczno, Polen – PEHD DN2400 mm, Länge 20 m",
+        "realizacja_piaseczno2": "Realisierung in Piaseczno, Polen – PEHD DN2400 mm, Länge 20 m",
+        "schron2_wejscie": "Eingang zu einem kompakten Schutzraum für 2 Personen",
+        "schron2_salon": "Kompakter Schutzraum – Wohnzimmer für 2 Personen",
+        "schron2_lazienka": "Badezimmer in einem kompakten Schutzraum für 2 Personen",
+        "schron4_wejscie": "Eingang zu einem Familienschutzraum für 4 Personen",
+        "schron4_widok": "Kompakter Schutzraum für 4 Personen – Draufsicht",
+        "schron100_rzut": "Stahlbetonschutzraum-Projekt für 100 Personen – Technischer Grundriss",
+        "schron100_techniczne": "Technikraum in einem Stahlbetonschutzraum für 100 Personen",
+        "schron100_sypialnia": "Schlafzimmer in einem Stahlbetonschutzraum für 100 Personen",
+        "schron100_magazyn": "Lagerraum in einem Stahlbetonschutzraum für 100 Personen",
+        "schron100_lazienka": "Badezimmer in einem Stahlbetonschutzraum für 100 Personen",
+        "schron20_rzut": "Modularer Stahlbetonschutzraum für 22 Personen",
+        "schron20_sypialnia": "Schlafzimmer in einem Schutzraum für 22 Personen",
+        "schron20_salon": "Wohn- und Lagerbereich in einem Schutzraum für 22 Personen",
+        "drzwi_wewnatrz": "Fronttür – Innenansicht",
+        "drzwi_bok": "Fronttür – Seitenansicht mit Verriegelungsmechanismus",
+        "filtrowentylacja": "Filterlüftungssystem",
+        "zespol_filtrow": "Filtersatz für Filterlüftung",
+        "mocowania_drzwi": "Befestigungssystem für Schutzraumtüren",
+        "mechanizm_drzwi_wew": "Eingangstürmechanismus für Schutzräume - Innenansicht",
+        "drzwi_wew": "Schutzraumtür - Innenansicht",
+        "drzwi_zew": "Schutzraumtür - Außenansicht",
+        "drzwi_bok2": "Schutzraumtür - Seitenansicht",
+        "drzwi_gazoszczelne": "Gasdichte Eingangstür",
+        "drzwi_gazoszczelne_wew": "Gasdichte Eingangstür - Innenansicht",
+        "wlaz_kanal_zew": "Notausstiegsluke, dicht – Außenansicht",
+        "wlazy_ucieczkowe": "Notluken aus dem Schutzraum",
+        "wlaz_ucieczkowy1": "Notluke",
+        "wlaz_ucieczkowy2": "Notluke",
+        "zawor_reczny": "Handventil",
+        "zawor_nadcisnieniowy1": "Überdruckventil",
+        "zawor_nadcisnieniowy2": "Überdruckventil",
+        "profil_rury": "Konstruktionsprofil basierend auf runden Stahlbetonrohren während des Baus",
+        "profil_rama": "Rahmenprofil der Stahlbetonstruktur während der Montage"
+      }
+    },
+    "virtualTour": {
+      "heading": "Machen Sie einen virtuellen Rundgang durch unseren Schutzraum",
+      "subHeading": "Entdecken Sie unsere Schutzraum-Entwürfe in 3D. Drehen, zoomen und erkunden Sie jedes Detail direkt im Browser.",
+      "tours": {
+        "bunker1": "Schutzraum L = 6m",
+        "bunker2": "Schutzraum L = 11,5m",
+        "bunker3": "Modulschutzeinrichtung"
+      }
+    },
+    "faq": {
+      "heading": "Häufig gestellte Fragen",
+      "subHeading": "Hier finden Sie Antworten auf die wichtigsten Fragen zu Bau, Formalitäten und Schutzraumtechnologie."
+    },
+    "blog": {
+      "heading": "Aktuelles",
+	  "subHeading": "Entdecken Sie die neuesten Artikel und Informationen zu rechtlichen und technischen Standards."
+    },
+    "careers": {
+      "heading": "Karriere",
+      "subHeading": "Werden Sie Teil unseres Expertenteams und entwickeln Sie mit uns moderne Sicherheitssysteme."
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "subHeading": "Wir beantworten gerne all Ihre Fragen zu unseren Schutzräumen und Schutzlösungen.",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-Mail",
+      "addressLabel": "Adresse",
+      "form": {
+        "nameLabel": "Vor- und Nachname",
+        "namePlaceholder": "z.B. Max Mustermann",
+        "emailLabel": "E-Mail-Adresse",
+        "emailPlaceholder": "max.mustermann@example.com",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+49 123 456 789",
+        "companyLabel": "Firma (optional)",
+        "companyPlaceholder": "Name Ihres Unternehmens",
+        "messageLabel": "Nachricht",
+        "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
+        "rodoAccept": "Ich akzeptiere die Datenschutzrichtlinie",
+        "rodoModalTitle": "Datenschutzrichtlinie und DSGVO",
+        "rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
+        "rodoError": "Sie müssen die DSGVO-Datenschutzrichtlinie akzeptieren, bevor Sie das Formular absenden.",
+        "rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
+        "submitButton": "Nachricht senden",
+        "sendingButton": "Senden...",
+        "successMessage": "Nachricht erfolgreich gesendet!",
+        "close": "Schließen"
+      }
+    },
+    "footer": {
+      "companyName": "FIBER SYSTEM",
+      "description": "Professionelle Planung und Bau von Hausschutzräumen. Sicherheit und Komfort für Ihre Familie.",
+      "slogan": "Entworfen für Ihre Sicherheit",
+      "copyrightText": "FIBER SYSTEM. Alle Rechte vorbehalten.",
+      "navTitle": "Navigation",
+      "infoTitle": "Informationen",
+      "developedBy": "Developed by"
+    },
+    "catalog": {
+      "loading": "Katalog wird geladen...",
+      "modelDescriptions": {
+        "AFU": "Luftfiltereinheit",
+        "ARC": "Schutzraum-Filterlüftungssystem",
+        "BVNC": "Standard-Explosionsschutzventile",
+        "BVNO": "Verstärkte Explosionsschutzventile",
+        "SAFE360": "Sicheres CBRN-Filtersystem",
+        "DU-I": "Gasdichte, explosionsgeschützte Tür",
+        "DU-III": "Explosionsgeschützte Scharniertür",
+        "DU-IV": "Mechanisch solide Tür",
+        "SU-IV": "Dichte, explosionsgeschützte Luke"
+      }
+    },
+    "investor": {
+      "heading": "Für Investoren",
+      "subHeading": "Umfassende Investitionsunterstützung für moderne Schutzräume und Schutzbauten.",
+      "heroTitle": "Für Investoren",
+      "heroDesc": "Wir unterstützen private und institutionelle Investoren bei der Realisierung moderner Schutzräume und sicherer Schutzbereiche. Von der Konzeption und Planung bis zur finalen Ausführung garantieren wir umfassende Unterstützung in jeder Phase.",
+      "benefitsTitle": "Warum Sie mit uns arbeiten sollten",
+      "benefits": [
+        {
+          "title": "Garantierte Sicherheit",
+          "description": "Zertifizierte Lösungen, die höchsten Schutzstandards entsprechen"
+        },
+        {
+          "title": "Umfassende Dokumentation",
+          "description": "Vollständige technische und rechtliche Dokumentation für Ihre Investition"
+        },
+        {
+          "title": "Transparente Preisgestaltung",
+          "description": "Klare und detaillierte Kostenvoranschläge ohne versteckte Gebühren"
+        },
+        {
+          "title": "24/7 Support",
+          "description": "Persönlicher Projektmanager in jeder Phase verfügbar"
+        }
+      ],
+      "packagesTitle": "Unser Angebot",
+      "packagesSubtitle": "Wir planen und realisieren Stahlbetonschutzräume und temporäre Schutzbauten (DMS) gemäß den geltenden Anforderungen und Richtlinien des MSWiA sowie den Bestimmungen des Zivilschutzgesetzes.",
+      "popularBadge": "Am beliebtesten",
+      "inquiryButton": "Angebot anfragen",
+      "packagesFooter": "Alle Umsetzungen erfolgen gemäß den aktuellen Richtlinien und den Bestimmungen des neuen Zivilschutzgesetzes.",
+      "packages": [
+        {
+          "name": "Basisversion",
+          "price": "ab 34.300 EUR",
+          "features": [
+            "Schutzraum für 4–6 Personen",
+            "Konstruktion aus PE-HD-Rohren Ø2500–3600 mm",
+            "Eingang mit abschließbarer Luke und Boden",
+            "LED-Beleuchtung, Grundlüftung",
+            "Vollständig wasserdichte Materialien",
+            "Technische und architektonische Planung"
+          ]
+        },
+        {
+          "name": "Erweiterte Version",
+          "price": "ab 64.000 EUR",
+          "features": [
+            "Zusätzliche Räume: Technik-, Sanitär-, Lagerraum",
+            "Dekontaminationskammer Ø2000 mm mit Dusche",
+            "Toilette, Dusche, Waschbecken oder Spüle",
+            "Etagenbetten und Spinde",
+            "Gasdichte und explosionsgeschützte Türen",
+            "Renommierte Schweizer Filterlüftungssysteme"
+          ]
+        },
+        {
+          "name": "Premium-Version",
+          "price": "ab 96.000 EUR",
+          "features": [
+            "Modulares System mit Verbindungsmöglichkeit zu einem Raumgefüge",
+            "Elektrische Heizung und Notstromversorgung",
+            "Überwachung, TV, Radio, Internet, Satellitentelefon",
+            "Wasser- und Abwassertanks mit Netzanschlussoption",
+            "Sicherheitssensoren (CO₂, Bewegung, Wasserstoff, Füllstände)",
+            "Bedienfeld und Automatisierungs-App"
+          ]
+        }
+      ],
+      "processTitle": "Ablauf der Realisierung",
+      "steps": [
+        {
+          "title": "Beratung",
+          "desc": "Bedarfs- und Standortanalyse"
+        },
+        {
+          "title": "Planung",
+          "desc": "Ausarbeitung der technischen Dokumentation"
+        },
+        {
+          "title": "Ausführung",
+          "desc": "Bau und Systeminstallation"
+        },
+        {
+          "title": "Übergabe",
+          "desc": "Tests und Übergabe des Objekts"
+        }
+      ],
+      "ctaTitle": "Bereit, über Ihr Projekt zu sprechen?",
+      "ctaDesc": "Kontaktieren Sie uns für ein individuelles Angebot und eine kostenlose technische Beratung.",
+      "ctaButton": "Beratung vereinbaren",
+      "ctaBack": "Zurück zur Startseite"
+    },
+    "designer": {
+      "heading": "Für Architekten",
+      "subHeading": "Technische Dokumentation, Richtlinien und ingenieurtechnische Unterstützung für Bauprojekte.",
+      "heroTitle": "Für Architekten",
+      "heroDesc": "Wir bieten technische und fachliche Unterstützung für Architekten und Planungsbüros bei Investitionen im Bereich des Schutzbaus. Wir stellen Wissen, Werkzeuge und Dokumentationen zur Verfügung, die die Erstellung moderner und sicherer Anlagen erleichtern.",
+      "supportTitle": "Unterstützungsbereiche",
+      "supportAreas": [
+        {
+          "title": "Technische Dokumentation",
+          "description": "Vollständige Planungsstudien, Installationsschemata und Branchenrichtlinien emäß den geltenden Normen des MSWiA"
+        },
+        {
+          "title": "Expertenberatung",
+          "description": "Direkter Kontakt mit unseren Spezialisten in den Bereichen Konstruktion, Belüftung und Schutzraumsicherheit."
+        },
+        {
+          "title": "Technischer Support",
+          "description": "Unterstützung bei der Auswahl von Materialien, Systemkomponenten und Technologien für Schutzraumprojekte."
+        },
+        {
+          "title": "Wissensdatenbank",
+          "description": "Eine Sammlung aktueller Planungsrichtlinien, technischer Analysen und Beispiele realisierter Objekte."
+        }
+      ],
+      "resourcesTitle": "Materialien für Projektplaner",
+      "resourcesSubtitle": "Wir verfügen über die neuesten Richtlinien, die Architekten die Arbeit erleichtern und die Erstellung sicherer, moderner Schutzanlagen unterstützen.",
+      "resourcesNote": "Alle Dokumente sind aktuell und an die geltenden Standards des MSWiA angepasst",
+      "resources": [
+        {
+          "title": "Zivilschutzgesetz",
+          "description": "Aktuelle Vorschriften und Anforderungen an den baulichen Zivilschutz"
+        },
+        {
+          "title": "Verordnung des MSWiA – 14.07.2025",
+          "description": "Richtlinien zur Vorbereitung von Gemeinschaftsschutzanlagen auf die Nutzung und detaillierte Betriebsbedingungen"
+        },
+        {
+          "title": "Verordnung des MSWiA – 13.11.2025",
+          "description": "Technische Bedingungen von Schutzbauten sowie Regeln für deren Nutzung und Standort"
+        }
+      ],
+      "downloadButton": "PDF herunterladen",
+      "catalogTitle": "Architektenkatalog",
+      "catalogDesc": "Durchsuchen Sie Produktkategorien, detaillierte Modelle sowie deren Varianten und Untermodelle. Unter jedem Untermodell finden Sie dedizierte Schaltflächen für den schnellen Zugriff auf Zeichnungsdateien.",
+      "benefitsTitle": "Vorteile der Zusammenarbeit",
+      "benefitsDesc": "Die Zusammenarbeit mit uns bedeutet Zugang zu Fachwissen und technischer Infrastruktur, die Architekten bei der Schaffung sicherer, regelkonformer Anlagen unterstützen.",
+      "benefits": [
+        "Zugang zu zertifizierten Konstruktions- und Installationslösungen",
+        "Unterstützung bei der Auslegung von Normen und Richtlinien des MSWiA",
+        "Prioritäre Beratung bei technischen Projekten",
+        "Möglichkeit der Zusammenarbeit bei der Projektumsetzung",
+        "Teilnahme an Schulungen und Branchen-Webinaren",
+        "Zugang zu einem Netzwerk technologischer Partner"
+      ],
+      "formTitle": "Partner werden",
+      "formDesc": "Füllen Sie das Formular aus und unser Team wird sich mit Ihnen in Verbindung setzen, um die Details der Zusammenarbeit zu besprechen.",
+      "ctaTitle": "Benötigen Sie Planungsunterstützung?",
+      "ctaDesc": "Kontaktieren Sie unsere technische Abteilung – wir helfen Ihnen bei der Auswahl der richtigen Lösungen für Ihr Projekt.",
+      "ctaButton": "Experten kontaktieren",
+      "ctaBack": "Zurück zur Startseite",
+      "designerForm": {
+        "nameLabel": "Vor- und Nachname",
+        "namePlaceholder": "z.B. Max Mustermann",
+        "emailLabel": "E-Mail-Adresse",
+        "emailPlaceholder": "max.mustermann@example.com",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+49 123 456 789",
+        "companyLabel": "Firma / Studio",
+        "companyPlaceholder": "Name Ihres Unternehmens",
+        "messageLabel": "Nachricht",
+        "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen...",
+        "rodoAccept": "Ich akzeptiere die Datenschutzrichtlinie",
+        "rodoModalTitle": "DSGVO-Richtlinie",
+        "rodoModalContent": "DSGVO-Informationsklausel (Art. 13 Abs. 1 und 2 DSGVO)\n\nGemäß Art. 13 Abs. 1 und 2 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung – DSGVO) informieren wir Sie wie folgt:\n\n1. Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist die Gesellschaft „Fiber System Polska sp. z o.o.“ mit Sitz in Warschau (01-042), ul. Okopowa 59A/97, Polen.\n2. In Fragen des Datenschutzes können Sie uns per E-Mail unter office@fibersystem.eu kontaktieren.\n3. Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n   - Erfüllung von Verträgen sowie Erbringung von Beratungs- und technischen Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO),\n   - Laufender telefonischer, schriftlicher oder direkter Kontakt (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse des Verantwortlichen),\n   - Durchführung von Marketingaktivitäten, Zusendung von Handelsinformationen und Newslettern (Art. 6 Abs. 1 lit. a DSGVO – Einwilligung),\n   - Analytische, statistische und Archivierungszwecke (Art. 6 Abs. 1 lit. f DSGVO).\n4. Empfänger Ihrer personenbezogenen Daten sind ausschließlich Stellen, die gesetzlich zum Erhalt personenbezogener Daten berechtigt sind, sowie Auftragsverarbeiter, die Daten im Auftrag des Verantwortlichen verarbeiten (z.B. IT-Dienstleister, Buchhaltungs- und Rechtsberatungsunternehmen).\n5. Ihre personenbezogenen Daten werden für den zur Erfüllung der Zwecke erforderlichen Zeitraum und danach für einen Zeitraum von 5 Jahren oder bis zum Ablauf etwaiger Ansprüche oder dem Widerruf der Einwilligung gespeichert.\n6. Sie haben das Recht auf:\n   - Auskunft über Ihre Daten und Berichtigung,\n   - Löschung („Recht auf Vergessenwerden“) oder Einschränkung der Verarbeitung,\n   - Widerspruch gegen die Verarbeitung,\n   - Datenübertragbarkeit,\n   - Jederzeitigen Widerruf der Einwilligung, ohne dass die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt wird.\n7. Sie haben das Recht, eine Beschwerde bei der Aufsichtsbehörde (Präsident des Amtes für den Schutz personenbezogener Daten – PUODO) einzulegen, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt.\n8. Die Bereitstellung personenbezogener Daten ist freiwillig, jedoch erforderlich, um Kontakt aufzunehmen, Anfragen zu beantworten oder einen Vertrag abzuschließen und auszuführen.",
+        "rodoText": "und stimme der Verarbeitung meiner personenbezogenen Daten zu.",
+        "rodoError": "Sie müssen die DSGVO-Richtlinie akzeptieren, um die Nachricht zu senden.",
+        "submitButton": "Anfrage senden",
+        "sendingButton": "Senden...",
+        "successMessage": "Nachricht erfolgreich gesendet!",
+        "close": "Schließen"
+      }
+    }
+  }
+
 }
