@@ -3,15 +3,16 @@
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Languages } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useLanguage, Language } from "@/translations/context"
 import { motion, AnimatePresence } from "framer-motion"
 
-const FLAGS: Record<Language, { label: string; flag: React.ReactNode }> = {
+const FLAGS: Record<Language, { label: string; fullName: string; flag: React.ReactNode }> = {
   PL: {
     label: "PL",
+    fullName: "Polski",
     flag: (
       <svg className="w-5 h-3.5 rounded-[2px] object-cover shrink-0 border border-black/10" viewBox="0 0 640 480">
         <rect width="640" height="240" fill="#ffffff" />
@@ -21,6 +22,7 @@ const FLAGS: Record<Language, { label: string; flag: React.ReactNode }> = {
   },
   EN: {
     label: "EN",
+    fullName: "English",
     flag: (
       <svg className="w-5 h-3.5 rounded-[2px] object-cover shrink-0 border border-black/10" viewBox="0 0 640 480">
         <path fill="#00247d" d="M0 0h640v480H0z" />
@@ -33,6 +35,7 @@ const FLAGS: Record<Language, { label: string; flag: React.ReactNode }> = {
   },
   DE: {
     label: "DE",
+    fullName: "Deutsch",
     flag: (
       <svg className="w-5 h-3.5 rounded-[2px] object-cover shrink-0 border border-black/10" viewBox="0 0 640 480">
         <rect width="640" height="160" fill="#000000" />
@@ -43,15 +46,10 @@ const FLAGS: Record<Language, { label: string; flag: React.ReactNode }> = {
   },
 }
 
-const NEXT_LANG: Record<Language, Language> = {
-  PL: "EN",
-  EN: "DE",
-  DE: "PL",
-}
-
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const pathname = usePathname()
   const { language, setLanguage, t } = useLanguage()
 
@@ -70,10 +68,6 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [pathname])
-
-  const handleToggle = () => {
-    setLanguage(NEXT_LANG[language])
-  }
 
   const navLinks = [
     { href: "/#o-nas", label: t.navigation.about },
@@ -126,26 +120,58 @@ export function Navigation() {
               </a>
             ))}
 
-            {/* Animated Single Toggle Button (Desktop) */}
-            <button
-              onClick={handleToggle}
-              className="flex items-center justify-center min-w-[70px] h-8 px-3 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 border border-border/20 backdrop-blur-sm transition-all text-xs font-semibold active:scale-95 overflow-hidden cursor-pointer"
-              title="Zmień język"
+            {/* Language Dropdown (Desktop) */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsLangMenuOpen(true)}
+              onMouseLeave={() => setIsLangMenuOpen(false)}
             >
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.span
-                  key={language}
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 6 }}
-                  transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="flex items-center gap-2"
-                >
-                  {FLAGS[language].flag}
-                  <span>{FLAGS[language].label}</span>
-                </motion.span>
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center justify-center w-9 h-9 rounded-md bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 border border-border/20 backdrop-blur-sm transition-all"
+                title="Wybierz język"
+              >
+                <Languages className={cn("w-4 h-4", isScrolled ? "text-foreground" : "text-white")} />
+              </button>
+
+              <AnimatePresence>
+                {isLangMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    className="absolute top-full right-0 pt-2 min-w-[140px] z-50"
+                  >
+                    <div className="relative bg-white dark:bg-card shadow-lg border border-border rounded-xl p-1.5 flex flex-col">
+                      {/* Strzałka popovera */}
+                      <div className="absolute -top-1.5 right-3.5 w-3 h-3 bg-white dark:bg-card border-t border-l border-border rotate-45"></div>
+
+                      <div className="relative z-10 flex flex-col gap-0.5">
+                        {(["PL", "EN", "DE"] as Language[]).map((lang) => (
+                          <button
+                            key={lang}
+                            onClick={() => {
+                              setLanguage(lang)
+                              setIsLangMenuOpen(false)
+                            }}
+                            className={cn(
+                              "flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                              language === lang
+                                ? "bg-black/5 dark:bg-white/10 text-foreground"
+                                : "text-foreground/70 hover:bg-black/5 dark:hover:bg-white/5 hover:text-foreground"
+                            )}
+                          >
+                            {FLAGS[lang].flag}
+                            <span>{FLAGS[lang].fullName}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
               </AnimatePresence>
-            </button>
+            </div>
 
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <a href={"/#kontakt"}>{t.navigation.contact}</a>
@@ -183,26 +209,23 @@ export function Navigation() {
               </a>
             ))}
 
-            {/* Animated Single Toggle Button (Mobile) */}
-            <div className="flex items-center justify-between py-3 my-2 border-y border-border/40">
-              <button
-                onClick={handleToggle}
-                className="flex items-center justify-center min-w-[70px] h-9 px-4 rounded-full bg-black/10 dark:bg-white/10 border border-border/20 text-xs font-semibold active:scale-95 overflow-hidden"
-              >
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.span
-                    key={language}
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 6 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="flex items-center gap-2"
-                  >
-                    {FLAGS[language].flag}
-                    <span>{FLAGS[language].label}</span>
-                  </motion.span>
-                </AnimatePresence>
-              </button>
+            {/* Language Switches (Mobile) */}
+            <div className="flex items-center gap-2 py-4 my-2 border-y border-border/40">
+              {(["PL", "EN", "DE"] as Language[]).map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setLanguage(lang)}
+                  className={cn(
+                    "flex-1 flex items-center justify-center gap-2 px-2 py-2.5 rounded-lg border text-sm font-semibold transition-all",
+                    language === lang
+                      ? "bg-white text-black border-transparent dark:bg-white dark:text-black"
+                      : "bg-black/20 text-white border-white/20 hover:bg-black/30"
+                  )}
+                >
+                  {FLAGS[lang].flag}
+                  <span>{FLAGS[lang].label}</span>
+                </button>
+              ))}
             </div>
 
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
